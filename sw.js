@@ -1,5 +1,5 @@
-const CACHE='shijing-v4';
-const sceneImages=Array.from({length:20},(_,i)=>`./assets/landscape-${String(i+1).padStart(2,'0')}.jpg`);
+const CACHE='shijing-v5';
+const sceneImages=Array.from({length:50},(_,i)=>`./assets/landscape-${String(i+1).padStart(2,'0')}.jpg`);
 const assets=['./','./index.html','./style.css','./script.js','./manifest.webmanifest','./sw.js','./icons/icon-192.png','./icons/icon-512.png','./icons/apple-touch-icon.png',...sceneImages];
 self.addEventListener('install',event=>{
   event.waitUntil(caches.open(CACHE).then(cache=>cache.addAll(assets)).then(()=>self.skipWaiting()));

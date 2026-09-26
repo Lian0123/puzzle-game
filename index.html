@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
   <meta name="theme-color" content="#0d1b24">
-  <meta name="description" content="拾景：20 關原創風景拼圖，在手機上拖曳方塊交換位置。">
+  <meta name="description" content="拾景：50 關原創風景拼圖，在手機上拖曳方塊交換位置。">
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
   <meta name="apple-mobile-web-app-title" content="拾景">
@@ -27,10 +27,10 @@
       <h1 id="heroTitle">拾景</h1>
       <p>拖曳方塊，拼回每一幅風景。<br>完成一關，開啟下一段旅程。</p>
       <button class="primary-button" id="continueButton" type="button">開始第 1 關 <span>→</span></button>
-      <div class="home-progress"><span id="levelProgress">已完成 0 / 20 關</span><div class="progress-track"><div id="progressFill"></div></div><p class="offline-status" id="offlineStatus">首次連線後會自動準備離線關卡。</p></div>
+      <div class="home-progress"><span id="levelProgress">已完成 0 / 50 關</span><div class="progress-track"><div id="progressFill"></div></div><p class="offline-status" id="offlineStatus">首次連線後會自動準備離線關卡。</p></div>
     </section>
     <section class="levels-section" aria-labelledby="levelsTitle">
-      <div class="levels-heading"><h2 id="levelsTitle">選擇關卡</h2><span>共 20 關</span></div>
+      <div class="levels-heading"><h2 id="levelsTitle">選擇關卡</h2><span id="levelCount">共 50 關</span></div>
       <div class="levels-grid" id="galleryGrid"></div>
     </section>
   </main>
@@ -47,11 +47,12 @@
         <aside class="game-panel"><div class="panel-card"><span class="panel-label">THE ORIGINAL VIEW</span><div class="preview-image" id="previewImage"></div><p>記住顏色與地形的線索，讓風景慢慢回到原位。</p></div><div class="panel-card controls-card"><span class="panel-label">DIFFICULTY</span><div class="difficulty" id="difficulty" role="group" aria-label="選擇拼圖難度"><button type="button" data-size="4">探險<br><small>4 × 4</small></button><button type="button" data-size="5">挑戰<br><small>5 × 5</small></button><button type="button" data-size="6">大師<br><small>6 × 6</small></button></div><div class="control-row"><button type="button" id="shuffleButton">↻ 重新打亂</button><button type="button" id="hintButton">✧ 提示 <span id="hintCount">2</span></button></div><div class="best-line" id="bestLine">這幅風景還沒有完成紀錄。</div></div></aside>
       </div>
     </div>
+    <div class="back-notice" id="backNotice" role="status" aria-live="polite" hidden>目前拼圖進度已保留，請使用畫面左上角返回。</div>
   </div>
 
-  <div class="win-overlay" id="winOverlay" hidden><div class="win-card" role="dialog" aria-modal="true" aria-labelledby="winTitle"><div class="win-spark">✳</div><div class="eyebrow">LANDSCAPE RESTORED</div><h2 id="winTitle">風景，回來了。</h2><p id="winText"></p><div class="win-stats"><div><small>完成時間</small><strong id="winTime"></strong></div><div><small>交換步數</small><strong id="winMoves"></strong></div><div><small>評價</small><strong id="winStars"></strong></div></div><div class="win-actions"><button class="primary-button" id="nextButton" type="button">下一關 →</button><button class="text-button" id="galleryButton" type="button">返回關卡</button></div></div></div>
-  <dialog class="install-dialog" id="installDialog" aria-labelledby="installTitle"><button class="dialog-close" id="installClose" type="button" aria-label="關閉">×</button><div class="brand-icon">✳</div><h2 id="installTitle">把拾景加到手機</h2><p id="installInstructions"></p><p class="offline-note">首次連線時會下載遊戲與 20 張風景。看到「離線遊玩已準備好」後即可離線遊玩。</p></dialog>
-  <footer><span>✳ 拾景</span><span>20 ORIGINAL LANDSCAPES · MADE FOR CURIOUS MINDS</span><span>© 2026 拾景</span></footer>
+  <div class="win-overlay" id="winOverlay" hidden><div class="win-card" role="dialog" aria-modal="true" aria-labelledby="winTitle"><div class="win-spark">✳</div><div class="eyebrow">LANDSCAPE RESTORED</div><h2 id="winTitle">風景，回來了。</h2><div class="win-image" id="winImage" role="img"></div><p id="winText"></p><div class="win-stats"><div><small>完成時間</small><strong id="winTime"></strong></div><div><small>交換步數</small><strong id="winMoves"></strong></div><div><small>評價</small><strong id="winStars"></strong></div></div><div class="win-actions"><button class="primary-button" id="nextButton" type="button">下一關 →</button><button class="text-button" id="galleryButton" type="button">返回關卡</button></div></div></div>
+  <dialog class="install-dialog" id="installDialog" aria-labelledby="installTitle"><button class="dialog-close" id="installClose" type="button" aria-label="關閉">×</button><div class="brand-icon">✳</div><h2 id="installTitle">把拾景加到手機</h2><p id="installInstructions"></p><p class="offline-note">首次連線時會下載遊戲與 50 張風景。看到「離線遊玩已準備好」後即可離線遊玩。</p></dialog>
+  <footer><span>✳ 拾景</span><span>50 ORIGINAL LANDSCAPES · MADE FOR CURIOUS MINDS</span><span>© 2026 拾景</span></footer>
   <script src="script.js" defer></script>
 </body>
 </html>
