@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
   <meta name="theme-color" content="#0d1b24">
-  <meta name="description" content="拾景：20 幅原創風景、可在手機滑動交換的方塊拼圖。">
+  <meta name="description" content="拾景：20 關原創風景拼圖，在手機上拖曳方塊交換位置。">
   <title>拾景 · 風景拼圖</title>
   <link rel="stylesheet" href="style.css">
 </head>
@@ -15,20 +15,17 @@
     <button class="sound-button" id="soundButton" type="button" aria-label="切換音效" aria-pressed="true">♪ <span>音效開</span></button>
   </header>
 
-  <main id="top">
-    <section class="hero" aria-labelledby="heroTitle">
-      <div class="hero-copy">
-        <div class="eyebrow"><span class="eyebrow-line"></span> 一段風景，一場挑戰</div>
-        <h1 id="heroTitle">把世界的<br><em>美好</em>，拼回來。</h1>
-        <p>20 幅原創風景，沒有缺角的拼圖。用指尖滑動、交換相鄰方塊，找回每一幅畫的完整模樣。</p>
-        <div class="hero-actions"><a class="primary-button" href="#gallery">選一幅風景 <span>↗</span></a><span class="hero-note">✦ 隨時可玩・離線也能玩</span></div>
-      </div>
-      <div class="hero-art" aria-hidden="true"><div class="hero-art-image" id="heroArt"></div><div class="hero-art-label">01 / 20 <span>EXPLORE THE VIEW</span></div><div class="hero-art-stamp">SWIPE<br>TO SOLVE ↗</div></div>
+  <main id="top" class="home">
+    <section class="home-intro" aria-labelledby="heroTitle">
+      <div class="eyebrow">✳ 風景拼圖</div>
+      <h1 id="heroTitle">拾景</h1>
+      <p>拖曳方塊，拼回每一幅風景。<br>完成一關，開啟下一段旅程。</p>
+      <button class="primary-button" id="continueButton" type="button">開始第 1 關 <span>→</span></button>
+      <div class="home-progress"><span id="levelProgress">已完成 0 / 20 關</span><div class="progress-track"><div id="progressFill"></div></div></div>
     </section>
-
-    <section class="gallery-section" id="gallery" aria-labelledby="galleryTitle">
-      <div class="section-heading"><div><div class="eyebrow"><span class="eyebrow-line"></span> THE COLLECTION</div><h2 id="galleryTitle">挑一處，<em>出發吧。</em></h2></div><p>從海岸到雪山，旅程由你決定。<br>完成的風景會留下專屬紀錄。</p></div>
-      <div class="gallery" id="galleryGrid"></div>
+    <section class="levels-section" aria-labelledby="levelsTitle">
+      <div class="levels-heading"><h2 id="levelsTitle">選擇關卡</h2><span>共 20 關</span></div>
+      <div class="levels-grid" id="galleryGrid"></div>
     </section>
   </main>
 
@@ -39,14 +36,14 @@
         <div class="board-column">
           <div class="board-top"><div class="stat"><span>時間</span><strong id="timeDisplay">00:00</strong></div><div class="stat"><span>步數</span><strong id="movesDisplay">0</strong></div><div class="stat"><span>已歸位</span><strong id="progressDisplay">0/16</strong></div></div>
           <div class="board-frame"><div class="board" id="board" aria-label="拼圖方塊區"></div></div>
-          <p class="board-help" id="boardHelp">向上、下、左、右滑動方塊，與隔壁交換位置。也可以連點兩塊相鄰方塊。</p>
+          <p class="board-help" id="boardHelp">拖曳方塊到任何位置即可交換。也可以依序點選兩塊方塊。</p>
         </div>
         <aside class="game-panel"><div class="panel-card"><span class="panel-label">THE ORIGINAL VIEW</span><div class="preview-image" id="previewImage"></div><p>記住顏色與地形的線索，讓風景慢慢回到原位。</p></div><div class="panel-card controls-card"><span class="panel-label">DIFFICULTY</span><div class="difficulty" id="difficulty" role="group" aria-label="選擇拼圖難度"><button type="button" data-size="4">探險<br><small>4 × 4</small></button><button type="button" data-size="5">挑戰<br><small>5 × 5</small></button><button type="button" data-size="6">大師<br><small>6 × 6</small></button></div><div class="control-row"><button type="button" id="shuffleButton">↻ 重新打亂</button><button type="button" id="hintButton">✧ 提示 <span id="hintCount">2</span></button></div><div class="best-line" id="bestLine">這幅風景還沒有完成紀錄。</div></div></aside>
       </div>
     </div>
   </div>
 
-  <div class="win-overlay" id="winOverlay" hidden><div class="win-card" role="dialog" aria-modal="true" aria-labelledby="winTitle"><div class="win-spark">✳</div><div class="eyebrow">LANDSCAPE RESTORED</div><h2 id="winTitle">風景，回來了。</h2><p id="winText"></p><div class="win-stats"><div><small>完成時間</small><strong id="winTime"></strong></div><div><small>交換步數</small><strong id="winMoves"></strong></div><div><small>評價</small><strong id="winStars"></strong></div></div><div class="win-actions"><button class="primary-button" id="nextButton" type="button">下一幅風景 ↗</button><button class="text-button" id="galleryButton" type="button">返回圖庫</button></div></div></div>
+  <div class="win-overlay" id="winOverlay" hidden><div class="win-card" role="dialog" aria-modal="true" aria-labelledby="winTitle"><div class="win-spark">✳</div><div class="eyebrow">LANDSCAPE RESTORED</div><h2 id="winTitle">風景，回來了。</h2><p id="winText"></p><div class="win-stats"><div><small>完成時間</small><strong id="winTime"></strong></div><div><small>交換步數</small><strong id="winMoves"></strong></div><div><small>評價</small><strong id="winStars"></strong></div></div><div class="win-actions"><button class="primary-button" id="nextButton" type="button">下一關 →</button><button class="text-button" id="galleryButton" type="button">返回關卡</button></div></div></div>
   <footer><span>✳ 拾景</span><span>20 ORIGINAL LANDSCAPES · MADE FOR CURIOUS MINDS</span><span>© 2026 拾景</span></footer>
   <script src="script.js" defer></script>
 </body>
