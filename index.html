@@ -5,14 +5,20 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
   <meta name="theme-color" content="#0d1b24">
   <meta name="description" content="拾景：20 關原創風景拼圖，在手機上拖曳方塊交換位置。">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="apple-mobile-web-app-title" content="拾景">
   <title>拾景 · 風景拼圖</title>
+  <link rel="manifest" href="manifest.webmanifest">
+  <link rel="apple-touch-icon" href="icons/apple-touch-icon.png">
+  <link rel="icon" href="icons/icon-192.png" type="image/png">
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
   <div class="grain" aria-hidden="true"></div>
   <header class="topbar">
     <a class="brand" href="#top" aria-label="拾景首頁"><span class="brand-icon">✳</span><span>拾景<small>LANDSCAPE PUZZLE</small></span></a>
-    <button class="sound-button" id="soundButton" type="button" aria-label="切換音效" aria-pressed="true">♪ <span>音效開</span></button>
+    <div class="topbar-actions"><button class="install-button" id="installButton" type="button">＋ 安裝</button><button class="sound-button" id="soundButton" type="button" aria-label="切換音效" aria-pressed="true">♪ <span>音效開</span></button></div>
   </header>
 
   <main id="top" class="home">
@@ -21,7 +27,7 @@
       <h1 id="heroTitle">拾景</h1>
       <p>拖曳方塊，拼回每一幅風景。<br>完成一關，開啟下一段旅程。</p>
       <button class="primary-button" id="continueButton" type="button">開始第 1 關 <span>→</span></button>
-      <div class="home-progress"><span id="levelProgress">已完成 0 / 20 關</span><div class="progress-track"><div id="progressFill"></div></div></div>
+      <div class="home-progress"><span id="levelProgress">已完成 0 / 20 關</span><div class="progress-track"><div id="progressFill"></div></div><p class="offline-status" id="offlineStatus">首次連線後會自動準備離線關卡。</p></div>
     </section>
     <section class="levels-section" aria-labelledby="levelsTitle">
       <div class="levels-heading"><h2 id="levelsTitle">選擇關卡</h2><span>共 20 關</span></div>
@@ -44,6 +50,7 @@
   </div>
 
   <div class="win-overlay" id="winOverlay" hidden><div class="win-card" role="dialog" aria-modal="true" aria-labelledby="winTitle"><div class="win-spark">✳</div><div class="eyebrow">LANDSCAPE RESTORED</div><h2 id="winTitle">風景，回來了。</h2><p id="winText"></p><div class="win-stats"><div><small>完成時間</small><strong id="winTime"></strong></div><div><small>交換步數</small><strong id="winMoves"></strong></div><div><small>評價</small><strong id="winStars"></strong></div></div><div class="win-actions"><button class="primary-button" id="nextButton" type="button">下一關 →</button><button class="text-button" id="galleryButton" type="button">返回關卡</button></div></div></div>
+  <dialog class="install-dialog" id="installDialog" aria-labelledby="installTitle"><button class="dialog-close" id="installClose" type="button" aria-label="關閉">×</button><div class="brand-icon">✳</div><h2 id="installTitle">把拾景加到手機</h2><p id="installInstructions"></p><p class="offline-note">首次連線時會下載遊戲與 20 張風景。看到「離線遊玩已準備好」後即可離線遊玩。</p></dialog>
   <footer><span>✳ 拾景</span><span>20 ORIGINAL LANDSCAPES · MADE FOR CURIOUS MINDS</span><span>© 2026 拾景</span></footer>
   <script src="script.js" defer></script>
 </body>

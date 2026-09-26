@@ -9,6 +9,7 @@ const $ = id => document.getElementById(id);
 const gallery = $('galleryGrid');
 const board = $('board');
 let current = 0, size = 4, pieces = [], moves = 0, seconds = 0, hints = 2, selected = -1, timer = null, playing = false, soundOn = true, gesture = null, ghost = null, ignoreClick = false;
+let deferredInstallPrompt = null;
 const saved = (()=>{try{return JSON.parse(localStorage.getItem('shijing-records')||'{}')}catch{return {}}})();
 
 function saveRecords(){try{localStorage.setItem('shijing-records',JSON.stringify(saved))}catch{}}
@@ -39,5 +40,16 @@ board.addEventListener('click',e=>{if(ignoreClick)return;const tile=e.target.clo
 board.addEventListener('keydown',e=>{const tile=e.target.closest('.tile');if(!tile)return;const index=Number(tile.dataset.index);const delta={ArrowUp:-size,ArrowDown:size,ArrowLeft:-1,ArrowRight:1}[e.key];if(delta===undefined)return;e.preventDefault();const target=index+delta;if(target>=0&&target<pieces.length&&adjacent(index,target)){swap(index,target);board.children[target]?.focus()}});
 document.querySelectorAll('#difficulty button').forEach(button=>button.addEventListener('click',()=>setDifficulty(Number(button.dataset.size))));
 $('continueButton').addEventListener('click',()=>openGame(nextLevel()));$('shuffleButton').addEventListener('click',shuffle);$('hintButton').addEventListener('click',showHint);$('closeButton').addEventListener('click',closeGame);$('backButton').addEventListener('click',closeGame);$('galleryButton').addEventListener('click',closeGame);$('nextButton').addEventListener('click',()=>openGame((current+1)%scenes.length));$('soundButton').addEventListener('click',()=>{soundOn=!soundOn;$('soundButton').setAttribute('aria-pressed',String(soundOn));$('soundButton').querySelector('span').textContent=soundOn?'音效開':'音效關'});document.addEventListener('keydown',e=>{if(e.key==='Escape'&&!$('gameOverlay').hidden)closeGame()});
+function isInstalled(){return window.matchMedia?.('(display-mode: standalone)').matches||window.navigator.standalone===true}
+function showInstallGuide(){const apple=/iphone|ipad|ipod/i.test(navigator.userAgent)||(/macintosh/i.test(navigator.userAgent)&&navigator.maxTouchPoints>1);const android=/android/i.test(navigator.userAgent);$('installInstructions').textContent=apple?'請先關閉此說明，再於 Safari 點「分享」→「加入主畫面」→「加入」。':android?'請先關閉此說明，再於 Chrome 點右上角「⋮」，選「安裝應用程式」或「加到主畫面」。':'請先關閉此說明，再使用 Chrome 或 Edge 網址列的安裝圖示，或從瀏覽器選單選擇安裝。';$('installDialog').showModal()}
+$('installButton').addEventListener('click',async()=>{if(!deferredInstallPrompt){showInstallGuide();return}deferredInstallPrompt.prompt();await deferredInstallPrompt.userChoice;deferredInstallPrompt=null});$('installClose').addEventListener('click',()=>$('installDialog').close());$('installDialog').addEventListener('click',e=>{if(e.target===$('installDialog'))$('installDialog').close()});window.addEventListener('beforeinstallprompt',e=>{e.preventDefault();deferredInstallPrompt=e});window.addEventListener('appinstalled',()=>{deferredInstallPrompt=null;$('installButton').hidden=true});if(isInstalled())$('installButton').hidden=true;
 renderGallery();
-if('serviceWorker'in navigator)window.addEventListener('load',()=>navigator.serviceWorker.register('./sw.js').catch(()=>{}));
+if('serviceWorker'in navigator){
+  navigator.serviceWorker.addEventListener('message',event=>{
+    if(event.data?.type==='OFFLINE_STATUS')$('offlineStatus').textContent=event.data.ready?'✓ 離線遊玩已準備好':'首次連線下載風景中，請保持連線。';
+  });
+  window.addEventListener('load',()=>navigator.serviceWorker.register('./sw.js')
+    .then(()=>navigator.serviceWorker.ready)
+    .then(registration=>registration.active?.postMessage({type:'CHECK_OFFLINE'}))
+    .catch(()=>$('offlineStatus').textContent='此瀏覽器無法啟用離線快取。'));
+}else $('offlineStatus').textContent='此瀏覽器不支援離線快取。';
