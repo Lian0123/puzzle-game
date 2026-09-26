@@ -2,6 +2,8 @@
 
 一款純 HTML、CSS、JavaScript 的手機拼圖遊戲。20 張風景圖由 OpenAI 圖像生成工具為本專案原創產生；沒有使用第三方照片、商標或角色素材。圖片並非對特定現存作品的複製。這是素材來源說明，不構成法律保證。
 
+網頁版：https://lian0123.github.io/puzzle-game/
+
 ## 遊玩
 
 - 從第 1 關開始，完成後解鎖下一關。首頁只顯示關卡進度，不預覽圖片。
@@ -12,10 +14,6 @@
 ## 安裝到手機
 
 網站需透過 HTTPS 開啟（GitHub Pages 預設提供 HTTPS）。Android 可在 Chrome 點頁面上的「安裝」，或從瀏覽器選單安裝。iPhone／iPad 請用 Safari 開啟，點「分享」→「加入主畫面」→「加入」。安裝後會以獨立視窗開啟；第一次連線時請等首頁顯示離線準備完成，再關閉網路遊玩。
-
-## GitHub Pages 部署
-
-將本目錄推送到 GitHub 儲存庫。在儲存庫 **Settings → Pages**，選 **Deploy from a branch**，來源選 `main` 與 `/ (root)`，儲存後等待 GitHub Pages 發布。網頁不需建置流程或伺服器。若使用者名稱儲存庫 `使用者名稱.github.io`，網址為 `https://使用者名稱.github.io/`；一般儲存庫則為 `https://使用者名稱.github.io/儲存庫名稱/`。
 
 ## 素材與技術
 
