@@ -1,6 +1,8 @@
-const CACHE='shijing-v5';
+// Increment CACHE and VERSION whenever the app shell or bundled assets change.
+const CACHE='shijing-v6';
+const VERSION='6';
 const sceneImages=Array.from({length:50},(_,i)=>`./assets/landscape-${String(i+1).padStart(2,'0')}.jpg`);
-const assets=['./','./index.html','./style.css','./script.js','./manifest.webmanifest','./sw.js','./icons/icon-192.png','./icons/icon-512.png','./icons/apple-touch-icon.png',...sceneImages];
+const assets=['./','./index.html','./style.css','./script.js','./manifest.webmanifest',`./sw.js?v=${VERSION}`,'./icons/icon-192.png','./icons/icon-512.png','./icons/apple-touch-icon.png',...sceneImages];
 self.addEventListener('install',event=>{
   event.waitUntil(caches.open(CACHE).then(cache=>cache.addAll(assets)).then(()=>self.skipWaiting()));
 });
@@ -18,8 +20,17 @@ self.addEventListener('message',event=>{
 });
 self.addEventListener('fetch',event=>{
   if(event.request.method!=='GET'||new URL(event.request.url).origin!==self.location.origin)return;
-  event.respondWith(caches.match(event.request).then(cached=>cached||fetch(event.request).then(response=>{
-    if(response.ok){const copy=response.clone();caches.open(CACHE).then(cache=>cache.put(event.request,copy));}
+  const request=event.request,url=new URL(request.url);
+  const appShell=request.mode==='navigate'||/\/(index\.html|script\.js|style\.css|manifest\.webmanifest|sw\.js)$/.test(url.pathname);
+  if(appShell){
+    event.respondWith(fetch(request,{cache:'no-store'}).then(response=>{
+      if(response.ok){const copy=response.clone();caches.open(CACHE).then(cache=>cache.put(request,copy));}
+      return response;
+    }).catch(()=>caches.match(request).then(cached=>cached||caches.match('./index.html'))));
+    return;
+  }
+  event.respondWith(caches.match(request).then(cached=>cached||fetch(request).then(response=>{
+    if(response.ok){const copy=response.clone();caches.open(CACHE).then(cache=>cache.put(request,copy));}
     return response;
   })));
 });

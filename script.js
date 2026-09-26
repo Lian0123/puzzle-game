@@ -62,11 +62,18 @@ function showInstallGuide(){const apple=/iphone|ipad|ipod/i.test(navigator.userA
 $('installButton').addEventListener('click',async()=>{if(!deferredInstallPrompt){showInstallGuide();return}deferredInstallPrompt.prompt();await deferredInstallPrompt.userChoice;deferredInstallPrompt=null});$('installClose').addEventListener('click',()=>$('installDialog').close());$('installDialog').addEventListener('click',e=>{if(e.target===$('installDialog'))$('installDialog').close()});window.addEventListener('beforeinstallprompt',e=>{e.preventDefault();deferredInstallPrompt=e});window.addEventListener('appinstalled',()=>{deferredInstallPrompt=null;$('installButton').hidden=true});if(isInstalled())$('installButton').hidden=true;
 renderGallery();
 if('serviceWorker'in navigator){
+  const hadController=Boolean(navigator.serviceWorker.controller);
+  let refreshing=false;
+  navigator.serviceWorker.addEventListener('controllerchange',()=>{
+    if(!hadController||refreshing)return;
+    refreshing=true;
+    window.location.reload();
+  });
   navigator.serviceWorker.addEventListener('message',event=>{
     if(event.data?.type==='OFFLINE_STATUS')$('offlineStatus').textContent=event.data.ready?'✓ 離線遊玩已準備好':'首次連線下載風景中，請保持連線。';
   });
-  window.addEventListener('load',()=>navigator.serviceWorker.register('./sw.js')
-    .then(()=>navigator.serviceWorker.ready)
+  window.addEventListener('load',()=>navigator.serviceWorker.register('./sw.js?v=6',{updateViaCache:'none'})
+    .then(registration=>registration.update().catch(()=>{}).then(()=>navigator.serviceWorker.ready))
     .then(registration=>registration.active?.postMessage({type:'CHECK_OFFLINE'}))
     .catch(()=>$('offlineStatus').textContent='此瀏覽器無法啟用離線快取。'));
 }else $('offlineStatus').textContent='此瀏覽器不支援離線快取。';
