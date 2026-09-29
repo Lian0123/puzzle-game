@@ -1,7 +1,7 @@
 // Increment CACHE and VERSION whenever the app shell or bundled assets change.
-const CACHE='shijing-v6';
-const VERSION='6';
-const sceneImages=Array.from({length:50},(_,i)=>`./assets/landscape-${String(i+1).padStart(2,'0')}.jpg`);
+const CACHE='shijing-v7';
+const VERSION='7';
+const sceneImages=Array.from({length:100},(_,i)=>`./assets/landscape-${String(i+1).padStart(2,'0')}.jpg`);
 const assets=['./','./index.html','./style.css','./script.js','./manifest.webmanifest',`./sw.js?v=${VERSION}`,'./icons/icon-192.png','./icons/icon-512.png','./icons/apple-touch-icon.png',...sceneImages];
 self.addEventListener('install',event=>{
   event.waitUntil(caches.open(CACHE).then(cache=>cache.addAll(assets)).then(()=>self.skipWaiting()));
