@@ -13,6 +13,7 @@
   <link rel="apple-touch-icon" href="icons/apple-touch-icon.png">
   <link rel="icon" href="icons/icon-192.png" type="image/png">
   <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="map.css">
 </head>
 <body>
   <div class="grain" aria-hidden="true"></div>
@@ -30,8 +31,30 @@
       <div class="home-progress"><span id="levelProgress">已完成 0 / 100 關</span><div class="progress-track"><div id="progressFill"></div></div><p class="offline-status" id="offlineStatus">首次連線後會自動準備離線關卡。</p></div>
     </section>
     <section class="levels-section" aria-labelledby="levelsTitle">
-      <div class="levels-heading"><h2 id="levelsTitle">選擇關卡</h2><span id="levelCount">共 100 關</span></div>
-      <div class="levels-grid" id="galleryGrid"></div>
+      <div class="levels-heading">
+        <div><span class="map-eyebrow">✦ 一般世界 · 001—100</span><h2 id="levelsTitle">選擇你的旅程</h2><p>沿著路線前進，拼回每一段風景。</p></div>
+        <div class="levels-overview"><span id="levelCount">共 100 關</span><div class="map-legend" aria-label="關卡狀態圖例"><span><i class="legend-dot done"></i>已完成</span><span><i class="legend-dot now"></i>可遊玩</span><span><i class="legend-dot locked"></i>未解鎖</span></div></div>
+      </div>
+      <nav class="chapter-nav" id="chapterNav" aria-label="選擇旅程路線"></nav>
+      <div class="map-shell" id="mapShell">
+        <div class="map-topline"><span class="map-topline-route"><span aria-hidden="true">✧</span><span id="mapChapterNumber">01 / 05</span></span><span id="mapChapterProgress">已完成 0 / 20 關</span></div>
+        <div class="map-heading"><div class="map-heading-main"><span class="map-heading-icon" id="mapChapterIcon" aria-hidden="true">✦</span><div><h3 id="mapChapterTitle">晨光啟程</h3><p id="mapChapterDescription">沿著第一道晨光，拼回旅行的起點。</p></div></div><div class="map-status"><small>目前旅程</small><strong id="mapChapterStatus">第 1 關等你出發</strong><button id="mapJumpButton" type="button" hidden>回到目前路線 ↗</button></div></div>
+        <div class="world-map" role="group" aria-label="路線關卡地圖">
+          <svg class="map-landscape" viewBox="0 0 1000 700" preserveAspectRatio="none" aria-hidden="true"><circle class="map-sun" cx="790" cy="130" r="78"/><path class="map-far" d="M0 365 95 297 174 345 290 219 397 344 490 256 596 347 695 227 835 337 930 270 1000 335V700H0Z"/><path class="map-mid" d="M0 455 120 421 235 466 360 368 469 456 600 396 724 470 850 382 1000 448V700H0Z"/><path class="map-near" d="M0 554Q150 477 325 551T660 533T1000 552V700H0Z"/><path class="map-ground" d="M0 650Q170 565 355 633T705 621T1000 635V700H0Z"/></svg>
+          <svg class="map-details" viewBox="0 0 1000 700" preserveAspectRatio="none" aria-hidden="true">
+            <defs><g id="mapTree"><path d="M0 0-19 32h9l-17 25h20v18H7V57h20L10 32h9Z"/></g><g id="mapTower"><path d="M-21 50V0l7-10h28l7 10v50ZM-30 50h60v12h-60ZM-14-10v-13h8v13M6-10v-13h8v13"/><path class="map-detail-window" d="M-5 15a5 5 0 0 1 10 0v14H-5Z"/></g></defs>
+            <path class="map-cloud" d="M124 94c20-24 54-24 72 0 24-11 49 3 52 22H96c4-18 13-25 28-22Zm485 112c18-17 43-16 58 1 19-7 42 2 48 18H579c6-17 17-22 30-19Z"/>
+            <path class="map-river" d="M0 282c91 15 113 72 196 71s112-45 190-40 96 55 167 55 135-58 216-58 134 27 231 17"/>
+            <g class="map-forest"><use href="#mapTree" transform="translate(256 188) scale(.65)"/><use href="#mapTree" transform="translate(300 205) scale(.82)"/><use href="#mapTree" transform="translate(466 553) scale(.72)"/><use href="#mapTree" transform="translate(516 568) scale(.92)"/><use href="#mapTree" transform="translate(778 580) scale(.68)"/></g>
+            <g class="map-landmarks"><use href="#mapTower" transform="translate(748 258) scale(.74)"/><use href="#mapTower" transform="translate(252 466) scale(.64)"/></g>
+            <g class="map-sparkles"><path d="m375 91 5 14 14 5-14 5-5 14-5-14-14-5 14-5Zm501 323 4 12 12 4-12 4-4 12-4-12-12-4 12-4ZM115 559l3 9 9 3-9 3-3 9-3-9-9-3 9-3Z"/></g>
+          </svg>
+          <svg class="map-trail" viewBox="0 0 1000 700" preserveAspectRatio="none" aria-hidden="true"><path id="mapTrailBase" class="map-trail-base"/><path id="mapTrailDone" class="map-trail-done"/></svg>
+          <span class="map-flag map-flag-start" aria-hidden="true">✦ 起點</span><span class="map-flag map-flag-goal" aria-hidden="true">終點 ★</span>
+          <div class="map-nodes" id="galleryGrid"></div>
+        </div>
+        <div class="map-foot"><span>✦ 點選發光的關卡開始拼圖</span><span>每完成一關，就能前往下一站</span></div>
+      </div>
     </section>
   </main>
 

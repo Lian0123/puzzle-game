@@ -21,11 +21,25 @@ const scenes = [
   ['雲霧杉林','森林 · 微光'],['白沙椰灣','熱帶 · 碧海'],['櫻吹雪溪畔','春溪 · 花雨'],['金色麥野','原野 · 黃昏'],['彩霞群峰','雪峰 · 日暮']
 ].map(([title,subtitle],index)=>({title,subtitle,index,url:`assets/landscape-${String(index+1).padStart(2,'0')}.jpg`}));
 const TOTAL_LEVELS = scenes.length;
+const CHAPTER_SIZE = 20;
+const chapters = [
+  {title:'晨光啟程',description:'沿著第一道晨光，拼回旅行的起點。',icon:'☀',theme:'dawn'},
+  {title:'秘境漫遊',description:'穿過林地與海岸，尋找藏起來的風景。',icon:'❖',theme:'grove'},
+  {title:'越過天際',description:'追逐雲層，走向更遠的地平線。',icon:'△',theme:'sky'},
+  {title:'四季遠征',description:'讓春花、秋葉與冰雪串成旅程。',icon:'✿',theme:'seasons'},
+  {title:'星海終章',description:'完成最後的路線，收藏每一片光。',icon:'✦',theme:'stars'}
+];
+const mapPositions = Array.from({length:CHAPTER_SIZE},(_,index)=>{
+  const row=Math.floor(index/4),column=index%4;
+  return {x:(row%2?[86,62,38,14]:[14,38,62,86])[column],y:12+row*19};
+});
 
 const $ = id => document.getElementById(id);
 const gallery = $('galleryGrid');
+const chapterNav = $('chapterNav');
 const board = $('board');
 let current = 0, size = 4, pieces = [], moves = 0, seconds = 0, hints = 2, selected = -1, timer = null, playing = false, soundOn = true, gesture = null, ghost = null, ignoreClick = false, gameHistoryActive = false, backNoticeTimer = null;
+let selectedChapter = null;
 let deferredInstallPrompt = null;
 const saved = (()=>{try{return JSON.parse(localStorage.getItem('shijing-records')||'{}')}catch{return {}}})();
 const activeSessionKey = 'shijing-active-session';
@@ -39,7 +53,89 @@ function formatTime(s){return `${String(Math.floor(s/60)).padStart(2,'0')}:${Str
 function playTone(freq=480){if(!soundOn)return;try{const context=new (window.AudioContext||window.webkitAudioContext)(),o=context.createOscillator(),g=context.createGain();o.type='sine';o.frequency.setValueAtTime(freq,context.currentTime);o.frequency.exponentialRampToValueAtTime(freq*1.25,context.currentTime+.08);g.gain.setValueAtTime(.035,context.currentTime);g.gain.exponentialRampToValueAtTime(.001,context.currentTime+.13);o.connect(g).connect(context.destination);o.start();o.stop(context.currentTime+.14);o.onended=()=>context.close()}catch{}}
 function isCompleted(index){return Object.keys(saved).some(key=>key.startsWith(`${index}-`))}
 function nextLevel(){const index=scenes.findIndex(scene=>!isCompleted(scene.index));return index<0?0:index}
-function renderGallery(){const next=nextLevel(),done=scenes.filter(scene=>isCompleted(scene.index)).length,session=readActiveSession();gallery.innerHTML='';$('levelProgress').textContent=`已完成 ${done} / ${TOTAL_LEVELS} 關`;$('progressFill').style.width=`${done/TOTAL_LEVELS*100}%`;$('levelCount').textContent=`共 ${TOTAL_LEVELS} 關`;$('continueButton').innerHTML=session?`繼續第 ${session.current+1} 關 <span>→</span>`:done===TOTAL_LEVELS?`重玩第 1 關 <span>→</span>`:`開始第 ${next+1} 關 <span>→</span>`;scenes.forEach(scene=>{const card=document.createElement('button');card.className='level-card';card.type='button';const completed=isCompleted(scene.index),unlocked=completed||scene.index<=next;card.classList.toggle('completed',completed);card.classList.toggle('current',scene.index===next&&!completed);card.disabled=!unlocked;card.setAttribute('aria-label',`第 ${scene.index+1} 關：${scene.title}${unlocked?'':'，尚未解鎖'}`);card.innerHTML=`<span class="level-number">LEVEL ${String(scene.index+1).padStart(2,'0')}</span><span class="level-arrow">${completed?'✓':unlocked?'→':'·'}</span><span class="level-title">${unlocked?scene.title:'尚未解鎖'}</span><span class="level-status">${completed?'已完成':unlocked?'點擊開始':'完成前一關後開啟'}</span>`;if(unlocked)card.addEventListener('click',()=>openGame(scene.index));gallery.append(card)})}
+function mapPath(count){return mapPositions.slice(0,count).map(({x,y},index)=>`${index?'L':'M'} ${x*10} ${y*7}`).join(' ')}
+function renderChapterNav(){
+  const fragment=document.createDocumentFragment();
+  const next=nextLevel();
+  chapters.forEach((chapter,index)=>{
+    const start=index*CHAPTER_SIZE,end=Math.min(start+CHAPTER_SIZE,TOTAL_LEVELS);
+    const done=scenes.slice(start,end).filter(scene=>isCompleted(scene.index)).length;
+    const button=document.createElement('button');
+    button.type='button';button.className='chapter-tab';button.dataset.chapter=index;
+    button.classList.toggle('active',index===selectedChapter);
+    button.setAttribute('aria-pressed',String(index===selectedChapter));
+    button.setAttribute('aria-label',`第 ${index+1} 條路線：${chapter.title}，第 ${start+1} 到 ${end} 關，已完成 ${done} 關`);
+    const unlocked=done>0||start<=next;
+    button.classList.toggle('locked',!unlocked);
+    button.style.setProperty('--portal-image',unlocked?`url("${scenes[start].url}")`:'linear-gradient(145deg,#607a83,#213e53 65%,#142d42)');
+    button.style.setProperty('--portal-progress',`${done/(end-start)*100}%`);
+    const dots=Array.from({length:5},(_,step)=>`<i class="${done>=(step+1)*4?'filled':''}"></i>`).join('');
+    button.innerHTML=`<span class="chapter-portal"><span class="chapter-portal-glow" aria-hidden="true"></span><span class="chapter-portal-icon" aria-hidden="true">${chapter.icon}</span><span class="chapter-portal-index" aria-hidden="true">${String(index+1).padStart(2,'0')}</span></span><span class="chapter-portal-dots" aria-hidden="true">${dots}</span>`;
+    fragment.append(button);
+  });
+  chapterNav.replaceChildren(fragment);
+}
+function centerSelectedChapter(){
+  const tab=chapterNav.children[selectedChapter];
+  if(!tab)return;
+  chapterNav.scrollLeft+=tab.getBoundingClientRect().left-chapterNav.getBoundingClientRect().left-(chapterNav.clientWidth-tab.clientWidth)/2;
+}
+function renderChapterMap(next){
+  const chapter=chapters[selectedChapter],start=selectedChapter*CHAPTER_SIZE;
+  const chapterScenes=scenes.slice(start,start+CHAPTER_SIZE);
+  const done=chapterScenes.filter(scene=>isCompleted(scene.index)).length;
+  const activeChapter=Math.floor(next/CHAPTER_SIZE);
+  $('mapShell').dataset.theme=chapter.theme;
+  $('mapShell').style.setProperty('--map-image',done>0||start<=next?`url("${chapterScenes[0].url}")`:'linear-gradient(145deg,#98a8aa,#36576c)');
+  $('mapChapterNumber').textContent=`${String(selectedChapter+1).padStart(2,'0')} / ${String(chapters.length).padStart(2,'0')}`;
+  $('mapChapterProgress').textContent=`已完成 ${done} / ${chapterScenes.length} 關`;
+  $('mapChapterIcon').textContent=chapter.icon;
+  $('mapChapterTitle').textContent=chapter.title;
+  $('mapChapterDescription').textContent=chapter.description;
+  $('mapChapterStatus').textContent=done===chapterScenes.length?'本章全數完成':selectedChapter===activeChapter?`第 ${next+1} 關 · ${scenes[next].title}`:selectedChapter>activeChapter?`先完成第 ${next+1} 關，開啟新路線`:'回來探索已解鎖的風景';
+  $('mapJumpButton').hidden=selectedChapter===activeChapter;
+  $('mapTrailBase').setAttribute('d',mapPath(chapterScenes.length));
+  let trailDone=0;
+  while(trailDone<chapterScenes.length&&isCompleted(chapterScenes[trailDone].index))trailDone++;
+  $('mapTrailDone').setAttribute('d',mapPath(trailDone));
+  const fragment=document.createDocumentFragment();
+  chapterScenes.forEach((scene,index)=>{
+    const completed=isCompleted(scene.index),unlocked=completed||scene.index<=next;
+    const node=document.createElement('button');
+    node.type='button';node.className='map-node';node.dataset.level=scene.index;
+    node.classList.toggle('completed',completed);
+    node.classList.toggle('current',scene.index===next&&!completed);
+    node.classList.toggle('locked',!unlocked);
+    node.classList.toggle('milestone',(index+1)%5===0);
+    node.disabled=!unlocked;
+    node.style.setProperty('--x',`${mapPositions[index].x}%`);
+    node.style.setProperty('--y',`${mapPositions[index].y}%`);
+    node.style.setProperty('--order',index);
+    node.setAttribute('aria-label',`第 ${scene.index+1} 關：${unlocked?scene.title:'尚未解鎖'}${completed?'，已完成':''}`);
+    node.innerHTML=`<span class="map-node-face"><span class="map-node-number">${String(scene.index+1).padStart(2,'0')}</span><span class="map-node-symbol" aria-hidden="true">${completed?'✓':scene.index===next?'✦':'⌑'}</span></span><span class="map-node-name">${unlocked?scene.title:'神秘風景'}</span>`;
+    if(unlocked)node.addEventListener('click',()=>openGame(scene.index));
+    fragment.append(node);
+  });
+  gallery.replaceChildren(fragment);
+}
+function renderGallery(){
+  const next=nextLevel(),done=scenes.filter(scene=>isCompleted(scene.index)).length,session=readActiveSession();
+  if(selectedChapter===null)selectedChapter=Math.floor(next/CHAPTER_SIZE);
+  $('levelProgress').textContent=`已完成 ${done} / ${TOTAL_LEVELS} 關`;
+  $('progressFill').style.width=`${done/TOTAL_LEVELS*100}%`;
+  $('levelCount').textContent=`共 ${TOTAL_LEVELS} 關`;
+  $('continueButton').innerHTML=session?`繼續第 ${session.current+1} 關 <span>→</span>`:done===TOTAL_LEVELS?`重玩第 1 關 <span>→</span>`:`開始第 ${next+1} 關 <span>→</span>`;
+  renderChapterNav();renderChapterMap(next);centerSelectedChapter();
+}
+chapterNav.addEventListener('click',event=>{
+  const button=event.target.closest('button[data-chapter]');
+  if(!button)return;
+  selectedChapter=Number(button.dataset.chapter);
+  renderChapterNav();renderChapterMap(nextLevel());
+  centerSelectedChapter();
+  chapterNav.children[selectedChapter]?.focus({preventScroll:true});
+});
+$('mapJumpButton').addEventListener('click',()=>{selectedChapter=Math.floor(nextLevel()/CHAPTER_SIZE);renderChapterNav();renderChapterMap(nextLevel());centerSelectedChapter();gallery.querySelector('.map-node.current')?.focus()});
 function startTimer(){clearInterval(timer);timer=setInterval(()=>{if(playing){seconds++;$('timeDisplay').textContent=formatTime(seconds);saveActiveSession()}},1000)}
 function shuffle(){pieces=Array.from({length:size*size},(_,i)=>i);for(let i=pieces.length-1;i>0;i--){const j=Math.floor(Math.random()*(i+1));[pieces[i],pieces[j]]=[pieces[j],pieces[i]]}if(pieces.filter((p,i)=>p===i).length>pieces.length/3){return shuffle()}if(pieces.every((p,i)=>p===i))return shuffle();moves=0;seconds=0;hints=2;selected=-1;playing=true;startTimer();renderBoard();updateStats();updateBest();saveActiveSession()}
 function enterGameHistory(){if(gameHistoryActive)return;try{history.pushState({shijingGame:true},'',`${baseUrl}#game`);gameHistoryActive=true}catch{}}
@@ -54,7 +150,7 @@ function adjacent(a,b){return Math.abs(Math.floor(a/size)-Math.floor(b/size))+Ma
 function swap(a,b){if(!playing||a===b||a<0||b<0||a>=pieces.length||b>=pieces.length)return;[pieces[a],pieces[b]]=[pieces[b],pieces[a]];moves++;selected=-1;playTone(400+Math.random()*100);renderBoard();updateStats();if(pieces.every((p,i)=>p===i))win();else saveActiveSession()}
 function updateStats(){$('timeDisplay').textContent=formatTime(seconds);$('movesDisplay').textContent=moves;$('progressDisplay').textContent=`${pieces.filter((p,i)=>p===i).length}/${pieces.length}`;$('hintCount').textContent=hints;$('hintButton').disabled=hints<=0}
 function updateBest(){const record=saved[`${current}-${size}`];$('bestLine').textContent=record?`個人最佳：${formatTime(record.time)} · ${record.moves} 步`:'這幅風景還沒有完成紀錄。'}
-function win(){playing=false;clearInterval(timer);clearActiveSession();const key=`${current}-${size}`,previous=saved[key];if(!previous||seconds<previous.time||(seconds===previous.time&&moves<previous.moves)){saved[key]={time:seconds,moves};saveRecords()}const target=size*size*2,scene=scenes[current],stars=moves<=target?'★★★':moves<=target*2?'★★☆':'★☆☆';$('winImage').style.backgroundImage=`url('${scene.url}')`;$('winImage').setAttribute('aria-label',`完成的拼圖：${scene.title}`);$('winText').textContent=`「${scene.title}」已完整歸位。${current<scenes.length-1?'下一關已解鎖，你可以準備好再繼續。':`恭喜完成全部 ${TOTAL_LEVELS} 關！`}`;$('winTime').textContent=formatTime(seconds);$('winMoves').textContent=moves;$('winStars').textContent=stars;$('nextButton').textContent=current<scenes.length-1?'下一關 →':'重玩第一關 →';$('winOverlay').hidden=false;playTone(660);setTimeout(()=>$('nextButton').focus(),50)}
+function win(){playing=false;clearInterval(timer);clearActiveSession();const key=`${current}-${size}`,previous=saved[key];if(!previous||seconds<previous.time||(seconds===previous.time&&moves<previous.moves)){saved[key]={time:seconds,moves};saveRecords()}if(current+1===nextLevel())selectedChapter=Math.floor((current+1)/CHAPTER_SIZE);const target=size*size*2,scene=scenes[current],stars=moves<=target?'★★★':moves<=target*2?'★★☆':'★☆☆';$('winImage').style.backgroundImage=`url('${scene.url}')`;$('winImage').setAttribute('aria-label',`完成的拼圖：${scene.title}`);$('winText').textContent=`「${scene.title}」已完整歸位。${current<scenes.length-1?'下一關已解鎖，你可以準備好再繼續。':`恭喜完成全部 ${TOTAL_LEVELS} 關！`}`;$('winTime').textContent=formatTime(seconds);$('winMoves').textContent=moves;$('winStars').textContent=stars;$('nextButton').textContent=current<scenes.length-1?'下一關 →':'重玩第一關 →';$('winOverlay').hidden=false;playTone(660);setTimeout(()=>$('nextButton').focus(),50)}
 function showHint(){if(!playing||hints<=0)return;const misplaced=pieces.map((p,i)=>p===i?-1:i).filter(i=>i>=0);if(!misplaced.length)return;const from=misplaced[Math.floor(Math.random()*misplaced.length)],to=pieces[from];hints--;updateStats();saveActiveSession();const cells=board.children;cells[from]?.classList.add('hinted');cells[to]?.classList.add('hinted');setTimeout(()=>{cells[from]?.classList.remove('hinted');cells[to]?.classList.remove('hinted')},2500);playTone(760)}
 function tileAtPoint(x,y){const rect=board.getBoundingClientRect();if(x<rect.left||x>=rect.right||y<rect.top||y>=rect.bottom)return -1;const col=Math.min(size-1,Math.floor((x-rect.left)/rect.width*size)),row=Math.min(size-1,Math.floor((y-rect.top)/rect.height*size));return row*size+col}
 function clearDragMarks(){board.querySelectorAll('.dragging,.drop-target').forEach(tile=>tile.classList.remove('dragging','drop-target'))}
@@ -82,7 +178,7 @@ if('serviceWorker'in navigator){
   navigator.serviceWorker.addEventListener('message',event=>{
     if(event.data?.type==='OFFLINE_STATUS')$('offlineStatus').textContent=event.data.ready?'✓ 離線遊玩已準備好':'首次連線下載風景中，請保持連線。';
   });
-  window.addEventListener('load',()=>navigator.serviceWorker.register('./sw.js?v=7',{updateViaCache:'none'})
+  window.addEventListener('load',()=>navigator.serviceWorker.register('./sw.js?v=9',{updateViaCache:'none'})
     .then(registration=>registration.update().catch(()=>{}).then(()=>navigator.serviceWorker.ready))
     .then(registration=>registration.active?.postMessage({type:'CHECK_OFFLINE'}))
     .catch(()=>$('offlineStatus').textContent='此瀏覽器無法啟用離線快取。'));
