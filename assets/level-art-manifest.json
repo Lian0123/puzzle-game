@@ -1,0 +1,322 @@
+[
+  {
+    "level": 101,
+    "title": "浮空花庭",
+    "subtitle": "浮島 · 晨光",
+    "file": "landscape-101.jpg",
+    "tool": "built-in image_gen",
+    "prompt": "Use case: stylized-concept. Asset type: a single square original landscape illustration for level 101 of a landscape puzzle game, not a collage or UI. Scene: floating flower garden at dawn, several green islands suspended among thick golden clouds, a curved stone path lined with blue and coral flowers in the detailed foreground, small arched bridges linking islands, luminous waterfall spilling from the central island into a cloud sea, distant sunlit peaks and tiny gardens above. Style: beautifully finished painterly fantasy travel illustration, finely drawn natural textures, warm inviting adventure game background art. Composition: square 1:1 full bleed, clear distinct visual landmarks and color variation in all quadrants so 4x4 through 6x6 puzzle pieces are recognizable; layered foreground/midground/distance; no large blank sky. Emerald foliage, turquoise water, golden dawn, pastel flowers. No text, no frame, no logos, no watermark, no people, no recognizable copyrighted characters or recreation of a specific artwork. Create exactly one unique landscape, ideally 1024x1024."
+  },
+  {
+    "level": 102,
+    "title": "雲階小徑",
+    "subtitle": "雲梯 · 薄霧",
+    "file": "landscape-102.jpg",
+    "tool": "built-in image_gen",
+    "prompt": "Use case: stylized-concept. Asset type: one original square landscape illustration for a fantasy landscape puzzle game. Style: richly detailed painterly fantasy travel illustration, finely drawn natural textures, inviting premium adventure game background art. Composition: square 1:1 full bleed single coherent landscape, no collage; distinct visual landmarks and color variation in every quadrant for recognizable 4x4 to 6x6 puzzle pieces, layered foreground/midground/distance, no large empty sky. Scene: A winding staircase built into floating white stone cliffs, tiny hanging gardens, stepping-stone islands, cloudy valleys and delicate fern-lined balustrades. Lighting and palette: misty ivory, mint and pale peach. No text, logos, watermark, border, people, recognizable copyrighted characters, or recreation of a specific artwork. Create exactly one unique landscape, ideally 1024x1024."
+  },
+  {
+    "level": 103,
+    "title": "風橋花島",
+    "subtitle": "風橋 · 晴空",
+    "file": "landscape-103.jpg",
+    "tool": "built-in image_gen",
+    "prompt": "Use case: stylized-concept. Asset type: one original square landscape illustration for a fantasy landscape puzzle game. Style: richly detailed painterly fantasy travel illustration, finely drawn natural textures, inviting premium adventure game background art. Composition: square 1:1 full bleed single coherent landscape, no collage; distinct visual landmarks and color variation in every quadrant for recognizable 4x4 to 6x6 puzzle pieces, layered foreground/midground/distance, no large empty sky. Scene: Graceful long suspension bridges between round floating garden islands, red-orange flowering trees, narrow streams, distant clouds and colorful wind pennants without any symbols or writing. Lighting and palette: sunlit turquoise, warm coral and jade. No text, logos, watermark, border, people, recognizable copyrighted characters, or recreation of a specific artwork. Create exactly one unique landscape, ideally 1024x1024."
+  },
+  {
+    "level": 104,
+    "title": "晴空水苑",
+    "subtitle": "水苑 · 午後",
+    "file": "landscape-104.jpg",
+    "tool": "built-in image_gen",
+    "prompt": "Use case: stylized-concept. Asset type: one original square landscape illustration for a fantasy landscape puzzle game. Style: richly detailed painterly fantasy travel illustration, finely drawn natural textures, inviting premium adventure game background art. Composition: square 1:1 full bleed single coherent landscape, no collage; distinct visual landmarks and color variation in every quadrant for recognizable 4x4 to 6x6 puzzle pieces, layered foreground/midground/distance, no large empty sky. Scene: Terraced ornamental pools with lily pads atop an airborne island, water flowing between marble terraces and tumbling into sky, pergolas with vines, distant floating peaks. Lighting and palette: clear azure, ivory stone and fresh leaf green. No text, logos, watermark, border, people, recognizable copyrighted characters, or recreation of a specific artwork. Create exactly one unique landscape, ideally 1024x1024."
+  },
+  {
+    "level": 105,
+    "title": "藤蔓空廊",
+    "subtitle": "藤廊 · 春日",
+    "file": "landscape-105.jpg",
+    "tool": "built-in image_gen",
+    "prompt": "Use case: stylized-concept. Asset type: one original square landscape illustration for a fantasy landscape puzzle game. Style: richly detailed painterly fantasy travel illustration, finely drawn natural textures, inviting premium adventure game background art. Composition: square 1:1 full bleed single coherent landscape, no collage; distinct visual landmarks and color variation in every quadrant for recognizable 4x4 to 6x6 puzzle pieces, layered foreground/midground/distance, no large empty sky. Scene: An ancient open stone colonnade suspended above clouds, densely entwined with purple wisteria and flowering vines, winding tiled walkway and neighboring garden islands. Lighting and palette: spring lilac, verdant foliage and honey light. No text, logos, watermark, border, people, recognizable copyrighted characters, or recreation of a specific artwork. Create exactly one unique landscape, ideally 1024x1024."
+  },
+  {
+    "level": 106,
+    "title": "虹光雲瀑",
+    "subtitle": "雲瀑 · 雨後",
+    "file": "landscape-106.jpg",
+    "tool": "built-in image_gen",
+    "prompt": "Use case: stylized-concept. Asset type: one original square landscape illustration for a fantasy landscape puzzle game. Style: richly detailed painterly fantasy travel illustration, finely drawn natural textures, inviting premium adventure game background art. Composition: square 1:1 full bleed single coherent landscape, no collage; distinct visual landmarks and color variation in every quadrant for recognizable 4x4 to 6x6 puzzle pieces, layered foreground/midground/distance, no large empty sky. Scene: A huge waterfall spilling from a floating forest island through drifting clouds, a soft rainbow in spray, foreground green terraces with orange lilies, aerial stone outcrops. Lighting and palette: rain-washed teal, rainbow pastel and warm sunlight. No text, logos, watermark, border, people, recognizable copyrighted characters, or recreation of a specific artwork. Create exactly one unique landscape, ideally 1024x1024."
+  },
+  {
+    "level": 107,
+    "title": "星葉花坪",
+    "subtitle": "花坪 · 微風",
+    "file": "landscape-107.jpg",
+    "tool": "built-in image_gen",
+    "prompt": "Use case: stylized-concept. Asset type: one original square landscape illustration for a fantasy landscape puzzle game. Style: richly detailed painterly fantasy travel illustration, finely drawn natural textures, inviting premium adventure game background art. Composition: square 1:1 full bleed single coherent landscape, no collage; distinct visual landmarks and color variation in every quadrant for recognizable 4x4 to 6x6 puzzle pieces, layered foreground/midground/distance, no large empty sky. Scene: Floating meadow dotted with star-shaped silver leaves and pink wildflowers, a tiny domed garden shelter, cloud shadows across colorful flowering terraces, islands in the distance. Lighting and palette: soft pink, silver green and baby blue. No text, logos, watermark, border, people, recognizable copyrighted characters, or recreation of a specific artwork. Create exactly one unique landscape, ideally 1024x1024."
+  },
+  {
+    "level": 108,
+    "title": "天空風車",
+    "subtitle": "風車 · 夕陽",
+    "file": "landscape-108.jpg",
+    "tool": "built-in image_gen",
+    "prompt": "Use case: stylized-concept. Asset type: one original square landscape illustration for a fantasy landscape puzzle game. Style: richly detailed painterly fantasy travel illustration, finely drawn natural textures, inviting premium adventure game background art. Composition: square 1:1 full bleed single coherent landscape, no collage; distinct visual landmarks and color variation in every quadrant for recognizable 4x4 to 6x6 puzzle pieces, layered foreground/midground/distance, no large empty sky. Scene: Small original wooden windmills on several floating wheat and flower terraces, serpentine stone walls, aerial streams, a brilliant sunset illuminating cloud valleys. Lighting and palette: amber wheat, brick red roofs and peach clouds. No text, logos, watermark, border, people, recognizable copyrighted characters, or recreation of a specific artwork. Create exactly one unique landscape, ideally 1024x1024."
+  },
+  {
+    "level": 109,
+    "title": "琉璃天池",
+    "subtitle": "天池 · 青藍",
+    "file": "landscape-109.jpg",
+    "tool": "built-in image_gen",
+    "prompt": "Use case: stylized-concept. Asset type: one original square landscape illustration for a fantasy landscape puzzle game. Style: richly detailed painterly fantasy travel illustration, finely drawn natural textures, inviting premium adventure game background art. Composition: square 1:1 full bleed single coherent landscape, no collage; distinct visual landmarks and color variation in every quadrant for recognizable 4x4 to 6x6 puzzle pieces, layered foreground/midground/distance, no large empty sky. Scene: An aerial circular sapphire lake on a jagged island, clear glass-like water reflecting layered clouds, flowering rocky shores, a small arched footbridge and hanging ferns. Lighting and palette: bright sapphire, jade and pearl white. No text, logos, watermark, border, people, recognizable copyrighted characters, or recreation of a specific artwork. Create exactly one unique landscape, ideally 1024x1024."
+  },
+  {
+    "level": 110,
+    "title": "雲端茶亭",
+    "subtitle": "茶亭 · 晨曦",
+    "file": "landscape-110.jpg",
+    "tool": "built-in image_gen",
+    "prompt": "Use case: stylized-concept. Asset type: one original square landscape illustration for a fantasy landscape puzzle game. Style: richly detailed painterly fantasy travel illustration, finely drawn natural textures, inviting premium adventure game background art. Composition: square 1:1 full bleed single coherent landscape, no collage; distinct visual landmarks and color variation in every quadrant for recognizable 4x4 to 6x6 puzzle pieces, layered foreground/midground/distance, no large empty sky. Scene: A cozy original round wooden tea pavilion overlooking floating tea terraces, a winding flagstone path between emerald hedges, cascading streams and mist-filled sky. Lighting and palette: morning sage, mellow gold and warm timber. No text, logos, watermark, border, people, recognizable copyrighted characters, or recreation of a specific artwork. Create exactly one unique landscape, ideally 1024x1024."
+  },
+  {
+    "level": 111,
+    "title": "花海浮舟",
+    "subtitle": "浮舟 · 春潮",
+    "file": "landscape-111.jpg",
+    "tool": "built-in image_gen",
+    "prompt": "Use case: stylized-concept. Asset type: one original square landscape illustration for a fantasy landscape puzzle game. Style: richly detailed painterly fantasy travel illustration, finely drawn natural textures, inviting premium adventure game background art. Composition: square 1:1 full bleed single coherent landscape, no collage; distinct visual landmarks and color variation in every quadrant for recognizable 4x4 to 6x6 puzzle pieces, layered foreground/midground/distance, no large empty sky. Scene: A large graceful unoccupied garden boat floating slowly among clouds, deck covered with colorful flowers and a small greenhouse, neighboring cloud islands and waterfalls, no sails with symbols. Lighting and palette: coral flowers, aqua clouds and cream wood. No text, logos, watermark, border, people, recognizable copyrighted characters, or recreation of a specific artwork. Create exactly one unique landscape, ideally 1024x1024."
+  },
+  {
+    "level": 112,
+    "title": "白羽穹園",
+    "subtitle": "穹園 · 雲光",
+    "file": "landscape-112.jpg",
+    "tool": "built-in image_gen",
+    "prompt": "Use case: stylized-concept. Asset type: one original square landscape illustration for a fantasy landscape puzzle game. Style: richly detailed painterly fantasy travel illustration, finely drawn natural textures, inviting premium adventure game background art. Composition: square 1:1 full bleed single coherent landscape, no collage; distinct visual landmarks and color variation in every quadrant for recognizable 4x4 to 6x6 puzzle pieces, layered foreground/midground/distance, no large empty sky. Scene: An airy white stone domed conservatory on a floating island, cascading blue flowering plants, decorative feather-shaped architectural arches, beautiful rich mosaic garden pathways. Lighting and palette: pearl white, cobalt flowers and gentle jade. No text, logos, watermark, border, people, recognizable copyrighted characters, or recreation of a specific artwork. Create exactly one unique landscape, ideally 1024x1024."
+  },
+  {
+    "level": 113,
+    "title": "青藤吊苑",
+    "subtitle": "吊苑 · 濃綠",
+    "file": "landscape-113.jpg",
+    "tool": "built-in image_gen",
+    "prompt": "Use case: stylized-concept. Asset type: one original square landscape illustration for a fantasy landscape puzzle game. Style: richly detailed painterly fantasy travel illustration, finely drawn natural textures, inviting premium adventure game background art. Composition: square 1:1 full bleed single coherent landscape, no collage; distinct visual landmarks and color variation in every quadrant for recognizable 4x4 to 6x6 puzzle pieces, layered foreground/midground/distance, no large empty sky. Scene: Multi-tier hanging gardens with long trailing ivy beneath floating sandstone ledges, wooden footbridges, abundant ferns and hanging plant baskets, shafts of warm light through clouds. Lighting and palette: deep green, warm sandstone and turquoise mist. No text, logos, watermark, border, people, recognizable copyrighted characters, or recreation of a specific artwork. Create exactly one unique landscape, ideally 1024x1024."
+  },
+  {
+    "level": 114,
+    "title": "霞色空港",
+    "subtitle": "空港 · 晚霞",
+    "file": "landscape-114.jpg",
+    "tool": "built-in image_gen",
+    "prompt": "Use case: stylized-concept. Asset type: one original square landscape illustration for a fantasy landscape puzzle game. Style: richly detailed painterly fantasy travel illustration, finely drawn natural textures, inviting premium adventure game background art. Composition: square 1:1 full bleed single coherent landscape, no collage; distinct visual landmarks and color variation in every quadrant for recognizable 4x4 to 6x6 puzzle pieces, layered foreground/midground/distance, no large empty sky. Scene: A quaint fantasy sky harbor on a floating island, moored unoccupied small airships with balloon envelopes and wooden hulls, miniature stone docks among flowering houses and clouds. Lighting and palette: rose sunset, cream balloons and teal roofs. No text, logos, watermark, border, people, recognizable copyrighted characters, or recreation of a specific artwork. Create exactly one unique landscape, ideally 1024x1024."
+  },
+  {
+    "level": 115,
+    "title": "雲上鐘庭",
+    "subtitle": "鐘庭 · 午後",
+    "file": "landscape-115.jpg",
+    "tool": "built-in image_gen",
+    "prompt": "Use case: stylized-concept. Asset type: one original square landscape illustration for a fantasy landscape puzzle game. Style: richly detailed painterly fantasy travel illustration, finely drawn natural textures, inviting premium adventure game background art. Composition: square 1:1 full bleed single coherent landscape, no collage; distinct visual landmarks and color variation in every quadrant for recognizable 4x4 to 6x6 puzzle pieces, layered foreground/midground/distance, no large empty sky. Scene: An original bell tower surrounded by floating terraced flower gardens, bronze bell visible under open arches but no clock face or writing, curved stone stairways, cloud-filled canyon. Lighting and palette: sun-warmed ochre, soft green and sky blue. No text, logos, watermark, border, people, recognizable copyrighted characters, or recreation of a specific artwork. Create exactly one unique landscape, ideally 1024x1024."
+  },
+  {
+    "level": 116,
+    "title": "月白花階",
+    "subtitle": "花階 · 月色",
+    "file": "landscape-116.jpg",
+    "tool": "built-in image_gen",
+    "prompt": "Use case: stylized-concept. Asset type: one original square landscape illustration for a fantasy landscape puzzle game. Style: richly detailed painterly fantasy travel illustration, finely drawn natural textures, inviting premium adventure game background art. Composition: square 1:1 full bleed single coherent landscape, no collage; distinct visual landmarks and color variation in every quadrant for recognizable 4x4 to 6x6 puzzle pieces, layered foreground/midground/distance, no large empty sky. Scene: White flowering trees along moonlit stairways connecting hovering garden platforms, silver fountains, blue clouds, warm golden lanterns, crescent moon partially hidden by fine clouds. Lighting and palette: moonlit silver, midnight blue and warm amber. No text, logos, watermark, border, people, recognizable copyrighted characters, or recreation of a specific artwork. Create exactly one unique landscape, ideally 1024x1024."
+  },
+  {
+    "level": 117,
+    "title": "金葉雲谷",
+    "subtitle": "雲谷 · 金秋",
+    "file": "landscape-117.jpg",
+    "tool": "built-in image_gen",
+    "prompt": "Use case: stylized-concept. Asset type: one original square landscape illustration for a fantasy landscape puzzle game. Style: richly detailed painterly fantasy travel illustration, finely drawn natural textures, inviting premium adventure game background art. Composition: square 1:1 full bleed single coherent landscape, no collage; distinct visual landmarks and color variation in every quadrant for recognizable 4x4 to 6x6 puzzle pieces, layered foreground/midground/distance, no large empty sky. Scene: A valley made of closely clustered floating islands covered in golden ginkgo and copper maple trees, suspended mossy bridge and winding blue waterfalls, cloud-filled ravines. Lighting and palette: gold foliage, copper red and rich teal. No text, logos, watermark, border, people, recognizable copyrighted characters, or recreation of a specific artwork. Create exactly one unique landscape, ideally 1024x1024."
+  },
+  {
+    "level": 118,
+    "title": "晴雨雙島",
+    "subtitle": "雙島 · 天候",
+    "file": "landscape-118.jpg",
+    "tool": "built-in image_gen",
+    "prompt": "Use case: stylized-concept. Asset type: one original square landscape illustration for a fantasy landscape puzzle game. Style: richly detailed painterly fantasy travel illustration, finely drawn natural textures, inviting premium adventure game background art. Composition: square 1:1 full bleed single coherent landscape, no collage; distinct visual landmarks and color variation in every quadrant for recognizable 4x4 to 6x6 puzzle pieces, layered foreground/midground/distance, no large empty sky. Scene: Two contrasting floating garden islands linked by a curving bridge, one lit by golden sunlight with bright flowers and one under soft refreshing rain with reflective blue pools, cohesive single landscape. Lighting and palette: golden green, rainy blue and violet. No text, logos, watermark, border, people, recognizable copyrighted characters, or recreation of a specific artwork. Create exactly one unique landscape, ideally 1024x1024."
+  },
+  {
+    "level": 119,
+    "title": "天際花冠",
+    "subtitle": "花冠 · 晨星",
+    "file": "landscape-119.jpg",
+    "tool": "built-in image_gen",
+    "prompt": "Use case: stylized-concept. Asset type: one original square landscape illustration for a fantasy landscape puzzle game. Style: richly detailed painterly fantasy travel illustration, finely drawn natural textures, inviting premium adventure game background art. Composition: square 1:1 full bleed single coherent landscape, no collage; distinct visual landmarks and color variation in every quadrant for recognizable 4x4 to 6x6 puzzle pieces, layered foreground/midground/distance, no large empty sky. Scene: A ring of small garden islands surrounding a majestic high floating mountain peak crowned by a flowering stone sanctuary, hanging streams and layered pink dawn clouds. Lighting and palette: soft apricot dawn, jade, rose flowers and ivory. No text, logos, watermark, border, people, recognizable copyrighted characters, or recreation of a specific artwork. Create exactly one unique landscape, ideally 1024x1024."
+  },
+  {
+    "level": 120,
+    "title": "蒼穹瀑城",
+    "subtitle": "瀑城 · 終景",
+    "file": "landscape-120.jpg",
+    "tool": "built-in image_gen",
+    "prompt": "Use case: stylized-concept. Asset type: one original square landscape illustration for a fantasy landscape puzzle game. Style: richly detailed painterly fantasy travel illustration, finely drawn natural textures, inviting premium adventure game background art. Composition: square 1:1 full bleed single coherent landscape, no collage; distinct visual landmarks and color variation in every quadrant for recognizable 4x4 to 6x6 puzzle pieces, layered foreground/midground/distance, no large empty sky. Scene: A magnificent original floating garden city built across many islands with circular colonnades, cascading grand waterfalls, suspended arched bridges and rich flower terraces among luminous clouds. Lighting and palette: heroic golden light, emerald, turquoise and ivory. No text, logos, watermark, border, people, recognizable copyrighted characters, or recreation of a specific artwork. Create exactly one unique landscape, ideally 1024x1024."
+  },
+  {
+    "level": 121,
+    "title": "月光林門",
+    "subtitle": "森林 · 初月",
+    "file": "landscape-121.jpg",
+    "tool": "built-in image_gen",
+    "prompt": "Use case: stylized-concept. Asset type: one original square landscape illustration for a fantasy landscape puzzle game. Style: richly detailed painterly fantasy travel illustration, finely drawn natural textures, inviting premium adventure game background art. Composition: square 1:1 full bleed single coherent landscape, no collage; distinct visual landmarks and color variation in every quadrant for recognizable 4x4 to 6x6 puzzle pieces, layered foreground/midground/distance, no large empty sky. Scene: A welcoming ancient stone gateway formed by intertwined roots at the entrance to a luminous enchanted forest, crescent moon between treetops, blue-green ferns, glowing flowers and wet cobblestone path. Lighting and palette: midnight indigo, mint luminescence and gentle silver. No text, logos, watermark, border, people, recognizable copyrighted characters, or recreation of a specific artwork. Create exactly one unique landscape, ideally 1024x1024."
+  },
+  {
+    "level": 122,
+    "title": "螢河木橋",
+    "subtitle": "螢河 · 夜色",
+    "file": "landscape-122.jpg",
+    "tool": "built-in image_gen",
+    "prompt": "Use case: stylized-concept. Asset type: one original square landscape illustration for a fantasy landscape puzzle game. Style: richly detailed painterly fantasy travel illustration, finely drawn natural textures, inviting premium adventure game background art. Composition: square 1:1 full bleed single coherent landscape, no collage; distinct visual landmarks and color variation in every quadrant for recognizable 4x4 to 6x6 puzzle pieces, layered foreground/midground/distance, no large empty sky. Scene: A curved wooden bridge over a luminous winding turquoise river through tall ancient forest trees, thousands of tiny fireflies, mossy rocks and blue orchids in the foreground. Lighting and palette: electric turquoise, navy and moss green. No text, logos, watermark, border, people, recognizable copyrighted characters, or recreation of a specific artwork. Create exactly one unique landscape, ideally 1024x1024."
+  },
+  {
+    "level": 123,
+    "title": "銀蕈樹庭",
+    "subtitle": "蕈庭 · 月光",
+    "file": "landscape-123.jpg",
+    "tool": "built-in image_gen",
+    "prompt": "Use case: stylized-concept. Asset type: one original square landscape illustration for a fantasy landscape puzzle game. Style: richly detailed painterly fantasy travel illustration, finely drawn natural textures, inviting premium adventure game background art. Composition: square 1:1 full bleed single coherent landscape, no collage; distinct visual landmarks and color variation in every quadrant for recognizable 4x4 to 6x6 puzzle pieces, layered foreground/midground/distance, no large empty sky. Scene: An enchanted forest glade of silver-blue luminous mushrooms of different sizes surrounding an old twisted tree, tiny pools and intricate moss-covered paths, moonbeams through leaves. Lighting and palette: silver blue, violet shadow and fresh mint. No text, logos, watermark, border, people, recognizable copyrighted characters, or recreation of a specific artwork. Create exactly one unique landscape, ideally 1024x1024."
+  },
+  {
+    "level": 124,
+    "title": "星苔石徑",
+    "subtitle": "石徑 · 幽光",
+    "file": "landscape-124.jpg",
+    "tool": "built-in image_gen",
+    "prompt": "Use case: stylized-concept. Asset type: one original square landscape illustration for a fantasy landscape puzzle game. Style: richly detailed painterly fantasy travel illustration, finely drawn natural textures, inviting premium adventure game background art. Composition: square 1:1 full bleed single coherent landscape, no collage; distinct visual landmarks and color variation in every quadrant for recognizable 4x4 to 6x6 puzzle pieces, layered foreground/midground/distance, no large empty sky. Scene: A winding rough stone pathway covered with star-like luminous moss, tall sculptural forest roots, jewel-colored ferns and softly glowing stones, a small stream crossing in the distance. Lighting and palette: emerald and cyan, deep midnight forest. No text, logos, watermark, border, people, recognizable copyrighted characters, or recreation of a specific artwork. Create exactly one unique landscape, ideally 1024x1024."
+  },
+  {
+    "level": 125,
+    "title": "古樹燈屋",
+    "subtitle": "樹屋 · 暖燈",
+    "file": "landscape-125.jpg",
+    "tool": "built-in image_gen",
+    "prompt": "Use case: stylized-concept. Asset type: one original square landscape illustration for a fantasy landscape puzzle game. Style: richly detailed painterly fantasy travel illustration, finely drawn natural textures, inviting premium adventure game background art. Composition: square 1:1 full bleed single coherent landscape, no collage; distinct visual landmarks and color variation in every quadrant for recognizable 4x4 to 6x6 puzzle pieces, layered foreground/midground/distance, no large empty sky. Scene: A cozy original round treehouse nestled among the huge roots of an ancient tree, warm lit circular windows, spiral wooden steps, glowing blue mushrooms, delicate lanterns and streams. Lighting and palette: warm amber windows, deep teal and moonlit blue. No text, logos, watermark, border, people, recognizable copyrighted characters, or recreation of a specific artwork. Create exactly one unique landscape, ideally 1024x1024."
+  },
+  {
+    "level": 126,
+    "title": "月露蓮潭",
+    "subtitle": "蓮潭 · 薄霧",
+    "file": "landscape-126.jpg",
+    "tool": "built-in image_gen",
+    "prompt": "Use case: stylized-concept. Asset type: one original square landscape illustration for a fantasy landscape puzzle game. Style: richly detailed painterly fantasy travel illustration, finely drawn natural textures, inviting premium adventure game background art. Composition: square 1:1 full bleed single coherent landscape, no collage; distinct visual landmarks and color variation in every quadrant for recognizable 4x4 to 6x6 puzzle pieces, layered foreground/midground/distance, no large empty sky. Scene: A still enchanted forest pool with huge luminous white lotus flowers and layered lily pads, curved branches reflecting in water, pearl dew drops and small waterfalls in blue moonlight. Lighting and palette: pearl white, luminous aqua and indigo. No text, logos, watermark, border, people, recognizable copyrighted characters, or recreation of a specific artwork. Create exactly one unique landscape, ideally 1024x1024."
+  },
+  {
+    "level": 127,
+    "title": "藍蝶花谷",
+    "subtitle": "花谷 · 微光",
+    "file": "landscape-127.jpg",
+    "tool": "built-in image_gen",
+    "prompt": "Use case: stylized-concept. Asset type: one original square landscape illustration for a fantasy landscape puzzle game. Style: richly detailed painterly fantasy travel illustration, finely drawn natural textures, inviting premium adventure game background art. Composition: square 1:1 full bleed single coherent landscape, no collage; distinct visual landmarks and color variation in every quadrant for recognizable 4x4 to 6x6 puzzle pieces, layered foreground/midground/distance, no large empty sky. Scene: A deep forest valley filled with bright blue flowers, tiny luminous blue butterflies scattered naturally, a winding stream and small natural stone bridge framed by thick tree roots. Lighting and palette: saturated cobalt flowers, teal foliage and silver moon. No text, logos, watermark, border, people, recognizable copyrighted characters, or recreation of a specific artwork. Create exactly one unique landscape, ideally 1024x1024."
+  },
+  {
+    "level": 128,
+    "title": "翠光藤廊",
+    "subtitle": "藤廊 · 密林",
+    "file": "landscape-128.jpg",
+    "tool": "built-in image_gen",
+    "prompt": "Use case: stylized-concept. Asset type: one original square landscape illustration for a fantasy landscape puzzle game. Style: richly detailed painterly fantasy travel illustration, finely drawn natural textures, inviting premium adventure game background art. Composition: square 1:1 full bleed single coherent landscape, no collage; distinct visual landmarks and color variation in every quadrant for recognizable 4x4 to 6x6 puzzle pieces, layered foreground/midground/distance, no large empty sky. Scene: A tunnel of arching living vines and ferns glowing gently with green light, braided roots forming stepping stones over shallow water, small amber hanging lanterns in the deep forest. Lighting and palette: bright jade, dark navy and tiny amber highlights. No text, logos, watermark, border, people, recognizable copyrighted characters, or recreation of a specific artwork. Create exactly one unique landscape, ideally 1024x1024."
+  },
+  {
+    "level": 129,
+    "title": "夜語水車",
+    "subtitle": "水車 · 星夜",
+    "file": "landscape-129.jpg",
+    "tool": "built-in image_gen",
+    "prompt": "Use case: stylized-concept. Asset type: one original square landscape illustration for a fantasy landscape puzzle game. Style: richly detailed painterly fantasy travel illustration, finely drawn natural textures, inviting premium adventure game background art. Composition: square 1:1 full bleed single coherent landscape, no collage; distinct visual landmarks and color variation in every quadrant for recognizable 4x4 to 6x6 puzzle pieces, layered foreground/midground/distance, no large empty sky. Scene: A charming unoccupied moss-roofed woodland mill with a wooden water wheel on a bioluminescent creek, oversized roots and shining white flowers, moonbeams and warm lit windows. Lighting and palette: navy night, turquoise water and warm gold. No text, logos, watermark, border, people, recognizable copyrighted characters, or recreation of a specific artwork. Create exactly one unique landscape, ideally 1024x1024."
+  },
+  {
+    "level": 130,
+    "title": "精靈森泉",
+    "subtitle": "森泉 · 清輝",
+    "file": "landscape-130.jpg",
+    "tool": "built-in image_gen",
+    "prompt": "Use case: stylized-concept. Asset type: one original square landscape illustration for a fantasy landscape puzzle game. Style: richly detailed painterly fantasy travel illustration, finely drawn natural textures, inviting premium adventure game background art. Composition: square 1:1 full bleed single coherent landscape, no collage; distinct visual landmarks and color variation in every quadrant for recognizable 4x4 to 6x6 puzzle pieces, layered foreground/midground/distance, no large empty sky. Scene: A magnificent tiered natural fountain made of old roots and smooth rocks in a magical forest clearing, luminous turquoise spring water, richly colored tiny flowers and blue crystalline moss, no characters. Lighting and palette: mint water, sapphire shadows and silver highlights. No text, logos, watermark, border, people, recognizable copyrighted characters, or recreation of a specific artwork. Create exactly one unique landscape, ideally 1024x1024."
+  },
+  {
+    "level": 131,
+    "title": "琥珀樹窗",
+    "subtitle": "樹窗 · 微雨",
+    "file": "landscape-131.jpg",
+    "tool": "built-in image_gen",
+    "prompt": "Use case: stylized-concept. Asset type: one original square landscape illustration for a fantasy landscape puzzle game. Style: richly detailed painterly fantasy travel illustration, finely drawn natural textures, inviting premium adventure game background art. Composition: square 1:1 full bleed single coherent landscape, no collage; distinct visual landmarks and color variation in every quadrant for recognizable 4x4 to 6x6 puzzle pieces, layered foreground/midground/distance, no large empty sky. Scene: Original cozy woodland houses grown into several giant tree trunks, circular amber windows and mossy roofs, wooden walkways above a reflective rainy creek and blue glowing plants. Lighting and palette: amber, rain-dark teal and cool blue. No text, logos, watermark, border, people, recognizable copyrighted characters, or recreation of a specific artwork. Create exactly one unique landscape, ideally 1024x1024."
+  },
+  {
+    "level": 132,
+    "title": "月弧石橋",
+    "subtitle": "石橋 · 夜空",
+    "file": "landscape-132.jpg",
+    "tool": "built-in image_gen",
+    "prompt": "Use case: stylized-concept. Asset type: one original square landscape illustration for a fantasy landscape puzzle game. Style: richly detailed painterly fantasy travel illustration, finely drawn natural textures, inviting premium adventure game background art. Composition: square 1:1 full bleed single coherent landscape, no collage; distinct visual landmarks and color variation in every quadrant for recognizable 4x4 to 6x6 puzzle pieces, layered foreground/midground/distance, no large empty sky. Scene: An elegant crescent-shaped ancient stone bridge spanning a luminous ravine in a dense forest, moon reflected in small waterfalls, silver-leaf trees and lilac flowers. Lighting and palette: silver foliage, indigo and pale lavender. No text, logos, watermark, border, people, recognizable copyrighted characters, or recreation of a specific artwork. Create exactly one unique landscape, ideally 1024x1024."
+  },
+  {
+    "level": 133,
+    "title": "銀葉秘庭",
+    "subtitle": "秘庭 · 秋夜",
+    "file": "landscape-133.jpg",
+    "tool": "built-in image_gen",
+    "prompt": "Use case: stylized-concept. Asset type: one original square landscape illustration for a fantasy landscape puzzle game. Style: richly detailed painterly fantasy travel illustration, finely drawn natural textures, inviting premium adventure game background art. Composition: square 1:1 full bleed single coherent landscape, no collage; distinct visual landmarks and color variation in every quadrant for recognizable 4x4 to 6x6 puzzle pieces, layered foreground/midground/distance, no large empty sky. Scene: A secret woodland garden filled with silver-leaf trees and golden mushrooms, an ornate original mossy circular pavilion, leaf-covered paths and a quiet glimmering stream. Lighting and palette: silver, copper gold and deep forest blue. No text, logos, watermark, border, people, recognizable copyrighted characters, or recreation of a specific artwork. Create exactly one unique landscape, ideally 1024x1024."
+  },
+  {
+    "level": 134,
+    "title": "繁星蘆灣",
+    "subtitle": "蘆灣 · 星光",
+    "file": "landscape-134.jpg",
+    "tool": "built-in image_gen",
+    "prompt": "Use case: stylized-concept. Asset type: one original square landscape illustration for a fantasy landscape puzzle game. Style: richly detailed painterly fantasy travel illustration, finely drawn natural textures, inviting premium adventure game background art. Composition: square 1:1 full bleed single coherent landscape, no collage; distinct visual landmarks and color variation in every quadrant for recognizable 4x4 to 6x6 puzzle pieces, layered foreground/midground/distance, no large empty sky. Scene: An enchanted reed-covered woodland lake with countless bioluminescent reeds, small driftwood islets, a rustic wooden jetty and a starry sky seen through overlapping branches. Lighting and palette: deep sapphire, luminous cyan and soft gold stars. No text, logos, watermark, border, people, recognizable copyrighted characters, or recreation of a specific artwork. Create exactly one unique landscape, ideally 1024x1024."
+  },
+  {
+    "level": 135,
+    "title": "螢火瀑階",
+    "subtitle": "瀑階 · 夜霧",
+    "file": "landscape-135.jpg",
+    "tool": "built-in image_gen",
+    "prompt": "Use case: stylized-concept. Asset type: one original square landscape illustration for a fantasy landscape puzzle game. Style: richly detailed painterly fantasy travel illustration, finely drawn natural textures, inviting premium adventure game background art. Composition: square 1:1 full bleed single coherent landscape, no collage; distinct visual landmarks and color variation in every quadrant for recognizable 4x4 to 6x6 puzzle pieces, layered foreground/midground/distance, no large empty sky. Scene: Many stepped little waterfalls among huge tree roots, surrounded by luminous yellow-green fireflies and glowing blue flowers, moss-covered terraces descend into an enchanted pool. Lighting and palette: jade firefly light, teal waterfalls and deep blue. No text, logos, watermark, border, people, recognizable copyrighted characters, or recreation of a specific artwork. Create exactly one unique landscape, ideally 1024x1024."
+  },
+  {
+    "level": 136,
+    "title": "幽藍樹冠",
+    "subtitle": "樹冠 · 月夜",
+    "file": "landscape-136.jpg",
+    "tool": "built-in image_gen",
+    "prompt": "Use case: stylized-concept. Asset type: one original square landscape illustration for a fantasy landscape puzzle game. Style: richly detailed painterly fantasy travel illustration, finely drawn natural textures, inviting premium adventure game background art. Composition: square 1:1 full bleed single coherent landscape, no collage; distinct visual landmarks and color variation in every quadrant for recognizable 4x4 to 6x6 puzzle pieces, layered foreground/midground/distance, no large empty sky. Scene: Elevated view inside a magical tree canopy, wooden spiral walkways circling immense blue-lit trunks, dense hanging fern gardens and suspended glowing fruit, moonlight through layered leaves. Lighting and palette: indigo canopy, luminous blue and warm tiny lanterns. No text, logos, watermark, border, people, recognizable copyrighted characters, or recreation of a specific artwork. Create exactly one unique landscape, ideally 1024x1024."
+  },
+  {
+    "level": 137,
+    "title": "暮紫森湖",
+    "subtitle": "森湖 · 暮色",
+    "file": "landscape-137.jpg",
+    "tool": "built-in image_gen",
+    "prompt": "Use case: stylized-concept. Asset type: one original square landscape illustration for a fantasy landscape puzzle game. Style: richly detailed painterly fantasy travel illustration, finely drawn natural textures, inviting premium adventure game background art. Composition: square 1:1 full bleed single coherent landscape, no collage; distinct visual landmarks and color variation in every quadrant for recognizable 4x4 to 6x6 puzzle pieces, layered foreground/midground/distance, no large empty sky. Scene: A still violet enchanted lake at twilight with tiny wooded islands, large twisted trees and pink glowing flowering bushes, low stone bridge and rich detailed mirrored shore. Lighting and palette: violet twilight, plum pink and cool mint. No text, logos, watermark, border, people, recognizable copyrighted characters, or recreation of a specific artwork. Create exactly one unique landscape, ideally 1024x1024."
+  },
+  {
+    "level": 138,
+    "title": "月砂溪灣",
+    "subtitle": "溪灣 · 皎月",
+    "file": "landscape-138.jpg",
+    "tool": "built-in image_gen",
+    "prompt": "Use case: stylized-concept. Asset type: one original square landscape illustration for a fantasy landscape puzzle game. Style: richly detailed painterly fantasy travel illustration, finely drawn natural textures, inviting premium adventure game background art. Composition: square 1:1 full bleed single coherent landscape, no collage; distinct visual landmarks and color variation in every quadrant for recognizable 4x4 to 6x6 puzzle pieces, layered foreground/midground/distance, no large empty sky. Scene: A winding woodland stream with softly glowing silver sandbanks and smooth pebble islands, roots arching above the water, oversized translucent leaves and small blue flowers under the full moon. Lighting and palette: silver sand, cyan stream and deep emerald. No text, logos, watermark, border, people, recognizable copyrighted characters, or recreation of a specific artwork. Create exactly one unique landscape, ideally 1024x1024."
+  },
+  {
+    "level": 139,
+    "title": "星藤古殿",
+    "subtitle": "古殿 · 星輝",
+    "file": "landscape-139.jpg",
+    "tool": "built-in image_gen",
+    "prompt": "Use case: stylized-concept. Asset type: one original square landscape illustration for a fantasy landscape puzzle game. Style: richly detailed painterly fantasy travel illustration, finely drawn natural textures, inviting premium adventure game background art. Composition: square 1:1 full bleed single coherent landscape, no collage; distinct visual landmarks and color variation in every quadrant for recognizable 4x4 to 6x6 puzzle pieces, layered foreground/midground/distance, no large empty sky. Scene: An ancient original ruined woodland sanctuary entwined with luminous vines, tall curved stone columns, shining blue crystals growing beside mossy stairs and flowing forest water, no symbols or writing. Lighting and palette: moonlit stone, blue crystals and bright green vines. No text, logos, watermark, border, people, recognizable copyrighted characters, or recreation of a specific artwork. Create exactly one unique landscape, ideally 1024x1024."
+  },
+  {
+    "level": 140,
+    "title": "永夜森之心",
+    "subtitle": "森心 · 終景",
+    "file": "landscape-140.jpg",
+    "tool": "built-in image_gen",
+    "prompt": "Use case: stylized-concept. Asset type: one original square landscape illustration for a fantasy landscape puzzle game. Style: richly detailed painterly fantasy travel illustration, finely drawn natural textures, inviting premium adventure game background art. Composition: square 1:1 full bleed single coherent landscape, no collage; distinct visual landmarks and color variation in every quadrant for recognizable 4x4 to 6x6 puzzle pieces, layered foreground/midground/distance, no large empty sky. Scene: A breathtaking vast enchanted forest centered on a majestic ancient world tree with glowing blue and mint leaves, warm tiny treehouses in the roots, cascading luminous rivers and bridges, elaborate foreground ferns and mushrooms. Lighting and palette: radiant turquoise and jade, midnight indigo and amber. No text, logos, watermark, border, people, recognizable copyrighted characters, or recreation of a specific artwork. Create exactly one unique landscape, ideally 1024x1024."
+  }
+]

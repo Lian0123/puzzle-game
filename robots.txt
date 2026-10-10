@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /puzzle-game/
+
+Sitemap: https://lian0123.github.io/puzzle-game/sitemap.xml
