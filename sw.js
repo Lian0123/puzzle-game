@@ -1,7 +1,7 @@
 // Increment CACHE and VERSION whenever the app shell or bundled assets change.
 importScripts('./game-data.js');
-const CACHE='shijing-v12';
-const VERSION='12';
+const CACHE='shijing-v13';
+const VERSION='13';
 const sceneImages=self.ShijingData.scenes.map(scene=>`./${scene.url}`);
 const shell=['./','./index.html','./style.css','./map.css','./polish.css','./adventure.css','./game-data.js','./progression.js','./script.js','./manifest.webmanifest',`./sw.js?v=${VERSION}`,'./icons/icon-192.png','./icons/icon-512.png','./icons/apple-touch-icon.png'];
 const assets=[...shell,...sceneImages];

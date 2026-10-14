@@ -22,12 +22,12 @@ test('keyboard focus remains within game and returns home',async({page})=>{
 test('fantasy worlds, full collection and completion dialog pass WCAG AA checks',async({page},info)=>{
   test.setTimeout(90000);await page.goto('/');
   await page.evaluate(()=>{
-    localStorage.setItem('shijing-records',JSON.stringify(Object.fromEntries(Array.from({length:139},(_,i)=>[`${i}-4`,{time:60,moves:20}]))));
-    localStorage.setItem('shijing-active-session',JSON.stringify({current:139,size:4,pieces:[1,0,...Array.from({length:14},(_,i)=>i+2)],moves:2,seconds:20,hints:2}));
+    localStorage.setItem('shijing-records',JSON.stringify(Object.fromEntries(Array.from({length:299},(_,i)=>[`${i}-4`,{time:60,moves:20}]))));
+    localStorage.setItem('shijing-active-session',JSON.stringify({current:299,size:4,pieces:[1,0,...Array.from({length:14},(_,i)=>i+2)],moves:2,seconds:20,hints:2}));
   });await page.reload();
   const audit=async()=>{await page.locator('dialog[open]').evaluateAll(async dialogs=>{await Promise.all(dialogs.flatMap(dialog=>dialog.getAnimations({subtree:true})).filter(animation=>Number.isFinite(animation.effect.getComputedTiming().endTime)).map(animation=>animation.finished.catch(()=>{})));});return new AxeBuilder({page}).withTags(['wcag2a','wcag2aa','wcag21a','wcag21aa']).analyze();};
-  await expect(page.locator('#mapChapterTitle')).toHaveText('月光精靈森');expect((await audit()).violations).toEqual([]);
-  await page.evaluate(()=>{document.activeElement?.blur();scrollTo(0,0);});await page.screenshot({path:`qa/${info.project.name}-moonforest-map.png`,fullPage:true,animations:'disabled',scale:'css'});
+  await expect(page.locator('#mapChapterTitle')).toHaveText('雲上宮闕');expect((await audit()).violations).toEqual([]);
+  await page.evaluate(()=>{document.activeElement?.blur();scrollTo(0,0);});await page.screenshot({path:`qa/${info.project.name}-ancient-map.png`,fullPage:true,animations:'disabled',scale:'css'});
   await page.locator('#collectionButton').click();expect((await audit()).violations).toEqual([]);await page.locator('#featureClose').click();
   await page.locator('#continueButton').click();await page.locator('.tile').nth(0).click();await page.locator('.tile').nth(1).click();await expect(page.locator('#winOverlay')).toBeVisible();expect((await audit()).violations).toEqual([]);
 });

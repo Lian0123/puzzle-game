@@ -17,3 +17,23 @@ button{font-weight:600}.topbar{height:82px;border-bottom-color:#b7c6e529}.brand-
 .moonforest-landforms{display:none;position:absolute;inset:0;width:100%;height:100%;pointer-events:none;opacity:.85}.map-shell[data-theme="moonforest"] .fantasy-landforms{display:none}.map-shell[data-theme="moonforest"] .moonforest-landforms{display:block}.map-shell[data-theme="moonforest"] .map-sun{fill:#d9f2fc;opacity:.8}.map-shell[data-theme="moonforest"] .map-cloud{opacity:.15}
 @media(max-width:650px){html{scroll-padding-bottom:calc(90px + env(safe-area-inset-bottom))}.home button,.home a{scroll-margin-block:90px}.game-is-open{scroll-padding-bottom:0}.game-shell button{scroll-margin-block:12px}}
 @media(max-width:650px) and (max-height:740px){.game-header{padding-bottom:10px;margin-bottom:11px}.stat{padding:6px 10px}.game-mode-line{margin-bottom:10px}.board-progress-track{margin-bottom:10px}.board-help{margin:10px 0}.controls-card{padding:10px}.difficulty{margin-bottom:8px}.toolbelt{margin-top:8px;padding-top:8px}.toolbelt button{padding:6px 5px}.best-line{margin-top:6px;padding-top:6px}}
+/* Expanded worlds and route palettes, 141–300. */
+.world-nav{grid-template-columns:repeat(3,minmax(0,1fr))}
+.world-card[data-world="2"]{background:linear-gradient(130deg,#685449,#3c4b54)}
+.map-shell[data-theme="crystal"]{--sky-top:#55548f;--sky-bottom:#b2b5d1;--far:#8c82b6;--mid:#72679e;--near:#506d97;--ground:#385779;--accent:#e8d9f5}
+.map-shell[data-theme="arcane"]{--sky-top:#705a95;--sky-bottom:#d8b8b2;--far:#a68ab0;--mid:#77779a;--near:#535f80;--ground:#354660;--accent:#ffe3a6}
+.map-shell[data-theme="dreamsea"]{--sky-top:#3b427c;--sky-bottom:#a092b9;--far:#7773a5;--mid:#627695;--near:#456982;--ground:#2e4c6e;--accent:#f0dff9}
+.map-shell[data-theme="ancientpath"]{--sky-top:#628b85;--sky-bottom:#c6cfb1;--far:#8ca99a;--mid:#6c8d81;--near:#497467;--ground:#31544d;--accent:#f5e7b9}
+.map-shell[data-theme="waterway"]{--sky-top:#6a929f;--sky-bottom:#d6dcc0;--far:#91b0ad;--mid:#709397;--near:#507983;--ground:#355b68;--accent:#ffe7bd}
+.map-shell[data-theme="gardens"]{--sky-top:#99899e;--sky-bottom:#e1c7b8;--far:#b3a4ac;--mid:#8f9591;--near:#687d78;--ground:#425c59;--accent:#ffecd0}
+.map-shell[data-theme="oldcity"]{--sky-top:#735d83;--sky-bottom:#d4aa98;--far:#a78b96;--mid:#857783;--near:#615c72;--ground:#41445d;--accent:#ffdda0}
+.map-shell[data-theme="palace"]{--sky-top:#718498;--sky-bottom:#e2d3b9;--far:#a6b0b2;--mid:#879a9b;--near:#617f83;--ground:#405b69;--accent:#ffe5a6}
+.ancient-landforms{display:none;position:absolute;inset:0;z-index:1;width:100%;height:100%;pointer-events:none;opacity:.75}
+.map-shell[data-world="ancient"] .ancient-landforms{display:block}
+.map-shell[data-world="ancient"] .map-landmarks{display:none}
+.map-shell[data-world="ancient"] .map-forest{fill:#315a51}
+.map-shell[data-world="ancient"] .map-cloud{opacity:.32}
+@media(max-width:1100px){.world-nav{grid-template-columns:repeat(2,minmax(0,1fr))}.world-card:last-child{grid-column:1/-1}}
+@media(max-width:650px){.world-nav{grid-template-columns:1fr}.world-card:last-child{grid-column:auto}}
+
+.badge-grid{grid-template-columns:repeat(3,minmax(0,1fr))}

@@ -44,9 +44,9 @@ function renderPlayerHUD() {
   const done = scenes.filter(scene => isCompleted(scene.index)).length;
   const complete = done === TOTAL_LEVELS, experience = complete ? 1000 : done % 10 * 100;
   $('playerLevel').textContent = `LV. ${String(Math.floor(done / 10) + 1).padStart(2,'0')}`;
-  $('playerRank').textContent = done >= 140 ? '幻想傳奇 · 世界的風景都在心裡' : done >= 100 ? '跨界旅人 · 新世界等你探索' : done >= 20 ? '山海收藏家 · 旅程越來越精彩' : '初見旅人 · 旅程從這裡開始';
+  $('playerRank').textContent = done >= 300 ? '三界傳奇 · 世界的風景都在心裡' : done >= 200 ? '古風行者 · 宮闕與山水等你收藏' : done >= 100 ? '跨界旅人 · 新世界等你探索' : done >= 20 ? '山海收藏家 · 旅程越來越精彩' : '初見旅人 · 旅程從這裡開始';
   $('journeyXP').textContent = `${experience.toLocaleString('zh-TW')} / 1,000 旅途經驗`;
-  $('nextRankText').textContent = complete ? '140 幅風景全收藏 · 旅人等級已滿' : `再完成 ${10-done%10} 個新關卡，提升旅人等級`;
+  $('nextRankText').textContent = complete ? `${TOTAL_LEVELS} 幅風景全收藏 · 旅人等級已滿` : `再完成 ${10-done%10} 個新關卡，提升旅人等級`;
   $('xpFill').style.width = `${experience / 10}%`;
   $('collectionStat').innerHTML = `${done} <small>/ ${TOTAL_LEVELS}</small>`;
   $('chapterStat').innerHTML = `${chapters.filter((_,i)=>scenes.slice(i*CHAPTER_SIZE,(i+1)*CHAPTER_SIZE).every(scene=>isCompleted(scene.index))).length} <small>/ ${chapters.length}</small>`;
@@ -55,6 +55,8 @@ function renderPlayerHUD() {
   $('heroStageTitle').textContent = `${String(scene.index+1).padStart(3,'0')} · ${scene.title}`;
   $('heroStageWorld').textContent = `${worlds[scene.worldId].title} · ${chapter.title}`;
   document.querySelector('.hero-landscape').src = scene.url;
+  document.querySelector('.scene-caption > span').textContent = `${String(scene.index+1).padStart(3,'0')} / ${TOTAL_LEVELS}`;
+  document.querySelector('.scene-caption > strong').textContent = scene.title;
   document.querySelectorAll('.floating-piece').forEach(piece=>piece.style.backgroundImage=`url('${scene.url}')`);
 }
 function renderWorldNav() {
@@ -62,7 +64,7 @@ function renderWorldNav() {
   $('worldNav').innerHTML = worlds.map(world => {
     const done = scenes.slice(world.start,world.end).filter(scene=>isCompleted(scene.index)).length;
     const unlocked = world.start <= next || done > 0, total = world.end-world.start;
-    return `<button class="world-card ${selectedWorld===world.id?'active':''} ${unlocked?'':'locked'}" data-world="${world.id}" type="button" aria-pressed="${selectedWorld===world.id}" aria-label="${world.title}，第 ${world.start+1} 到 ${world.end} 關，已完成 ${done} 關${unlocked?'':'，完成山海世界 100 關後解鎖'}" style="--world-image:${unlocked?`url('${scenes[world.start].url}')`:'linear-gradient(135deg,#63588a,#242745)'}"><span class="world-card-icon" aria-hidden="true">${world.icon}</span><span class="world-card-copy"><small>WORLD ${String(world.id+1).padStart(2,'0')} · ${world.start+1}—${world.end}</small><strong>${world.title}</strong><span>${world.description}</span><span class="world-completion"><i style="width:${done/total*100}%"></i></span></span><span class="world-lock">${!unlocked?'完成 100 關解鎖':done===total?'全數完成 ✓':selectedWorld===world.id?'正在探索 ✦':'進入世界 ↗'}</span></button>`;
+    return `<button class="world-card ${selectedWorld===world.id?'active':''} ${unlocked?'':'locked'}" data-world="${world.id}" type="button" aria-pressed="${selectedWorld===world.id}" aria-label="${world.title}，第 ${world.start+1} 到 ${world.end} 關，已完成 ${done} 關${unlocked?'':`，完成前 ${world.start} 關後解鎖`}" style="--world-image:${unlocked?`url('${scenes[world.start].url}')`:'linear-gradient(135deg,#63588a,#242745)'}"><span class="world-card-icon" aria-hidden="true">${world.icon}</span><span class="world-card-copy"><small>WORLD ${String(world.id+1).padStart(2,'0')} · ${world.start+1}—${world.end}</small><strong>${world.title}</strong><span>${world.description}</span><span class="world-completion"><i style="width:${done/total*100}%"></i></span></span><span class="world-lock">${!unlocked?`完成 ${world.start} 關解鎖`:done===total?'全數完成 ✓':selectedWorld===world.id?'正在探索 ✦':'進入世界 ↗'}</span></button>`;
   }).join('');
   const world=worlds[selectedWorld],done=scenes.slice(world.start,world.end).filter(scene=>isCompleted(scene.index)).length;
   $('worldProgressText').textContent=`${world.title} · ${done} / ${world.end-world.start}`;
@@ -101,11 +103,11 @@ function openFeature(kind) {
   if (kind === 'shop') $('featureContent').innerHTML = `<div class="shop-balance">✦ ${profile.balance.toLocaleString('zh-TW')} 星砂 <small> · 旅程的每一點收穫</small></div>${Object.entries(S.ITEMS).map(([id,item]) => `<div class="shop-item"><span class="shop-item-icon" aria-hidden="true">${item.icon}</span><div class="shop-item-copy"><h3>${item.name}</h3><p>${item.description}</p><small>背包中有 ${profile.inventory[id]} 個</small></div><button data-buy="${id}" type="button" ${profile.balance < item.cost || profile.inventory[id] >= 999 ? 'disabled' : ''}>${item.cost} ✦ 兌換</button></div>`).join('')}<p class="dialog-note">星砂由簽到、每日任務與完成拼圖獲得，沒有付費購買。道具使用後扣除，不會因切換拼圖而退還。新旅人已獲得 120 星砂與入門道具。</p>`;
   if (kind === 'collection') {
     const collected = scenes.filter(scene => isCompleted(scene.index));
-    const badges = [{icon:'✧',name:'第一片風景',earned:collected.length>=1},{icon:'❖',name:'山海收藏家',earned:collected.length>=20},{icon:'☀',name:'七日拾光',earned:profile.bestStreak>=7},{icon:'✦',name:'百景旅人',earned:collected.length>=100},{icon:'♧',name:'幻想先鋒',earned:collected.length===TOTAL_LEVELS}];
+    const badges = [{icon:'✧',name:'第一片風景',earned:collected.length>=1},{icon:'❖',name:'山海收藏家',earned:collected.length>=20},{icon:'☀',name:'七日拾光',earned:profile.bestStreak>=7},{icon:'✦',name:'百景旅人',earned:collected.length>=100},{icon:'♧',name:'幻想先鋒',earned:scenes.slice(100,140).every(scene=>isCompleted(scene.index))},{icon:'⌂',name:'古風雅客',earned:scenes.slice(200,300).every(scene=>isCompleted(scene.index))}];
     $('featureContent').innerHTML = `<div class="album-stats"><span>風景 ${collected.length} / ${TOTAL_LEVELS}</span><span>累計完成 ${profile.totalWins} 局</span></div><div class="badge-grid">${badges.map(b => `<div class="badge ${b.earned ? 'earned' : ''}" aria-label="${b.name}，${b.earned ? '已獲得' : '未獲得'}"><strong aria-hidden="true">${b.icon}</strong>${b.name}</div>`).join('')}</div>${collected.length ? `<div class="album-grid">${collected.map(scene => `<figure class="album-card"><img src="${scene.url}" alt="${scene.title}，${scene.subtitle}" loading="lazy" width="256" height="256"><figcaption>${String(scene.index+1).padStart(2,'0')} · ${scene.title}</figcaption></figure>`).join('')}</div>` : '<div class="empty-album"><span>▧</span><p>完成旅程模式第一關，<br>收藏你的第一幅風景。</p></div>'}<p class="dialog-note">旅程模式會收藏風景、解鎖下一關。特殊模式另有獎勵，不影響旅程解鎖。</p>`;
   }
   if (kind === 'settings') $('featureContent').innerHTML = `<div class="setting-row"><div><strong>遊戲音效</strong><small>交換、提示與完成時的輕柔音效</small></div><button class="toggle-button" data-setting="sound" aria-pressed="${profile.settings.sound}" type="button">${profile.settings.sound?'開啟':'關閉'}</button></div><div class="setting-row"><div><strong>畫面動態</strong><small>浮動風景、交換動畫與完成彩紙</small></div><button class="toggle-button" data-setting="motion" aria-pressed="${profile.settings.motion}" type="button">${profile.settings.motion?'開啟':'關閉'}</button></div><p class="dialog-note">會自動尊重裝置的「減少動態」偏好。進度保存在目前瀏覽器；清除網站資料會移除進度，不同裝置不會同步。</p>`;
-  if (kind === 'guide') $('featureContent').innerHTML = '<ol class="guide-steps"><li><strong>從一幅風景出發。</strong><br>旅程模式共有 140 關，完成後解鎖下一站。</li><li><strong>交換，讓風景歸位。</strong><br>拖曳到另一塊，或依序點兩塊即可交換。鍵盤方向鍵可交換相鄰方塊。</li><li><strong>需要靈感？看看原圖。</strong><br>每局兩次免費提示。手機可點下方「原圖」查看；歸位羅盤會自動歸位一塊。</li><li><strong>每天都有新的小確幸。</strong><br>簽到與任務可領星砂，再到補給站兌換道具。限時衝刺只有 180 秒，時間沙漏可增加 30 秒。</li></ol><p class="dialog-note">遊戲中可暫停；切換到其他應用程式時會自動暫停。退出遊戲會保存盤面，下次從「繼續」接著玩。</p>';
+  if (kind === 'guide') $('featureContent').innerHTML = '<ol class="guide-steps"><li><strong>從一幅風景出發。</strong><br>旅程模式共有 300 關，完成後解鎖下一站。</li><li><strong>交換，讓風景歸位。</strong><br>拖曳到另一塊，或依序點兩塊即可交換。鍵盤方向鍵可交換相鄰方塊。</li><li><strong>需要靈感？看看原圖。</strong><br>每局兩次免費提示。手機可點下方「原圖」查看；歸位羅盤會自動歸位一塊。</li><li><strong>每天都有新的小確幸。</strong><br>簽到與任務可領星砂，再到補給站兌換道具。限時衝刺只有 180 秒，時間沙漏可增加 30 秒。</li></ol><p class="dialog-note">遊戲中可暫停；切換到其他應用程式時會自動暫停。退出遊戲會保存盤面，下次從「繼續」接著玩。</p>';
   if (!dialog.open) dialog.showModal();
 }
 function updateTools() {
@@ -265,8 +267,10 @@ function win() {
   $('winText').textContent=`「${scene.title}」已完整歸位。${mode==='journey'?(current<scenes.length-1?'下一關已解鎖，新的風景等你收藏。':`恭喜完成全部 ${TOTAL_LEVELS} 關！`):mode==='daily'?(sessionDate===S.dayKey()?'今日的風景，已收進心裡。明天還有新的挑戰。':'這一天的風景已完成，還可以挑戰今日的一景。'):'帶著這份專注，繼續下一段旅程。'}`;
   $('winTime').textContent=mode==='zen'?'自在時光':formatTime(seconds);$('winMoves').textContent=moves;$('winStars').textContent='★'.repeat(starCount)+'☆'.repeat(3-starCount);
   $('winReward').textContent=reward?`✦ ＋${reward} 星砂 · ${mode==='journey'?'首次完成獎勵':mode==='daily'&&sessionDate!==S.dayKey()?'該日首勝獎勵':'今日首勝獎勵'}`:'✧ 已領取首勝獎勵，每一次重玩都值得。';
-  $('winMilestone').hidden=mode!=='journey'||(current+1)%CHAPTER_SIZE!==0;$('winMilestone').textContent=current===99?'✦ 山海世界完成 · 幻想世界已解鎖':current===139?'♧ 幻想世界完成 · 140 幅風景全收藏':`✦ ${chapters[Math.floor(current/CHAPTER_SIZE)].title} · 路線完成`;
-  $('nextButton').textContent=mode==='journey'?(current===99?'前往幻想世界 →':current===119?'進入月光精靈森 →':current<scenes.length-1?'下一關 →':'重玩第一關 →'):mode==='daily'?(sessionDate===S.dayKey()&&dailyPool===TOTAL_LEVELS?'再拼一次 →':'挑戰今日一景 →'):mode==='sprint'?'再挑戰一次 →':'另一幅風景 →';
+  const world=worlds[scene.worldId],nextWorld=worlds[scene.worldId+1],route=chapters[scene.chapter],nextRoute=chapters[scene.chapter+1];
+  $('winMilestone').hidden=mode!=='journey'||(current+1)%CHAPTER_SIZE!==0;
+  $('winMilestone').textContent=current+1===world.end?`${world.icon} ${world.title}完成 · ${nextWorld?`${nextWorld.title}已解鎖`:`${TOTAL_LEVELS} 幅風景全收藏`}`:`✦ ${route.title} · 路線完成`;
+  $('nextButton').textContent=mode==='journey'?(current===TOTAL_LEVELS-1?'重玩第一關 →':current+1===world.end&&nextWorld?`前往${nextWorld.title} →`:(current+1)%CHAPTER_SIZE===0&&nextRoute?`進入${nextRoute.title} →`:'下一關 →'):mode==='daily'?(sessionDate===S.dayKey()&&dailyPool===TOTAL_LEVELS?'再拼一次 →':'挑戰今日一景 →'):mode==='sprint'?'再挑戰一次 →':'另一幅風景 →';
   $('gameOverlay').inert=true;$('gameOverlay').querySelector('.game-shell').inert=true;$('winOverlay').hidden=false;updateTools();playTone(660);celebrate();$('nextButton').focus();
 }
 function showHint(){if(!playing||paused||hints<=0)return;const misplaced=pieces.map((p,i)=>p===i?-1:i).filter(i=>i>=0);if(!misplaced.length)return;const from=misplaced[Math.floor(Math.random()*misplaced.length)],to=pieces[from];hints--;updateStats();saveActiveSession();const cells=board.children;cells[from]?.classList.add('hinted');cells[to]?.classList.add('hinted');setTimeout(()=>{cells[from]?.classList.remove('hinted');cells[to]?.classList.remove('hinted')},2500);playTone(760)}
@@ -300,7 +304,7 @@ $('worldNav').addEventListener('click',event=>{
   selectedChapter=world.chapters.includes(active)?active:world.chapters[0];renderGallery();
   $('worldNav').querySelector(`[data-world="${selectedWorld}"]`)?.focus({preventScroll:true});
 });
-$('fantasyPromoButton').addEventListener('click',()=>{const active=Math.floor(nextLevel()/CHAPTER_SIZE);selectedChapter=worlds[1].chapters.includes(active)?active:worlds[1].chapters[0];renderGallery();$('adventureSection').scrollIntoView({behavior:profile.settings.motion&&!matchMedia('(prefers-reduced-motion: reduce)').matches?'smooth':'instant'});$('worldNav').querySelector('[data-world="1"]')?.focus({preventScroll:true});});
+$('fantasyPromoButton').addEventListener('click',()=>{const active=Math.floor(nextLevel()/CHAPTER_SIZE);selectedChapter=worlds[worlds.length-1].chapters.includes(active)?active:worlds[worlds.length-1].chapters[0];renderGallery();$('adventureSection').scrollIntoView({behavior:profile.settings.motion&&!matchMedia('(prefers-reduced-motion: reduce)').matches?'smooth':'instant'});$('worldNav').querySelector(`[data-world="${worlds.length-1}"]`)?.focus({preventScroll:true});});
 $('supplyJumpButton').addEventListener('click',()=>{$('supplySection').scrollIntoView({behavior:profile.settings.motion&&!matchMedia('(prefers-reduced-motion: reduce)').matches?'smooth':'instant'});$('checkinButton').focus({preventScroll:true});});
 if('IntersectionObserver' in window){
   const sectionObserver=new IntersectionObserver(entries=>{
@@ -341,11 +345,11 @@ if('serviceWorker'in navigator){
     window.location.reload();
   });
   navigator.serviceWorker.addEventListener('message',event=>{
-    if(event.data?.version!=='12')return;
+    if(event.data?.version!=='13')return;
     if(event.data?.type==='OFFLINE_STATUS')$('offlineStatus').textContent=event.data.ready?'✓ 離線遊玩已準備好':'首次連線下載風景中，請保持連線。';
     if(event.data?.type==='OFFLINE_PROGRESS')$('offlineStatus').textContent=`正在準備離線風景：${event.data.done} / ${event.data.total}，請保持連線。`;
   });
-  window.addEventListener('load',()=>navigator.serviceWorker.register('./sw.js?v=12',{updateViaCache:'none'})
+  window.addEventListener('load',()=>navigator.serviceWorker.register('./sw.js?v=13',{updateViaCache:'none'})
     .then(registration=>{
       const observe=worker=>worker?.addEventListener('statechange',()=>{if(worker.state==='redundant')$('offlineStatus').textContent='離線準備未完成，連線後重新開啟遊戲即可再試。';});
       observe(registration.installing);registration.addEventListener('updatefound',()=>observe(registration.installing));

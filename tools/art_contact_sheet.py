@@ -1,11 +1,12 @@
 """Create labeled QA thumbnails without modifying shipped artwork."""
 import json
+import sys
 from pathlib import Path
 from PIL import Image, ImageDraw, ImageFont
 root = Path(__file__).resolve().parents[1]
 entries = json.loads((root / 'assets/level-art-manifest.json').read_text())
 font = ImageFont.load_default()
-for start in [101, 121]:
+for start in (map(int, sys.argv[1:]) if len(sys.argv) > 1 else range(141, 301, 20)):
     sheet = Image.new('RGB', (1100, 1000), '#141a35')
     draw = ImageDraw.Draw(sheet)
     for offset, level in enumerate(range(start, start + 20)):

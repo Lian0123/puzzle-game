@@ -109,16 +109,16 @@ test('settings persist and reduced motion is respected',async({page})=>{
 });
 test('corrupt saves recover and valid legacy progress is kept',async({page})=>{
   await seed(page,{[PROFILE]:{version:1,balance:-5},[SESSION]:{current:0,size:4,pieces:Array(16).fill(0)},'shijing-records':{'0-4':{time:25,moves:10},'1-4':{time:-1,moves:0}}});
-  await begin(page);await expect(page.locator('#balanceDisplay')).toHaveText('120');await expect(page.locator('#levelProgress')).toHaveText('已完成 1 / 140 關');await page.locator('#continueButton').click();await expect(page.locator('#gameTitle')).toHaveText('蔚藍海岸');
+  await begin(page);await expect(page.locator('#balanceDisplay')).toHaveText('120');await expect(page.locator('#levelProgress')).toHaveText('已完成 1 / 300 關');await page.locator('#continueButton').click();await expect(page.locator('#gameTitle')).toHaveText('蔚藍海岸');
 });
 test('opening another mode protects the saved board',async({page})=>{
   await begin(page);await page.locator('#continueButton').click();const original=await page.evaluate(()=>[...pieces]);await page.locator('#closeButton').click();await page.locator('#dailyModeButton').click();await expect(page.locator('#confirmDialog')).toBeVisible();await page.locator('#confirmCancel').click();await page.locator('#continueButton').click();expect(await page.evaluate(()=>[...pieces])).toEqual(original);
 });
-test('final landscape completes all 140 levels and safely returns to first scene',async({page})=>{
-  const records=Object.fromEntries(Array.from({length:139},(_,index)=>[`${index}-4`,{time:60,moves:20}]));
-  await seed(page,{'shijing-records':records,[SESSION]:{...nearWin(),current:139}});await begin(page);await solveNearWin(page);
-  await expect(page.locator('#winText')).toContainText('全部 140 關');await expect(page.locator('#nextButton')).toHaveText('重玩第一關 →');
-  await page.locator('#galleryButton').click();await expect(page.locator('#levelProgress')).toHaveText('已完成 140 / 140 關');await expect(page.locator('.map-node.completed')).toHaveCount(20);
+test('final landscape completes all 300 levels and safely returns to first scene',async({page})=>{
+  const records=Object.fromEntries(Array.from({length:299},(_,index)=>[`${index}-4`,{time:60,moves:20}]));
+  await seed(page,{'shijing-records':records,[SESSION]:{...nearWin(),current:299}});await begin(page);await solveNearWin(page);
+  await expect(page.locator('#winText')).toContainText('全部 300 關');await expect(page.locator('#nextButton')).toHaveText('重玩第一關 →');
+  await page.locator('#galleryButton').click();await expect(page.locator('#levelProgress')).toHaveText('已完成 300 / 300 關');await expect(page.locator('.map-node.completed')).toHaveCount(20);
   await page.locator('#continueButton').click();await expect(page.locator('#gameTitle')).toHaveText('晨霧山谷');
 });
 test.describe('offline cache',()=>{
@@ -126,17 +126,17 @@ test.use({serviceWorkers:'allow'});
 test('full asset cache supports offline reload, modes and progress',async({page,context})=>{
   test.setTimeout(90000);await begin(page);await expect(page.locator('#offlineStatus')).toHaveText('✓ 離線遊玩已準備好',{timeout:45000});
   await page.reload();await page.evaluate(()=>navigator.serviceWorker.ready);await context.setOffline(true);await page.reload();await expect(page.locator('#dailyModeButton')).toBeVisible();await page.locator('#dailyModeButton').click();await expect(page.locator('.tile')).toHaveCount(16);
-  expect(await page.evaluate(async()=>{const cache=await caches.open('shijing-v12');return Boolean(await cache.match(new URL('./assets/landscape-140.jpg',location.href).href))})).toBeTruthy();
+  expect(await page.evaluate(async()=>{const cache=await caches.open('shijing-v13');return Boolean(await cache.match(new URL('./assets/landscape-300.jpg',location.href).href))})).toBeTruthy();
   await page.locator('#closeButton').click();await page.evaluate(()=>localStorage.removeItem('shijing-active-session'));await page.locator('[data-world="1"]').click();await expect(page.locator('#mapChapterTitle')).toHaveText('浮空花園');
-  expect(await page.evaluate(async()=>{const image=new Image();image.src='assets/landscape-140.jpg';await image.decode();return image.naturalWidth;})).toBe(1024);
+  expect(await page.evaluate(async()=>{const image=new Image();image.src='assets/landscape-300.jpg';await image.decode();return image.naturalWidth;})).toBe(1024);
   await context.setOffline(false);
 });
 
 });
 
 test('world portals show locked fantasy routes without exposing puzzle art',async({page})=>{
-  await begin(page);await expect(page.locator('.world-card')).toHaveCount(2);await expect(page.locator('.chapter-tab')).toHaveCount(5);
-  await page.locator('#fantasyPromoButton').click();await expect(page.locator('.chapter-tab')).toHaveCount(2);await expect(page.locator('#mapChapterTitle')).toHaveText('浮空花園');
+  await begin(page);await expect(page.locator('.world-card')).toHaveCount(3);await expect(page.locator('.chapter-tab')).toHaveCount(5);
+  await page.locator('[data-world="1"]').click();await expect(page.locator('.chapter-tab')).toHaveCount(5);await expect(page.locator('#mapChapterTitle')).toHaveText('浮空花園');
   await expect(page.locator('.map-node:not(:disabled)')).toHaveCount(0);await expect(page.locator('[data-level="100"]')).toHaveAccessibleName(/尚未解鎖/);
   for(const selector of ['#mapShell','.world-card[data-world="1"]','.chapter-tab[data-chapter="5"]','.chapter-tab[data-chapter="6"]'])expect(await page.locator(selector).evaluate(el=>el.getAttribute('style'))).not.toContain('landscape-1');
   await page.locator('[data-chapter="6"]').click();await expect(page.locator('#mapChapterTitle')).toHaveText('月光精靈森');await expect(page.locator('[data-level="139"]')).toBeDisabled();
@@ -146,29 +146,28 @@ test('stage 100 opens fantasy world; stage 120 opens moonlight forest',async({pa
   const records=Object.fromEntries(Array.from({length:99},(_,i)=>[`${i}-4`,{time:60,moves:20}]));
   await seed(page,{'shijing-records':records,[SESSION]:{...nearWin(),current:99}});await begin(page);await solveNearWin(page);
   await expect(page.locator('#winMilestone')).toContainText('幻想世界已解鎖');await expect(page.locator('#nextButton')).toHaveText('前往幻想世界 →');
-  await page.locator('#nextButton').click();await expect(page.locator('#gameTitle')).toHaveText('浮空花庭');await expect(page.locator('#gameLevelTag')).toHaveText('STAGE 101 / 140');
-  await page.locator('#closeButton').click();await expect(page.locator('#playerLevel')).toHaveText('LV. 11');await expect(page.locator('#chapterStat')).toHaveText('5 / 7');await expect(page.locator('.world-card[data-world="1"]')).toHaveAttribute('aria-pressed','true');
+  await page.locator('#nextButton').click();await expect(page.locator('#gameTitle')).toHaveText('浮空花庭');await expect(page.locator('#gameLevelTag')).toHaveText('STAGE 101 / 300');
+  await page.locator('#closeButton').click();await expect(page.locator('#playerLevel')).toHaveText('LV. 11');await expect(page.locator('#chapterStat')).toHaveText('5 / 15');await expect(page.locator('.world-card[data-world="1"]')).toHaveAttribute('aria-pressed','true');
   await page.evaluate(({session,key})=>{localStorage.setItem('shijing-records',JSON.stringify(Object.fromEntries(Array.from({length:119},(_,i)=>[`${i}-4`,{time:60,moves:20}]))));localStorage.setItem(key,JSON.stringify(session));},{session:{...nearWin(),current:119},key:SESSION});
   await page.reload();await solveNearWin(page);await expect(page.locator('#nextButton')).toHaveText('進入月光精靈森 →');await page.locator('#nextButton').click();await expect(page.locator('#gameTitle')).toHaveText('月光林門');await expect(page.locator('#gameLevelTag')).toContainText('121');
 });
-test('all 40 new stages open with distinct decoded art and compatible saves',async({page},info)=>{
-  test.setTimeout(180000);
-  const records=Object.fromEntries(Array.from({length:140},(_,i)=>[`${i}-4`,{time:60,moves:20}]));
-  await seed(page,{'shijing-records':records});await begin(page);await expect(page.locator('#levelProgress')).toHaveText('已完成 140 / 140 關');await expect(page.locator('#playerLevel')).toHaveText('LV. 15');
-  await page.locator('[data-world="1"]').click();await expect(page.locator('#worldProgressText')).toHaveText('幻想世界 · 40 / 40');
+test('all 160 new stages open with distinct decoded art and compatible saves',async({page},info)=>{
+  test.setTimeout(600000);
+  const records=Object.fromEntries(Array.from({length:300},(_,i)=>[`${i}-4`,{time:60,moves:20}]));
+  const profile=S.fresh();profile.settings.motion=false;
+  await seed(page,{'shijing-records':records,[PROFILE]:profile});await begin(page);await expect(page.locator('#levelProgress')).toHaveText('已完成 300 / 300 關');await expect(page.locator('#playerLevel')).toHaveText('LV. 31');
   const files=new Set();
-  for(let index=100;index<140;index++){
-    if(index===120)await page.locator('[data-chapter="6"]').click();
+  for(let index=140;index<300;index++){
+    const world=Math.floor(index/100),chapter=Math.floor(index/20);
+    if(index%20===0){await page.locator(`[data-world="${world}"]`).click();await page.locator(`[data-chapter="${chapter}"]`).click();}
     await page.locator(`[data-level="${index}"]`).click();await expect(page.locator('#gameTitle')).toHaveText(D.scenes[index].title);await expect(page.locator('.tile')).toHaveCount(16);
     const art=await page.locator('.tile').first().evaluate(async tile=>{const url=tile.style.backgroundImage.slice(5,-2);const image=new Image();image.src=url;await image.decode();return {url,width:image.naturalWidth,height:image.naturalHeight};});
     expect(art.width).toBe(1024);expect(art.height).toBe(1024);expect(art.url).toContain(D.scenes[index].url);files.add(art.url);
-    if(index===100)await page.screenshot({path:`qa/${info.project.name}-fantasy-game.png`,animations:'disabled',scale:'css'});
+    if(index===200)await page.screenshot({path:`qa/${info.project.name}-ancient-game.png`,animations:'disabled',scale:'css'});
     await page.locator('#closeButton').click();const session=await page.evaluate(key=>JSON.parse(localStorage.getItem(key)),SESSION);expect(session.current).toBe(index);expect(S.permutation(session.pieces,4)).toBeTruthy();
-    // Each catalogue entry starts independently so the test can visit all 40 via the map.
     await page.evaluate(key=>localStorage.removeItem(key),SESSION);
-    await page.locator('[data-world="1"]').click();await page.locator(`[data-chapter="${index>=119?6:5}"]`).click();
   }
-  expect(files.size).toBe(40);await page.locator('#collectionButton').click();await expect(page.locator('.album-card')).toHaveCount(140);await expect(page.locator('.badge.earned').filter({hasText:'幻想先鋒'})).toBeVisible();
+  expect(files.size).toBe(160);await page.locator('#collectionButton').click();await expect(page.locator('.album-card')).toHaveCount(300);await expect(page.locator('.badge.earned').filter({hasText:'古風雅客'})).toBeVisible();
 });
 test('fantasy map renders unlocked stage 101 and hides later scenes',async({page},info)=>{
   const records=Object.fromEntries(Array.from({length:100},(_,i)=>[`${i}-4`,{time:60,moves:20}]));
@@ -182,7 +181,7 @@ test('legacy daily save resumes its original image and cannot earn twice after e
   await seed(page,{[SESSION]:legacy,[PROFILE]:profile});await begin(page);await page.locator('#continueButton').click();await expect(page.locator('#gameTitle')).toHaveText(D.scenes[oldIndex].title);await page.locator('#closeButton').click();await page.reload();await solveNearWin(page);await expect(page.locator('#winReward')).toContainText('已領取');
   await expect(page.locator('#nextButton')).toHaveText('挑戰今日一景 →');await page.locator('#nextButton').click();await expect(page.locator('#gameTitle')).toHaveText(D.scenes[S.dailyIndex(date,D.TOTAL_LEVELS)].title);
   const newBoard=await page.evaluate(()=>[...pieces]);await page.locator('#closeButton').click();await expect(page.locator('#dailyTag')).toHaveText('今日已完成 ✓');await expect(page.locator('#balanceDisplay')).toHaveText('120');
-  const stored=await page.evaluate(key=>JSON.parse(localStorage.getItem(key)),SESSION);expect(stored.dailyPool).toBe(140);expect(S.normalizeSession(stored,140)).not.toBeNull();await page.reload();await page.locator('#continueButton').click();expect(await page.evaluate(()=>[...pieces])).toEqual(newBoard);
+  const stored=await page.evaluate(key=>JSON.parse(localStorage.getItem(key)),SESSION);expect(stored.dailyPool).toBe(300);expect(S.normalizeSession(stored,300)).not.toBeNull();await page.reload();await page.locator('#continueButton').click();expect(await page.evaluate(()=>[...pieces])).toEqual(newBoard);
 });
 test('mobile shortcuts open supplies and collection and hide during a puzzle',async({page},info)=>{
   await begin(page);if(info.project.name!=='mobile'){await expect(page.locator('.mobile-game-nav')).toBeHidden();return;}
@@ -193,27 +192,41 @@ test('mobile shortcuts open supplies and collection and hide during a puzzle',as
 
 test.describe('offline upgrade',()=>{
   test.use({serviceWorkers:'allow'});
-  test('v12 reuses v11 art, keeps existing progress and removes only obsolete app caches',async({page})=>{
+  test('v13 reuses v12 art, keeps existing progress and removes only obsolete app caches',async({page})=>{
     test.setTimeout(90000);
     await page.route('**/upgrade-test',route=>route.fulfill({contentType:'text/html',body:'<!doctype html><title>Upgrade fixture</title>'}));await page.goto('/upgrade-test');
     await page.evaluate(async()=>{
-      const url=new URL('/assets/landscape-01.jpg',location.href),response=await fetch(url),headers=new Headers(response.headers);headers.set('x-shijing-cache-source','v11');
-      const old=await caches.open('shijing-v11');await old.put(url,new Response(await response.blob(),{status:200,headers}));await caches.open('other-app-preserve');
-      localStorage.setItem('shijing-records',JSON.stringify(Object.fromEntries(Array.from({length:100},(_,i)=>[`${i}-4`,{time:60,moves:20}]))));
+      const url=new URL('/assets/landscape-01.jpg',location.href),response=await fetch(url),headers=new Headers(response.headers);headers.set('x-shijing-cache-source','v12');
+      const old=await caches.open('shijing-v12');await old.put(url,new Response(await response.blob(),{status:200,headers}));await caches.open('other-app-preserve');
+      localStorage.setItem('shijing-records',JSON.stringify(Object.fromEntries(Array.from({length:140},(_,i)=>[`${i}-4`,{time:60,moves:20}]))));
     });
     await begin(page);await expect(page.locator('#offlineStatus')).toHaveText('✓ 離線遊玩已準備好',{timeout:60000});
-    const result=await page.evaluate(async()=>({keys:await caches.keys(),source:(await(await caches.open('shijing-v12')).match(new URL('/assets/landscape-01.jpg',location.href))).headers.get('x-shijing-cache-source')}));
-    expect(result.source).toBe('v11');expect(result.keys).not.toContain('shijing-v11');expect(result.keys).toContain('other-app-preserve');
-    await expect(page.locator('#levelProgress')).toHaveText('已完成 100 / 140 關');await expect(page.locator('#heroStageTitle')).toContainText('101 · 浮空花庭');
+    const result=await page.evaluate(async()=>({keys:await caches.keys(),source:(await(await caches.open('shijing-v13')).match(new URL('/assets/landscape-01.jpg',location.href))).headers.get('x-shijing-cache-source')}));
+    expect(result.source).toBe('v12');expect(result.keys).not.toContain('shijing-v12');expect(result.keys).toContain('other-app-preserve');
+    await expect(page.locator('#levelProgress')).toHaveText('已完成 140 / 300 關');await expect(page.locator('#heroStageTitle')).toContainText('141 · 水晶之門');
   });
 });
 
 
 test('past daily completion opens today challenge and preserves a valid new session',async({page})=>{
   const date=new Date();date.setDate(date.getDate()-1);const yesterday=S.dayKey(date),today=S.dayKey();
-  await seed(page,{[SESSION]:{...nearWin('daily'),date:yesterday,current:S.dailyIndex(yesterday,140)}});await begin(page);await solveNearWin(page);
+  await seed(page,{[SESSION]:{...nearWin('daily'),date:yesterday,current:S.dailyIndex(yesterday,300)}});await begin(page);await solveNearWin(page);
   await expect(page.locator('#winReward')).toContainText('該日首勝獎勵');await expect(page.locator('#nextButton')).toHaveText('挑戰今日一景 →');await page.locator('#nextButton').click();
-  await expect(page.locator('#gameTitle')).toHaveText(D.scenes[S.dailyIndex(today,140)].title);const puzzle=await page.evaluate(()=>[...pieces]);await page.locator('#closeButton').click();
-  const stored=await page.evaluate(key=>JSON.parse(localStorage.getItem(key)),SESSION);expect(stored.date).toBe(today);expect(stored.current).toBe(S.dailyIndex(today,140));expect(S.normalizeSession(stored,140)).not.toBeNull();
+  await expect(page.locator('#gameTitle')).toHaveText(D.scenes[S.dailyIndex(today,300)].title);const puzzle=await page.evaluate(()=>[...pieces]);await page.locator('#closeButton').click();
+  const stored=await page.evaluate(key=>JSON.parse(localStorage.getItem(key)),SESSION);expect(stored.date).toBe(today);expect(stored.current).toBe(S.dailyIndex(today,300));expect(S.normalizeSession(stored,300)).not.toBeNull();
   await expect(page.locator('[data-quest="daily"]')).toBeDisabled();await expect(page.locator('#balanceDisplay')).toHaveText('200');await page.reload();await page.locator('#continueButton').click();expect(await page.evaluate(()=>[...pieces])).toEqual(puzzle);
+});
+
+for(const index of [139,159,179,199,219,239,259,279])test(`route boundary after stage ${index+1} unlocks the correct next scene`,async({page})=>{
+  const records=Object.fromEntries(Array.from({length:index},(_,i)=>[`${i}-4`,{time:60,moves:20}]));
+  await seed(page,{'shijing-records':records,[SESSION]:{...nearWin(),current:index}});await begin(page);await solveNearWin(page);
+  const next=D.scenes[index+1];
+  if(index===199){await expect(page.locator('#winMilestone')).toContainText('古風世界已解鎖');await expect(page.locator('#nextButton')).toHaveText('前往古風世界 →');}
+  else await expect(page.locator('#nextButton')).toHaveText(`進入${D.chapters[next.chapter].title} →`);
+  await page.locator('#nextButton').click();await expect(page.locator('#gameTitle')).toHaveText(next.title);await page.locator('#closeButton').click();await expect(page.locator('.world-card.active')).toHaveAttribute('data-world',String(next.worldId));await expect(page.locator('.map-node.current')).toHaveAttribute('data-level',String(index+1));
+});
+
+test('legacy 140-stage collection keeps the earned fantasy pioneer badge',async({page})=>{
+  const records=Object.fromEntries(Array.from({length:140},(_,i)=>[`${i}-4`,{time:60,moves:20}]));
+  await seed(page,{'shijing-records':records});await begin(page);await expect(page.locator('#heroStageTitle')).toContainText('141 · 水晶之門');await page.locator('#collectionButton').click();await expect(page.locator('.badge.earned').filter({hasText:'幻想先鋒'})).toBeVisible();await expect(page.locator('.album-card')).toHaveCount(140);
 });
