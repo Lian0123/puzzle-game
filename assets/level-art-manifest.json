@@ -1598,5 +1598,1605 @@
     "file": "landscape-300.jpg",
     "tool": "built-in image_gen",
     "prompt": "Use case: stylized-concept. Asset type: one original square landscape illustration for puzzle level 300, titled 萬山雲宮. Scene: grand finale original ancient palace above a vast cloud sea, many terraces, waterfalls, sunrise and richly detailed gardens. Style: richly detailed painterly travel illustration, beautifully finished premium adventure game background art, original ancient East Asian landscape. Composition: square 1:1 full bleed, one coherent scene, no collage; clear distinctive landmarks and color variation throughout all quadrants for recognizable 4x4 to 6x6 puzzle pieces, layered foreground, midground and distance; no large blank areas. Finely drawn natural and architectural textures, inviting cinematic light. No text, letters, numbers, logos, watermark, frame, people, copyrighted characters, or recreation of a specific artwork. Exactly one unique square image, ideally 1024x1024."
+  },
+  {
+    "level": 301,
+    "title": "巨木雨林",
+    "subtitle": "雨林 · 晨霧",
+    "file": "landscape-301.jpg",
+    "tool": "built-in image_gen",
+    "prompt": "One original square painterly landscape for stage 301, ‘巨木雨林’ (雨林 · 晨霧); 巨木雨林 is the focal landmark in a richly detailed primeval rainforest travel scene. Use a full-bleed 1:1 composition with foreground, middle distance, distant landforms and varied colors in every quadrant for 4x4–6x6 jigsaw play; no text, logos, watermark, frame or people."
+  },
+  {
+    "level": 302,
+    "title": "瀑潭蕨海",
+    "subtitle": "瀑潭 · 青綠",
+    "file": "landscape-302.jpg",
+    "tool": "built-in image_gen",
+    "prompt": "One original square painterly landscape for stage 302, ‘瀑潭蕨海’ (瀑潭 · 青綠); 瀑潭蕨海 is the focal landmark in a richly detailed primeval rainforest travel scene. Use a full-bleed 1:1 composition with foreground, middle distance, distant landforms and varied colors in every quadrant for 4x4–6x6 jigsaw play; no text, logos, watermark, frame or people."
+  },
+  {
+    "level": 303,
+    "title": "藤橋樹冠",
+    "subtitle": "樹冠 · 薄霧",
+    "file": "landscape-303.jpg",
+    "tool": "built-in image_gen",
+    "prompt": "One original square painterly landscape for stage 303, ‘藤橋樹冠’ (樹冠 · 薄霧); 藤橋樹冠 is the focal landmark in a richly detailed primeval rainforest travel scene. Use a full-bleed 1:1 composition with foreground, middle distance, distant landforms and varied colors in every quadrant for 4x4–6x6 jigsaw play; no text, logos, watermark, frame or people."
+  },
+  {
+    "level": 304,
+    "title": "沉霧樹根",
+    "subtitle": "根谷 · 潮光",
+    "file": "landscape-304.jpg",
+    "tool": "built-in image_gen",
+    "prompt": "One original square painterly landscape for stage 304, ‘沉霧樹根’ (根谷 · 潮光); 沉霧樹根 is the focal landmark in a richly detailed primeval rainforest travel scene. Use a full-bleed 1:1 composition with foreground, middle distance, distant landforms and varied colors in every quadrant for 4x4–6x6 jigsaw play; no text, logos, watermark, frame or people."
+  },
+  {
+    "level": 305,
+    "title": "翡翠雨幕",
+    "subtitle": "雨幕 · 翡翠",
+    "file": "landscape-305.jpg",
+    "tool": "built-in image_gen",
+    "prompt": "One original square painterly landscape for stage 305, ‘翡翠雨幕’ (雨幕 · 翡翠); 翡翠雨幕 is the focal landmark in a richly detailed primeval rainforest travel scene. Use a full-bleed 1:1 composition with foreground, middle distance, distant landforms and varied colors in every quadrant for 4x4–6x6 jigsaw play; no text, logos, watermark, frame or people."
+  },
+  {
+    "level": 306,
+    "title": "蘚階暗河",
+    "subtitle": "溪徑 · 幽藍",
+    "file": "landscape-306.jpg",
+    "tool": "procedural painterly generator",
+    "prompt": "Rendered by tools/generate_procedural_art.py as an original 1024x1024 landscape painting for stage 306, ‘蘚階暗河’ (溪徑 · 幽藍). The deterministic painterly scene uses the route palette, landmark shapes, terrain layers, water or sky details and fine texture; it contains no text or interface elements."
+  },
+  {
+    "level": 307,
+    "title": "琥珀蕈林",
+    "subtitle": "蕈林 · 暖金",
+    "file": "landscape-307.jpg",
+    "tool": "procedural painterly generator",
+    "prompt": "Rendered by tools/generate_procedural_art.py as an original 1024x1024 landscape painting for stage 307, ‘琥珀蕈林’ (蕈林 · 暖金). The deterministic painterly scene uses the route palette, landmark shapes, terrain layers, water or sky details and fine texture; it contains no text or interface elements."
+  },
+  {
+    "level": 308,
+    "title": "紅花榕庭",
+    "subtitle": "榕庭 · 紅花",
+    "file": "landscape-308.jpg",
+    "tool": "procedural painterly generator",
+    "prompt": "Rendered by tools/generate_procedural_art.py as an original 1024x1024 landscape painting for stage 308, ‘紅花榕庭’ (榕庭 · 紅花). The deterministic painterly scene uses the route palette, landmark shapes, terrain layers, water or sky details and fine texture; it contains no text or interface elements."
+  },
+  {
+    "level": 309,
+    "title": "霧島濕原",
+    "subtitle": "濕原 · 雲霧",
+    "file": "landscape-309.jpg",
+    "tool": "procedural painterly generator",
+    "prompt": "Rendered by tools/generate_procedural_art.py as an original 1024x1024 landscape painting for stage 309, ‘霧島濕原’ (濕原 · 雲霧). The deterministic painterly scene uses the route palette, landmark shapes, terrain layers, water or sky details and fine texture; it contains no text or interface elements."
+  },
+  {
+    "level": 310,
+    "title": "風雨崖瀑",
+    "subtitle": "崖瀑 · 暴雨",
+    "file": "landscape-310.jpg",
+    "tool": "built-in image_gen",
+    "prompt": "One original square painterly landscape for stage 310, ‘風雨崖瀑’ (崖瀑 · 暴雨); 風雨崖瀑 is the focal landmark in a richly detailed primeval rainforest travel scene. Use a full-bleed 1:1 composition with foreground, middle distance, distant landforms and varied colors in every quadrant for 4x4–6x6 jigsaw play; no text, logos, watermark, frame or people."
+  },
+  {
+    "level": 311,
+    "title": "古藤環潭",
+    "subtitle": "環潭 · 藤影",
+    "file": "landscape-311.jpg",
+    "tool": "built-in image_gen",
+    "prompt": "One original square painterly landscape for stage 311, ‘古藤環潭’ (環潭 · 藤影); 古藤環潭 is the focal landmark in a richly detailed primeval rainforest travel scene. Use a full-bleed 1:1 composition with foreground, middle distance, distant landforms and varied colors in every quadrant for 4x4–6x6 jigsaw play; no text, logos, watermark, frame or people."
+  },
+  {
+    "level": 312,
+    "title": "葉舟天池",
+    "subtitle": "天池 · 葉舟",
+    "file": "landscape-312.jpg",
+    "tool": "built-in image_gen",
+    "prompt": "One original square painterly landscape for stage 312, ‘葉舟天池’ (天池 · 葉舟); 葉舟天池 is the focal landmark in a richly detailed primeval rainforest travel scene. Use a full-bleed 1:1 composition with foreground, middle distance, distant landforms and varied colors in every quadrant for 4x4–6x6 jigsaw play; no text, logos, watermark, frame or people."
+  },
+  {
+    "level": 313,
+    "title": "巨蕨晨光",
+    "subtitle": "蕨海 · 日出",
+    "file": "landscape-313.jpg",
+    "tool": "built-in image_gen",
+    "prompt": "One original square painterly landscape for stage 313, ‘巨蕨晨光’ (蕨海 · 日出); 巨蕨晨光 is the focal landmark in a richly detailed primeval rainforest travel scene. Use a full-bleed 1:1 composition with foreground, middle distance, distant landforms and varied colors in every quadrant for 4x4–6x6 jigsaw play; no text, logos, watermark, frame or people."
+  },
+  {
+    "level": 314,
+    "title": "榕根迷宮",
+    "subtitle": "樹根 · 迷徑",
+    "file": "landscape-314.jpg",
+    "tool": "procedural painterly generator",
+    "prompt": "Rendered by tools/generate_procedural_art.py as an original 1024x1024 landscape painting for stage 314, ‘榕根迷宮’ (樹根 · 迷徑). The deterministic painterly scene uses the route palette, landmark shapes, terrain layers, water or sky details and fine texture; it contains no text or interface elements."
+  },
+  {
+    "level": 315,
+    "title": "樹洞星火",
+    "subtitle": "樹洞 · 星火",
+    "file": "landscape-315.jpg",
+    "tool": "procedural painterly generator",
+    "prompt": "Rendered by tools/generate_procedural_art.py as an original 1024x1024 landscape painting for stage 315, ‘樹洞星火’ (樹洞 · 星火). The deterministic painterly scene uses the route palette, landmark shapes, terrain layers, water or sky details and fine texture; it contains no text or interface elements."
+  },
+  {
+    "level": 316,
+    "title": "綠冠雲谷",
+    "subtitle": "雲谷 · 綠冠",
+    "file": "landscape-316.jpg",
+    "tool": "procedural painterly generator",
+    "prompt": "Rendered by tools/generate_procedural_art.py as an original 1024x1024 landscape painting for stage 316, ‘綠冠雲谷’ (雲谷 · 綠冠). The deterministic painterly scene uses the route palette, landmark shapes, terrain layers, water or sky details and fine texture; it contains no text or interface elements."
+  },
+  {
+    "level": 317,
+    "title": "苔橋溪澗",
+    "subtitle": "苔橋 · 午後",
+    "file": "landscape-317.jpg",
+    "tool": "procedural painterly generator",
+    "prompt": "Rendered by tools/generate_procedural_art.py as an original 1024x1024 landscape painting for stage 317, ‘苔橋溪澗’ (苔橋 · 午後). The deterministic painterly scene uses the route palette, landmark shapes, terrain layers, water or sky details and fine texture; it contains no text or interface elements."
+  },
+  {
+    "level": 318,
+    "title": "藍溪峽谷",
+    "subtitle": "峽谷 · 清溪",
+    "file": "landscape-318.jpg",
+    "tool": "procedural painterly generator",
+    "prompt": "Rendered by tools/generate_procedural_art.py as an original 1024x1024 landscape painting for stage 318, ‘藍溪峽谷’ (峽谷 · 清溪). The deterministic painterly scene uses the route palette, landmark shapes, terrain layers, water or sky details and fine texture; it contains no text or interface elements."
+  },
+  {
+    "level": 319,
+    "title": "雨林鳥瞰",
+    "subtitle": "鳥瞰 · 雲層",
+    "file": "landscape-319.jpg",
+    "tool": "procedural painterly generator",
+    "prompt": "Rendered by tools/generate_procedural_art.py as an original 1024x1024 landscape painting for stage 319, ‘雨林鳥瞰’ (鳥瞰 · 雲層). The deterministic painterly scene uses the route palette, landmark shapes, terrain layers, water or sky details and fine texture; it contains no text or interface elements."
+  },
+  {
+    "level": 320,
+    "title": "太初神木",
+    "subtitle": "神木 · 初曉",
+    "file": "landscape-320.jpg",
+    "tool": "procedural painterly generator",
+    "prompt": "Rendered by tools/generate_procedural_art.py as an original 1024x1024 landscape painting for stage 320, ‘太初神木’ (神木 · 初曉). The deterministic painterly scene uses the route palette, landmark shapes, terrain layers, water or sky details and fine texture; it contains no text or interface elements."
+  },
+  {
+    "level": 321,
+    "title": "遠古河谷",
+    "subtitle": "河谷 · 遠古",
+    "file": "landscape-321.jpg",
+    "tool": "procedural painterly generator",
+    "prompt": "Rendered by tools/generate_procedural_art.py as an original 1024x1024 landscape painting for stage 321, ‘遠古河谷’ (河谷 · 遠古). The deterministic painterly scene uses the route palette, landmark shapes, terrain layers, water or sky details and fine texture; it contains no text or interface elements."
+  },
+  {
+    "level": 322,
+    "title": "石橋長河",
+    "subtitle": "長河 · 石橋",
+    "file": "landscape-322.jpg",
+    "tool": "procedural painterly generator",
+    "prompt": "Rendered by tools/generate_procedural_art.py as an original 1024x1024 landscape painting for stage 322, ‘石橋長河’ (長河 · 石橋). The deterministic painterly scene uses the route palette, landmark shapes, terrain layers, water or sky details and fine texture; it contains no text or interface elements."
+  },
+  {
+    "level": 323,
+    "title": "風蝕峭壁",
+    "subtitle": "峭壁 · 風痕",
+    "file": "landscape-323.jpg",
+    "tool": "procedural painterly generator",
+    "prompt": "Rendered by tools/generate_procedural_art.py as an original 1024x1024 landscape painting for stage 323, ‘風蝕峭壁’ (峭壁 · 風痕). The deterministic painterly scene uses the route palette, landmark shapes, terrain layers, water or sky details and fine texture; it contains no text or interface elements."
+  },
+  {
+    "level": 324,
+    "title": "三角洲沙洲",
+    "subtitle": "沙洲 · 晴日",
+    "file": "landscape-324.jpg",
+    "tool": "procedural painterly generator",
+    "prompt": "Rendered by tools/generate_procedural_art.py as an original 1024x1024 landscape painting for stage 324, ‘三角洲沙洲’ (沙洲 · 晴日). The deterministic painterly scene uses the route palette, landmark shapes, terrain layers, water or sky details and fine texture; it contains no text or interface elements."
+  },
+  {
+    "level": 325,
+    "title": "赤壁瀑線",
+    "subtitle": "赤壁 · 瀑線",
+    "file": "landscape-325.jpg",
+    "tool": "procedural painterly generator",
+    "prompt": "Rendered by tools/generate_procedural_art.py as an original 1024x1024 landscape painting for stage 325, ‘赤壁瀑線’ (赤壁 · 瀑線). The deterministic painterly scene uses the route palette, landmark shapes, terrain layers, water or sky details and fine texture; it contains no text or interface elements."
+  },
+  {
+    "level": 326,
+    "title": "巨岩渡口",
+    "subtitle": "渡口 · 巨岩",
+    "file": "landscape-326.jpg",
+    "tool": "procedural painterly generator",
+    "prompt": "Rendered by tools/generate_procedural_art.py as an original 1024x1024 landscape painting for stage 326, ‘巨岩渡口’ (渡口 · 巨岩). The deterministic painterly scene uses the route palette, landmark shapes, terrain layers, water or sky details and fine texture; it contains no text or interface elements."
+  },
+  {
+    "level": 327,
+    "title": "河心綠洲",
+    "subtitle": "綠洲 · 河心",
+    "file": "landscape-327.jpg",
+    "tool": "procedural painterly generator",
+    "prompt": "Rendered by tools/generate_procedural_art.py as an original 1024x1024 landscape painting for stage 327, ‘河心綠洲’ (綠洲 · 河心). The deterministic painterly scene uses the route palette, landmark shapes, terrain layers, water or sky details and fine texture; it contains no text or interface elements."
+  },
+  {
+    "level": 328,
+    "title": "雲影峽門",
+    "subtitle": "峽門 · 雲影",
+    "file": "landscape-328.jpg",
+    "tool": "procedural painterly generator",
+    "prompt": "Rendered by tools/generate_procedural_art.py as an original 1024x1024 landscape painting for stage 328, ‘雲影峽門’ (峽門 · 雲影). The deterministic painterly scene uses the route palette, landmark shapes, terrain layers, water or sky details and fine texture; it contains no text or interface elements."
+  },
+  {
+    "level": 329,
+    "title": "水蝕石林",
+    "subtitle": "石林 · 水蝕",
+    "file": "landscape-329.jpg",
+    "tool": "procedural painterly generator",
+    "prompt": "Rendered by tools/generate_procedural_art.py as an original 1024x1024 landscape painting for stage 329, ‘水蝕石林’ (石林 · 水蝕). The deterministic painterly scene uses the route palette, landmark shapes, terrain layers, water or sky details and fine texture; it contains no text or interface elements."
+  },
+  {
+    "level": 330,
+    "title": "白沙古灘",
+    "subtitle": "古灘 · 白沙",
+    "file": "landscape-330.jpg",
+    "tool": "procedural painterly generator",
+    "prompt": "Rendered by tools/generate_procedural_art.py as an original 1024x1024 landscape painting for stage 330, ‘白沙古灘’ (古灘 · 白沙). The deterministic painterly scene uses the route palette, landmark shapes, terrain layers, water or sky details and fine texture; it contains no text or interface elements."
+  },
+  {
+    "level": 331,
+    "title": "盤谷溪灣",
+    "subtitle": "溪灣 · 盤谷",
+    "file": "landscape-331.jpg",
+    "tool": "procedural painterly generator",
+    "prompt": "Rendered by tools/generate_procedural_art.py as an original 1024x1024 landscape painting for stage 331, ‘盤谷溪灣’ (溪灣 · 盤谷). The deterministic painterly scene uses the route palette, landmark shapes, terrain layers, water or sky details and fine texture; it contains no text or interface elements."
+  },
+  {
+    "level": 332,
+    "title": "岩柱天橋",
+    "subtitle": "天橋 · 岩柱",
+    "file": "landscape-332.jpg",
+    "tool": "procedural painterly generator",
+    "prompt": "Rendered by tools/generate_procedural_art.py as an original 1024x1024 landscape painting for stage 332, ‘岩柱天橋’ (天橋 · 岩柱). The deterministic painterly scene uses the route palette, landmark shapes, terrain layers, water or sky details and fine texture; it contains no text or interface elements."
+  },
+  {
+    "level": 333,
+    "title": "霧河迴廊",
+    "subtitle": "迴廊 · 河霧",
+    "file": "landscape-333.jpg",
+    "tool": "procedural painterly generator",
+    "prompt": "Rendered by tools/generate_procedural_art.py as an original 1024x1024 landscape painting for stage 333, ‘霧河迴廊’ (迴廊 · 河霧). The deterministic painterly scene uses the route palette, landmark shapes, terrain layers, water or sky details and fine texture; it contains no text or interface elements."
+  },
+  {
+    "level": 334,
+    "title": "翠崖深潭",
+    "subtitle": "深潭 · 翠崖",
+    "file": "landscape-334.jpg",
+    "tool": "procedural painterly generator",
+    "prompt": "Rendered by tools/generate_procedural_art.py as an original 1024x1024 landscape painting for stage 334, ‘翠崖深潭’ (深潭 · 翠崖). The deterministic painterly scene uses the route palette, landmark shapes, terrain layers, water or sky details and fine texture; it contains no text or interface elements."
+  },
+  {
+    "level": 335,
+    "title": "金砂河套",
+    "subtitle": "河套 · 金砂",
+    "file": "landscape-335.jpg",
+    "tool": "procedural painterly generator",
+    "prompt": "Rendered by tools/generate_procedural_art.py as an original 1024x1024 landscape painting for stage 335, ‘金砂河套’ (河套 · 金砂). The deterministic painterly scene uses the route palette, landmark shapes, terrain layers, water or sky details and fine texture; it contains no text or interface elements."
+  },
+  {
+    "level": 336,
+    "title": "遠望斷層",
+    "subtitle": "斷層 · 遠望",
+    "file": "landscape-336.jpg",
+    "tool": "procedural painterly generator",
+    "prompt": "Rendered by tools/generate_procedural_art.py as an original 1024x1024 landscape painting for stage 336, ‘遠望斷層’ (斷層 · 遠望). The deterministic painterly scene uses the route palette, landmark shapes, terrain layers, water or sky details and fine texture; it contains no text or interface elements."
+  },
+  {
+    "level": 337,
+    "title": "雨後石橋",
+    "subtitle": "石橋 · 雨後",
+    "file": "landscape-337.jpg",
+    "tool": "procedural painterly generator",
+    "prompt": "Rendered by tools/generate_procedural_art.py as an original 1024x1024 landscape painting for stage 337, ‘雨後石橋’ (石橋 · 雨後). The deterministic painterly scene uses the route palette, landmark shapes, terrain layers, water or sky details and fine texture; it contains no text or interface elements."
+  },
+  {
+    "level": 338,
+    "title": "暮色河灣",
+    "subtitle": "河灣 · 暮色",
+    "file": "landscape-338.jpg",
+    "tool": "procedural painterly generator",
+    "prompt": "Rendered by tools/generate_procedural_art.py as an original 1024x1024 landscape painting for stage 338, ‘暮色河灣’ (河灣 · 暮色). The deterministic painterly scene uses the route palette, landmark shapes, terrain layers, water or sky details and fine texture; it contains no text or interface elements."
+  },
+  {
+    "level": 339,
+    "title": "星下古川",
+    "subtitle": "古川 · 星空",
+    "file": "landscape-339.jpg",
+    "tool": "procedural painterly generator",
+    "prompt": "Rendered by tools/generate_procedural_art.py as an original 1024x1024 landscape painting for stage 339, ‘星下古川’ (古川 · 星空). The deterministic painterly scene uses the route palette, landmark shapes, terrain layers, water or sky details and fine texture; it contains no text or interface elements."
+  },
+  {
+    "level": 340,
+    "title": "萬水歸谷",
+    "subtitle": "歸谷 · 萬水",
+    "file": "landscape-340.jpg",
+    "tool": "procedural painterly generator",
+    "prompt": "Rendered by tools/generate_procedural_art.py as an original 1024x1024 landscape painting for stage 340, ‘萬水歸谷’ (歸谷 · 萬水). The deterministic painterly scene uses the route palette, landmark shapes, terrain layers, water or sky details and fine texture; it contains no text or interface elements."
+  },
+  {
+    "level": 341,
+    "title": "赤熔火口",
+    "subtitle": "火口 · 赤焰",
+    "file": "landscape-341.jpg",
+    "tool": "procedural painterly generator",
+    "prompt": "Rendered by tools/generate_procedural_art.py as an original 1024x1024 landscape painting for stage 341, ‘赤熔火口’ (火口 · 赤焰). The deterministic painterly scene uses the route palette, landmark shapes, terrain layers, water or sky details and fine texture; it contains no text or interface elements."
+  },
+  {
+    "level": 342,
+    "title": "黑曜河",
+    "subtitle": "黑曜 · 熔河",
+    "file": "landscape-342.jpg",
+    "tool": "procedural painterly generator",
+    "prompt": "Rendered by tools/generate_procedural_art.py as an original 1024x1024 landscape painting for stage 342, ‘黑曜河’ (黑曜 · 熔河). The deterministic painterly scene uses the route palette, landmark shapes, terrain layers, water or sky details and fine texture; it contains no text or interface elements."
+  },
+  {
+    "level": 343,
+    "title": "火山玻璃原",
+    "subtitle": "火山 · 晶原",
+    "file": "landscape-343.jpg",
+    "tool": "procedural painterly generator",
+    "prompt": "Rendered by tools/generate_procedural_art.py as an original 1024x1024 landscape painting for stage 343, ‘火山玻璃原’ (火山 · 晶原). The deterministic painterly scene uses the route palette, landmark shapes, terrain layers, water or sky details and fine texture; it contains no text or interface elements."
+  },
+  {
+    "level": 344,
+    "title": "熔岩瀑布",
+    "subtitle": "熔岩 · 瀑布",
+    "file": "landscape-344.jpg",
+    "tool": "procedural painterly generator",
+    "prompt": "Rendered by tools/generate_procedural_art.py as an original 1024x1024 landscape painting for stage 344, ‘熔岩瀑布’ (熔岩 · 瀑布). The deterministic painterly scene uses the route palette, landmark shapes, terrain layers, water or sky details and fine texture; it contains no text or interface elements."
+  },
+  {
+    "level": 345,
+    "title": "灰燼山脊",
+    "subtitle": "山脊 · 灰燼",
+    "file": "landscape-345.jpg",
+    "tool": "procedural painterly generator",
+    "prompt": "Rendered by tools/generate_procedural_art.py as an original 1024x1024 landscape painting for stage 345, ‘灰燼山脊’ (山脊 · 灰燼). The deterministic painterly scene uses the route palette, landmark shapes, terrain layers, water or sky details and fine texture; it contains no text or interface elements."
+  },
+  {
+    "level": 346,
+    "title": "紅晶地脈",
+    "subtitle": "地脈 · 紅晶",
+    "file": "landscape-346.jpg",
+    "tool": "procedural painterly generator",
+    "prompt": "Rendered by tools/generate_procedural_art.py as an original 1024x1024 landscape painting for stage 346, ‘紅晶地脈’ (地脈 · 紅晶). The deterministic painterly scene uses the route palette, landmark shapes, terrain layers, water or sky details and fine texture; it contains no text or interface elements."
+  },
+  {
+    "level": 347,
+    "title": "火山口湖",
+    "subtitle": "火口湖 · 晨光",
+    "file": "landscape-347.jpg",
+    "tool": "procedural painterly generator",
+    "prompt": "Rendered by tools/generate_procedural_art.py as an original 1024x1024 landscape painting for stage 347, ‘火山口湖’ (火口湖 · 晨光). The deterministic painterly scene uses the route palette, landmark shapes, terrain layers, water or sky details and fine texture; it contains no text or interface elements."
+  },
+  {
+    "level": 348,
+    "title": "煙柱峽谷",
+    "subtitle": "峽谷 · 煙柱",
+    "file": "landscape-348.jpg",
+    "tool": "procedural painterly generator",
+    "prompt": "Rendered by tools/generate_procedural_art.py as an original 1024x1024 landscape painting for stage 348, ‘煙柱峽谷’ (峽谷 · 煙柱). The deterministic painterly scene uses the route palette, landmark shapes, terrain layers, water or sky details and fine texture; it contains no text or interface elements."
+  },
+  {
+    "level": 349,
+    "title": "焰脈石橋",
+    "subtitle": "石橋 · 焰脈",
+    "file": "landscape-349.jpg",
+    "tool": "procedural painterly generator",
+    "prompt": "Rendered by tools/generate_procedural_art.py as an original 1024x1024 landscape painting for stage 349, ‘焰脈石橋’ (石橋 · 焰脈). The deterministic painterly scene uses the route palette, landmark shapes, terrain layers, water or sky details and fine texture; it contains no text or interface elements."
+  },
+  {
+    "level": 350,
+    "title": "熔火梯田",
+    "subtitle": "梯田 · 熔火",
+    "file": "landscape-350.jpg",
+    "tool": "procedural painterly generator",
+    "prompt": "Rendered by tools/generate_procedural_art.py as an original 1024x1024 landscape painting for stage 350, ‘熔火梯田’ (梯田 · 熔火). The deterministic painterly scene uses the route palette, landmark shapes, terrain layers, water or sky details and fine texture; it contains no text or interface elements."
+  },
+  {
+    "level": 351,
+    "title": "赤焰雙峰",
+    "subtitle": "雙峰 · 赤焰",
+    "file": "landscape-351.jpg",
+    "tool": "procedural painterly generator",
+    "prompt": "Rendered by tools/generate_procedural_art.py as an original 1024x1024 landscape painting for stage 351, ‘赤焰雙峰’ (雙峰 · 赤焰). The deterministic painterly scene uses the route palette, landmark shapes, terrain layers, water or sky details and fine texture; it contains no text or interface elements."
+  },
+  {
+    "level": 352,
+    "title": "硫磺泉谷",
+    "subtitle": "泉谷 · 硫煙",
+    "file": "landscape-352.jpg",
+    "tool": "procedural painterly generator",
+    "prompt": "Rendered by tools/generate_procedural_art.py as an original 1024x1024 landscape painting for stage 352, ‘硫磺泉谷’ (泉谷 · 硫煙). The deterministic painterly scene uses the route palette, landmark shapes, terrain layers, water or sky details and fine texture; it contains no text or interface elements."
+  },
+  {
+    "level": 353,
+    "title": "黑砂海岸",
+    "subtitle": "黑砂 · 海岸",
+    "file": "landscape-353.jpg",
+    "tool": "procedural painterly generator",
+    "prompt": "Rendered by tools/generate_procedural_art.py as an original 1024x1024 landscape painting for stage 353, ‘黑砂海岸’ (黑砂 · 海岸). The deterministic painterly scene uses the route palette, landmark shapes, terrain layers, water or sky details and fine texture; it contains no text or interface elements."
+  },
+  {
+    "level": 354,
+    "title": "火山雷雨",
+    "subtitle": "火山 · 雷雨",
+    "file": "landscape-354.jpg",
+    "tool": "procedural painterly generator",
+    "prompt": "Rendered by tools/generate_procedural_art.py as an original 1024x1024 landscape painting for stage 354, ‘火山雷雨’ (火山 · 雷雨). The deterministic painterly scene uses the route palette, landmark shapes, terrain layers, water or sky details and fine texture; it contains no text or interface elements."
+  },
+  {
+    "level": 355,
+    "title": "餘燼森林",
+    "subtitle": "森林 · 餘燼",
+    "file": "landscape-355.jpg",
+    "tool": "procedural painterly generator",
+    "prompt": "Rendered by tools/generate_procedural_art.py as an original 1024x1024 landscape painting for stage 355, ‘餘燼森林’ (森林 · 餘燼). The deterministic painterly scene uses the route palette, landmark shapes, terrain layers, water or sky details and fine texture; it contains no text or interface elements."
+  },
+  {
+    "level": 356,
+    "title": "熔岩洞門",
+    "subtitle": "洞門 · 岩漿",
+    "file": "landscape-356.jpg",
+    "tool": "procedural painterly generator",
+    "prompt": "Rendered by tools/generate_procedural_art.py as an original 1024x1024 landscape painting for stage 356, ‘熔岩洞門’ (洞門 · 岩漿). The deterministic painterly scene uses the route palette, landmark shapes, terrain layers, water or sky details and fine texture; it contains no text or interface elements."
+  },
+  {
+    "level": 357,
+    "title": "星落火山",
+    "subtitle": "火山 · 星落",
+    "file": "landscape-357.jpg",
+    "tool": "procedural painterly generator",
+    "prompt": "Rendered by tools/generate_procedural_art.py as an original 1024x1024 landscape painting for stage 357, ‘星落火山’ (火山 · 星落). The deterministic painterly scene uses the route palette, landmark shapes, terrain layers, water or sky details and fine texture; it contains no text or interface elements."
+  },
+  {
+    "level": 358,
+    "title": "火山雪冠",
+    "subtitle": "雪冠 · 火峰",
+    "file": "landscape-358.jpg",
+    "tool": "procedural painterly generator",
+    "prompt": "Rendered by tools/generate_procedural_art.py as an original 1024x1024 landscape painting for stage 358, ‘火山雪冠’ (雪冠 · 火峰). The deterministic painterly scene uses the route palette, landmark shapes, terrain layers, water or sky details and fine texture; it contains no text or interface elements."
+  },
+  {
+    "level": 359,
+    "title": "金焰裂谷",
+    "subtitle": "裂谷 · 金焰",
+    "file": "landscape-359.jpg",
+    "tool": "procedural painterly generator",
+    "prompt": "Rendered by tools/generate_procedural_art.py as an original 1024x1024 landscape painting for stage 359, ‘金焰裂谷’ (裂谷 · 金焰). The deterministic painterly scene uses the route palette, landmark shapes, terrain layers, water or sky details and fine texture; it contains no text or interface elements."
+  },
+  {
+    "level": 360,
+    "title": "不熄之心",
+    "subtitle": "心核 · 不熄",
+    "file": "landscape-360.jpg",
+    "tool": "procedural painterly generator",
+    "prompt": "Rendered by tools/generate_procedural_art.py as an original 1024x1024 landscape painting for stage 360, ‘不熄之心’ (心核 · 不熄). The deterministic painterly scene uses the route palette, landmark shapes, terrain layers, water or sky details and fine texture; it contains no text or interface elements."
+  },
+  {
+    "level": 361,
+    "title": "冰封紀元",
+    "subtitle": "冰原 · 初霜",
+    "file": "landscape-361.jpg",
+    "tool": "procedural painterly generator",
+    "prompt": "Rendered by tools/generate_procedural_art.py as an original 1024x1024 landscape painting for stage 361, ‘冰封紀元’ (冰原 · 初霜). The deterministic painterly scene uses the route palette, landmark shapes, terrain layers, water or sky details and fine texture; it contains no text or interface elements."
+  },
+  {
+    "level": 362,
+    "title": "藍冰洞窟",
+    "subtitle": "洞窟 · 藍光",
+    "file": "landscape-362.jpg",
+    "tool": "procedural painterly generator",
+    "prompt": "Rendered by tools/generate_procedural_art.py as an original 1024x1024 landscape painting for stage 362, ‘藍冰洞窟’ (洞窟 · 藍光). The deterministic painterly scene uses the route palette, landmark shapes, terrain layers, water or sky details and fine texture; it contains no text or interface elements."
+  },
+  {
+    "level": 363,
+    "title": "冰川鏡湖",
+    "subtitle": "鏡湖 · 冰川",
+    "file": "landscape-363.jpg",
+    "tool": "procedural painterly generator",
+    "prompt": "Rendered by tools/generate_procedural_art.py as an original 1024x1024 landscape painting for stage 363, ‘冰川鏡湖’ (鏡湖 · 冰川). The deterministic painterly scene uses the route palette, landmark shapes, terrain layers, water or sky details and fine texture; it contains no text or interface elements."
+  },
+  {
+    "level": 364,
+    "title": "雪暴原野",
+    "subtitle": "雪原 · 暴風",
+    "file": "landscape-364.jpg",
+    "tool": "procedural painterly generator",
+    "prompt": "Rendered by tools/generate_procedural_art.py as an original 1024x1024 landscape painting for stage 364, ‘雪暴原野’ (雪原 · 暴風). The deterministic painterly scene uses the route palette, landmark shapes, terrain layers, water or sky details and fine texture; it contains no text or interface elements."
+  },
+  {
+    "level": 365,
+    "title": "霜峰裂谷",
+    "subtitle": "裂谷 · 霜峰",
+    "file": "landscape-365.jpg",
+    "tool": "procedural painterly generator",
+    "prompt": "Rendered by tools/generate_procedural_art.py as an original 1024x1024 landscape painting for stage 365, ‘霜峰裂谷’ (裂谷 · 霜峰). The deterministic painterly scene uses the route palette, landmark shapes, terrain layers, water or sky details and fine texture; it contains no text or interface elements."
+  },
+  {
+    "level": 366,
+    "title": "冰瀑階庭",
+    "subtitle": "冰庭 · 瀑階",
+    "file": "landscape-366.jpg",
+    "tool": "procedural painterly generator",
+    "prompt": "Rendered by tools/generate_procedural_art.py as an original 1024x1024 landscape painting for stage 366, ‘冰瀑階庭’ (冰庭 · 瀑階). The deterministic painterly scene uses the route palette, landmark shapes, terrain layers, water or sky details and fine texture; it contains no text or interface elements."
+  },
+  {
+    "level": 367,
+    "title": "晶雪松林",
+    "subtitle": "松林 · 晶雪",
+    "file": "landscape-367.jpg",
+    "tool": "procedural painterly generator",
+    "prompt": "Rendered by tools/generate_procedural_art.py as an original 1024x1024 landscape painting for stage 367, ‘晶雪松林’ (松林 · 晶雪). The deterministic painterly scene uses the route palette, landmark shapes, terrain layers, water or sky details and fine texture; it contains no text or interface elements."
+  },
+  {
+    "level": 368,
+    "title": "凍河石橋",
+    "subtitle": "石橋 · 凍河",
+    "file": "landscape-368.jpg",
+    "tool": "procedural painterly generator",
+    "prompt": "Rendered by tools/generate_procedural_art.py as an original 1024x1024 landscape painting for stage 368, ‘凍河石橋’ (石橋 · 凍河). The deterministic painterly scene uses the route palette, landmark shapes, terrain layers, water or sky details and fine texture; it contains no text or interface elements."
+  },
+  {
+    "level": 369,
+    "title": "極光冰原",
+    "subtitle": "冰原 · 極光",
+    "file": "landscape-369.jpg",
+    "tool": "procedural painterly generator",
+    "prompt": "Rendered by tools/generate_procedural_art.py as an original 1024x1024 landscape painting for stage 369, ‘極光冰原’ (冰原 · 極光). The deterministic painterly scene uses the route palette, landmark shapes, terrain layers, water or sky details and fine texture; it contains no text or interface elements."
+  },
+  {
+    "level": 370,
+    "title": "冰脊長城",
+    "subtitle": "冰脊 · 遠山",
+    "file": "landscape-370.jpg",
+    "tool": "procedural painterly generator",
+    "prompt": "Rendered by tools/generate_procedural_art.py as an original 1024x1024 landscape painting for stage 370, ‘冰脊長城’ (冰脊 · 遠山). The deterministic painterly scene uses the route palette, landmark shapes, terrain layers, water or sky details and fine texture; it contains no text or interface elements."
+  },
+  {
+    "level": 371,
+    "title": "霧凇湖岸",
+    "subtitle": "湖岸 · 霧凇",
+    "file": "landscape-371.jpg",
+    "tool": "procedural painterly generator",
+    "prompt": "Rendered by tools/generate_procedural_art.py as an original 1024x1024 landscape painting for stage 371, ‘霧凇湖岸’ (湖岸 · 霧凇). The deterministic painterly scene uses the route palette, landmark shapes, terrain layers, water or sky details and fine texture; it contains no text or interface elements."
+  },
+  {
+    "level": 372,
+    "title": "冰洞星河",
+    "subtitle": "洞河 · 星河",
+    "file": "landscape-372.jpg",
+    "tool": "procedural painterly generator",
+    "prompt": "Rendered by tools/generate_procedural_art.py as an original 1024x1024 landscape painting for stage 372, ‘冰洞星河’ (洞河 · 星河). The deterministic painterly scene uses the route palette, landmark shapes, terrain layers, water or sky details and fine texture; it contains no text or interface elements."
+  },
+  {
+    "level": 373,
+    "title": "雪丘風痕",
+    "subtitle": "丘陵 · 風痕",
+    "file": "landscape-373.jpg",
+    "tool": "procedural painterly generator",
+    "prompt": "Rendered by tools/generate_procedural_art.py as an original 1024x1024 landscape painting for stage 373, ‘雪丘風痕’ (丘陵 · 風痕). The deterministic painterly scene uses the route palette, landmark shapes, terrain layers, water or sky details and fine texture; it contains no text or interface elements."
+  },
+  {
+    "level": 374,
+    "title": "白夜山口",
+    "subtitle": "山口 · 白夜",
+    "file": "landscape-374.jpg",
+    "tool": "procedural painterly generator",
+    "prompt": "Rendered by tools/generate_procedural_art.py as an original 1024x1024 landscape painting for stage 374, ‘白夜山口’ (山口 · 白夜). The deterministic painterly scene uses the route palette, landmark shapes, terrain layers, water or sky details and fine texture; it contains no text or interface elements."
+  },
+  {
+    "level": 375,
+    "title": "冰川藍潭",
+    "subtitle": "藍潭 · 冰川",
+    "file": "landscape-375.jpg",
+    "tool": "procedural painterly generator",
+    "prompt": "Rendered by tools/generate_procedural_art.py as an original 1024x1024 landscape painting for stage 375, ‘冰川藍潭’ (藍潭 · 冰川). The deterministic painterly scene uses the route palette, landmark shapes, terrain layers, water or sky details and fine texture; it contains no text or interface elements."
+  },
+  {
+    "level": 376,
+    "title": "雪崖天井",
+    "subtitle": "天井 · 雪崖",
+    "file": "landscape-376.jpg",
+    "tool": "procedural painterly generator",
+    "prompt": "Rendered by tools/generate_procedural_art.py as an original 1024x1024 landscape painting for stage 376, ‘雪崖天井’ (天井 · 雪崖). The deterministic painterly scene uses the route palette, landmark shapes, terrain layers, water or sky details and fine texture; it contains no text or interface elements."
+  },
+  {
+    "level": 377,
+    "title": "冰封古木",
+    "subtitle": "古木 · 冰封",
+    "file": "landscape-377.jpg",
+    "tool": "procedural painterly generator",
+    "prompt": "Rendered by tools/generate_procedural_art.py as an original 1024x1024 landscape painting for stage 377, ‘冰封古木’ (古木 · 冰封). The deterministic painterly scene uses the route palette, landmark shapes, terrain layers, water or sky details and fine texture; it contains no text or interface elements."
+  },
+  {
+    "level": 378,
+    "title": "藍晶冰穴",
+    "subtitle": "冰穴 · 藍晶",
+    "file": "landscape-378.jpg",
+    "tool": "procedural painterly generator",
+    "prompt": "Rendered by tools/generate_procedural_art.py as an original 1024x1024 landscape painting for stage 378, ‘藍晶冰穴’ (冰穴 · 藍晶). The deterministic painterly scene uses the route palette, landmark shapes, terrain layers, water or sky details and fine texture; it contains no text or interface elements."
+  },
+  {
+    "level": 379,
+    "title": "晨光雪海",
+    "subtitle": "雪海 · 晨光",
+    "file": "landscape-379.jpg",
+    "tool": "procedural painterly generator",
+    "prompt": "Rendered by tools/generate_procedural_art.py as an original 1024x1024 landscape painting for stage 379, ‘晨光雪海’ (雪海 · 晨光). The deterministic painterly scene uses the route palette, landmark shapes, terrain layers, water or sky details and fine texture; it contains no text or interface elements."
+  },
+  {
+    "level": 380,
+    "title": "萬年冰心",
+    "subtitle": "冰心 · 萬年",
+    "file": "landscape-380.jpg",
+    "tool": "procedural painterly generator",
+    "prompt": "Rendered by tools/generate_procedural_art.py as an original 1024x1024 landscape painting for stage 380, ‘萬年冰心’ (冰心 · 萬年). The deterministic painterly scene uses the route palette, landmark shapes, terrain layers, water or sky details and fine texture; it contains no text or interface elements."
+  },
+  {
+    "level": 381,
+    "title": "原始海岸",
+    "subtitle": "海岸 · 初曉",
+    "file": "landscape-381.jpg",
+    "tool": "procedural painterly generator",
+    "prompt": "Rendered by tools/generate_procedural_art.py as an original 1024x1024 landscape painting for stage 381, ‘原始海岸’ (海岸 · 初曉). The deterministic painterly scene uses the route palette, landmark shapes, terrain layers, water or sky details and fine texture; it contains no text or interface elements."
+  },
+  {
+    "level": 382,
+    "title": "蒸氣海灣",
+    "subtitle": "海灣 · 蒸氣",
+    "file": "landscape-382.jpg",
+    "tool": "procedural painterly generator",
+    "prompt": "Rendered by tools/generate_procedural_art.py as an original 1024x1024 landscape painting for stage 382, ‘蒸氣海灣’ (海灣 · 蒸氣). The deterministic painterly scene uses the route palette, landmark shapes, terrain layers, water or sky details and fine texture; it contains no text or interface elements."
+  },
+  {
+    "level": 383,
+    "title": "礦物潮池",
+    "subtitle": "潮池 · 礦物",
+    "file": "landscape-383.jpg",
+    "tool": "procedural painterly generator",
+    "prompt": "Rendered by tools/generate_procedural_art.py as an original 1024x1024 landscape painting for stage 383, ‘礦物潮池’ (潮池 · 礦物). The deterministic painterly scene uses the route palette, landmark shapes, terrain layers, water or sky details and fine texture; it contains no text or interface elements."
+  },
+  {
+    "level": 384,
+    "title": "晨光玄武岩",
+    "subtitle": "玄武 · 晨光",
+    "file": "landscape-384.jpg",
+    "tool": "procedural painterly generator",
+    "prompt": "Rendered by tools/generate_procedural_art.py as an original 1024x1024 landscape painting for stage 384, ‘晨光玄武岩’ (玄武 · 晨光). The deterministic painterly scene uses the route palette, landmark shapes, terrain layers, water or sky details and fine texture; it contains no text or interface elements."
+  },
+  {
+    "level": 385,
+    "title": "初生瀑谷",
+    "subtitle": "瀑谷 · 初生",
+    "file": "landscape-385.jpg",
+    "tool": "procedural painterly generator",
+    "prompt": "Rendered by tools/generate_procedural_art.py as an original 1024x1024 landscape painting for stage 385, ‘初生瀑谷’ (瀑谷 · 初生). The deterministic painterly scene uses the route palette, landmark shapes, terrain layers, water or sky details and fine texture; it contains no text or interface elements."
+  },
+  {
+    "level": 386,
+    "title": "鹽晶海岬",
+    "subtitle": "海岬 · 鹽晶",
+    "file": "landscape-386.jpg",
+    "tool": "procedural painterly generator",
+    "prompt": "Rendered by tools/generate_procedural_art.py as an original 1024x1024 landscape painting for stage 386, ‘鹽晶海岬’ (海岬 · 鹽晶). The deterministic painterly scene uses the route palette, landmark shapes, terrain layers, water or sky details and fine texture; it contains no text or interface elements."
+  },
+  {
+    "level": 387,
+    "title": "溫泉石環",
+    "subtitle": "石環 · 溫泉",
+    "file": "landscape-387.jpg",
+    "tool": "procedural painterly generator",
+    "prompt": "Rendered by tools/generate_procedural_art.py as an original 1024x1024 landscape painting for stage 387, ‘溫泉石環’ (石環 · 溫泉). The deterministic painterly scene uses the route palette, landmark shapes, terrain layers, water or sky details and fine texture; it contains no text or interface elements."
+  },
+  {
+    "level": 388,
+    "title": "晨霧高地",
+    "subtitle": "高地 · 晨霧",
+    "file": "landscape-388.jpg",
+    "tool": "procedural painterly generator",
+    "prompt": "Rendered by tools/generate_procedural_art.py as an original 1024x1024 landscape painting for stage 388, ‘晨霧高地’ (高地 · 晨霧). The deterministic painterly scene uses the route palette, landmark shapes, terrain layers, water or sky details and fine texture; it contains no text or interface elements."
+  },
+  {
+    "level": 389,
+    "title": "原始珊瑚灣",
+    "subtitle": "珊瑚 · 原始",
+    "file": "landscape-389.jpg",
+    "tool": "procedural painterly generator",
+    "prompt": "Rendered by tools/generate_procedural_art.py as an original 1024x1024 landscape painting for stage 389, ‘原始珊瑚灣’ (珊瑚 · 原始). The deterministic painterly scene uses the route palette, landmark shapes, terrain layers, water or sky details and fine texture; it contains no text or interface elements."
+  },
+  {
+    "level": 390,
+    "title": "火山潮池",
+    "subtitle": "潮池 · 火山",
+    "file": "landscape-390.jpg",
+    "tool": "procedural painterly generator",
+    "prompt": "Rendered by tools/generate_procedural_art.py as an original 1024x1024 landscape painting for stage 390, ‘火山潮池’ (潮池 · 火山). The deterministic painterly scene uses the route palette, landmark shapes, terrain layers, water or sky details and fine texture; it contains no text or interface elements."
+  },
+  {
+    "level": 391,
+    "title": "古海沉積層",
+    "subtitle": "沉積 · 古海",
+    "file": "landscape-391.jpg",
+    "tool": "procedural painterly generator",
+    "prompt": "Rendered by tools/generate_procedural_art.py as an original 1024x1024 landscape painting for stage 391, ‘古海沉積層’ (沉積 · 古海). The deterministic painterly scene uses the route palette, landmark shapes, terrain layers, water or sky details and fine texture; it contains no text or interface elements."
+  },
+  {
+    "level": 392,
+    "title": "赤色海蝕洞",
+    "subtitle": "海蝕 · 赤洞",
+    "file": "landscape-392.jpg",
+    "tool": "procedural painterly generator",
+    "prompt": "Rendered by tools/generate_procedural_art.py as an original 1024x1024 landscape painting for stage 392, ‘赤色海蝕洞’ (海蝕 · 赤洞). The deterministic painterly scene uses the route palette, landmark shapes, terrain layers, water or sky details and fine texture; it contains no text or interface elements."
+  },
+  {
+    "level": 393,
+    "title": "生命之泉",
+    "subtitle": "泉水 · 生命",
+    "file": "landscape-393.jpg",
+    "tool": "procedural painterly generator",
+    "prompt": "Rendered by tools/generate_procedural_art.py as an original 1024x1024 landscape painting for stage 393, ‘生命之泉’ (泉水 · 生命). The deterministic painterly scene uses the route palette, landmark shapes, terrain layers, water or sky details and fine texture; it contains no text or interface elements."
+  },
+  {
+    "level": 394,
+    "title": "星光岩岸",
+    "subtitle": "岩岸 · 星光",
+    "file": "landscape-394.jpg",
+    "tool": "procedural painterly generator",
+    "prompt": "Rendered by tools/generate_procedural_art.py as an original 1024x1024 landscape painting for stage 394, ‘星光岩岸’ (岩岸 · 星光). The deterministic painterly scene uses the route palette, landmark shapes, terrain layers, water or sky details and fine texture; it contains no text or interface elements."
+  },
+  {
+    "level": 395,
+    "title": "曙光濕地",
+    "subtitle": "濕地 · 曙光",
+    "file": "landscape-395.jpg",
+    "tool": "procedural painterly generator",
+    "prompt": "Rendered by tools/generate_procedural_art.py as an original 1024x1024 landscape painting for stage 395, ‘曙光濕地’ (濕地 · 曙光). The deterministic painterly scene uses the route palette, landmark shapes, terrain layers, water or sky details and fine texture; it contains no text or interface elements."
+  },
+  {
+    "level": 396,
+    "title": "雲頂石灘",
+    "subtitle": "石灘 · 雲頂",
+    "file": "landscape-396.jpg",
+    "tool": "procedural painterly generator",
+    "prompt": "Rendered by tools/generate_procedural_art.py as an original 1024x1024 landscape painting for stage 396, ‘雲頂石灘’ (石灘 · 雲頂). The deterministic painterly scene uses the route palette, landmark shapes, terrain layers, water or sky details and fine texture; it contains no text or interface elements."
+  },
+  {
+    "level": 397,
+    "title": "琥珀淺海",
+    "subtitle": "淺海 · 琥珀",
+    "file": "landscape-397.jpg",
+    "tool": "procedural painterly generator",
+    "prompt": "Rendered by tools/generate_procedural_art.py as an original 1024x1024 landscape painting for stage 397, ‘琥珀淺海’ (淺海 · 琥珀). The deterministic painterly scene uses the route palette, landmark shapes, terrain layers, water or sky details and fine texture; it contains no text or interface elements."
+  },
+  {
+    "level": 398,
+    "title": "遠古天池",
+    "subtitle": "天池 · 遠古",
+    "file": "landscape-398.jpg",
+    "tool": "procedural painterly generator",
+    "prompt": "Rendered by tools/generate_procedural_art.py as an original 1024x1024 landscape painting for stage 398, ‘遠古天池’ (天池 · 遠古). The deterministic painterly scene uses the route palette, landmark shapes, terrain layers, water or sky details and fine texture; it contains no text or interface elements."
+  },
+  {
+    "level": 399,
+    "title": "初陽群峰",
+    "subtitle": "群峰 · 初陽",
+    "file": "landscape-399.jpg",
+    "tool": "procedural painterly generator",
+    "prompt": "Rendered by tools/generate_procedural_art.py as an original 1024x1024 landscape painting for stage 399, ‘初陽群峰’ (群峰 · 初陽). The deterministic painterly scene uses the route palette, landmark shapes, terrain layers, water or sky details and fine texture; it contains no text or interface elements."
+  },
+  {
+    "level": 400,
+    "title": "萬物初明",
+    "subtitle": "世界 · 初明",
+    "file": "landscape-400.jpg",
+    "tool": "procedural painterly generator",
+    "prompt": "Rendered by tools/generate_procedural_art.py as an original 1024x1024 landscape painting for stage 400, ‘萬物初明’ (世界 · 初明). The deterministic painterly scene uses the route palette, landmark shapes, terrain layers, water or sky details and fine texture; it contains no text or interface elements."
+  },
+  {
+    "level": 401,
+    "title": "雙日沙丘",
+    "subtitle": "沙丘 · 雙日",
+    "file": "landscape-401.jpg",
+    "tool": "procedural painterly generator",
+    "prompt": "Rendered by tools/generate_procedural_art.py as an original 1024x1024 landscape painting for stage 401, ‘雙日沙丘’ (沙丘 · 雙日). The deterministic painterly scene uses the route palette, landmark shapes, terrain layers, water or sky details and fine texture; it contains no text or interface elements."
+  },
+  {
+    "level": 402,
+    "title": "紅砂隕坑",
+    "subtitle": "隕坑 · 赤砂",
+    "file": "landscape-402.jpg",
+    "tool": "procedural painterly generator",
+    "prompt": "Rendered by tools/generate_procedural_art.py as an original 1024x1024 landscape painting for stage 402, ‘紅砂隕坑’ (隕坑 · 赤砂). The deterministic painterly scene uses the route palette, landmark shapes, terrain layers, water or sky details and fine texture; it contains no text or interface elements."
+  },
+  {
+    "level": 403,
+    "title": "風蝕方山",
+    "subtitle": "方山 · 風蝕",
+    "file": "landscape-403.jpg",
+    "tool": "procedural painterly generator",
+    "prompt": "Rendered by tools/generate_procedural_art.py as an original 1024x1024 landscape painting for stage 403, ‘風蝕方山’ (方山 · 風蝕). The deterministic painterly scene uses the route palette, landmark shapes, terrain layers, water or sky details and fine texture; it contains no text or interface elements."
+  },
+  {
+    "level": 404,
+    "title": "赭色沙海",
+    "subtitle": "沙海 · 赭紅",
+    "file": "landscape-404.jpg",
+    "tool": "procedural painterly generator",
+    "prompt": "Rendered by tools/generate_procedural_art.py as an original 1024x1024 landscape painting for stage 404, ‘赭色沙海’ (沙海 · 赭紅). The deterministic painterly scene uses the route palette, landmark shapes, terrain layers, water or sky details and fine texture; it contains no text or interface elements."
+  },
+  {
+    "level": 405,
+    "title": "藍影峽口",
+    "subtitle": "峽口 · 藍影",
+    "file": "landscape-405.jpg",
+    "tool": "procedural painterly generator",
+    "prompt": "Rendered by tools/generate_procedural_art.py as an original 1024x1024 landscape painting for stage 405, ‘藍影峽口’ (峽口 · 藍影). The deterministic painterly scene uses the route palette, landmark shapes, terrain layers, water or sky details and fine texture; it contains no text or interface elements."
+  },
+  {
+    "level": 406,
+    "title": "星塵探谷",
+    "subtitle": "探谷 · 星塵",
+    "file": "landscape-406.jpg",
+    "tool": "procedural painterly generator",
+    "prompt": "Rendered by tools/generate_procedural_art.py as an original 1024x1024 landscape painting for stage 406, ‘星塵探谷’ (探谷 · 星塵). The deterministic painterly scene uses the route palette, landmark shapes, terrain layers, water or sky details and fine texture; it contains no text or interface elements."
+  },
+  {
+    "level": 407,
+    "title": "環形石窪",
+    "subtitle": "石窪 · 環形",
+    "file": "landscape-407.jpg",
+    "tool": "procedural painterly generator",
+    "prompt": "Rendered by tools/generate_procedural_art.py as an original 1024x1024 landscape painting for stage 407, ‘環形石窪’ (石窪 · 環形). The deterministic painterly scene uses the route palette, landmark shapes, terrain layers, water or sky details and fine texture; it contains no text or interface elements."
+  },
+  {
+    "level": 408,
+    "title": "遠古著陸臺",
+    "subtitle": "著陸 · 遺跡",
+    "file": "landscape-408.jpg",
+    "tool": "procedural painterly generator",
+    "prompt": "Rendered by tools/generate_procedural_art.py as an original 1024x1024 landscape painting for stage 408, ‘遠古著陸臺’ (著陸 · 遺跡). The deterministic painterly scene uses the route palette, landmark shapes, terrain layers, water or sky details and fine texture; it contains no text or interface elements."
+  },
+  {
+    "level": 409,
+    "title": "紫暮沙丘",
+    "subtitle": "沙丘 · 紫暮",
+    "file": "landscape-409.jpg",
+    "tool": "procedural painterly generator",
+    "prompt": "Rendered by tools/generate_procedural_art.py as an original 1024x1024 landscape painting for stage 409, ‘紫暮沙丘’ (沙丘 · 紫暮). The deterministic painterly scene uses the route palette, landmark shapes, terrain layers, water or sky details and fine texture; it contains no text or interface elements."
+  },
+  {
+    "level": 410,
+    "title": "鐵砂荒原",
+    "subtitle": "荒原 · 鐵砂",
+    "file": "landscape-410.jpg",
+    "tool": "procedural painterly generator",
+    "prompt": "Rendered by tools/generate_procedural_art.py as an original 1024x1024 landscape painting for stage 410, ‘鐵砂荒原’ (荒原 · 鐵砂). The deterministic painterly scene uses the route palette, landmark shapes, terrain layers, water or sky details and fine texture; it contains no text or interface elements."
+  },
+  {
+    "level": 411,
+    "title": "玻璃隕石灘",
+    "subtitle": "隕石 · 玻璃",
+    "file": "landscape-411.jpg",
+    "tool": "procedural painterly generator",
+    "prompt": "Rendered by tools/generate_procedural_art.py as an original 1024x1024 landscape painting for stage 411, ‘玻璃隕石灘’ (隕石 · 玻璃). The deterministic painterly scene uses the route palette, landmark shapes, terrain layers, water or sky details and fine texture; it contains no text or interface elements."
+  },
+  {
+    "level": 412,
+    "title": "雙月石林",
+    "subtitle": "石林 · 雙月",
+    "file": "landscape-412.jpg",
+    "tool": "procedural painterly generator",
+    "prompt": "Rendered by tools/generate_procedural_art.py as an original 1024x1024 landscape painting for stage 412, ‘雙月石林’ (石林 · 雙月). The deterministic painterly scene uses the route palette, landmark shapes, terrain layers, water or sky details and fine texture; it contains no text or interface elements."
+  },
+  {
+    "level": 413,
+    "title": "赤沙河床",
+    "subtitle": "河床 · 赤沙",
+    "file": "landscape-413.jpg",
+    "tool": "procedural painterly generator",
+    "prompt": "Rendered by tools/generate_procedural_art.py as an original 1024x1024 landscape painting for stage 413, ‘赤沙河床’ (河床 · 赤沙). The deterministic painterly scene uses the route palette, landmark shapes, terrain layers, water or sky details and fine texture; it contains no text or interface elements."
+  },
+  {
+    "level": 414,
+    "title": "流星裂谷",
+    "subtitle": "裂谷 · 流星",
+    "file": "landscape-414.jpg",
+    "tool": "procedural painterly generator",
+    "prompt": "Rendered by tools/generate_procedural_art.py as an original 1024x1024 landscape painting for stage 414, ‘流星裂谷’ (裂谷 · 流星). The deterministic painterly scene uses the route palette, landmark shapes, terrain layers, water or sky details and fine texture; it contains no text or interface elements."
+  },
+  {
+    "level": 415,
+    "title": "沙海孤峰",
+    "subtitle": "孤峰 · 沙海",
+    "file": "landscape-415.jpg",
+    "tool": "procedural painterly generator",
+    "prompt": "Rendered by tools/generate_procedural_art.py as an original 1024x1024 landscape painting for stage 415, ‘沙海孤峰’ (孤峰 · 沙海). The deterministic painterly scene uses the route palette, landmark shapes, terrain layers, water or sky details and fine texture; it contains no text or interface elements."
+  },
+  {
+    "level": 416,
+    "title": "紅岩天井",
+    "subtitle": "天井 · 紅岩",
+    "file": "landscape-416.jpg",
+    "tool": "procedural painterly generator",
+    "prompt": "Rendered by tools/generate_procedural_art.py as an original 1024x1024 landscape painting for stage 416, ‘紅岩天井’ (天井 · 紅岩). The deterministic painterly scene uses the route palette, landmark shapes, terrain layers, water or sky details and fine texture; it contains no text or interface elements."
+  },
+  {
+    "level": 417,
+    "title": "晨星沙洲",
+    "subtitle": "沙洲 · 晨星",
+    "file": "landscape-417.jpg",
+    "tool": "procedural painterly generator",
+    "prompt": "Rendered by tools/generate_procedural_art.py as an original 1024x1024 landscape painting for stage 417, ‘晨星沙洲’ (沙洲 · 晨星). The deterministic painterly scene uses the route palette, landmark shapes, terrain layers, water or sky details and fine texture; it contains no text or interface elements."
+  },
+  {
+    "level": 418,
+    "title": "風暴眼盆地",
+    "subtitle": "盆地 · 風暴",
+    "file": "landscape-418.jpg",
+    "tool": "procedural painterly generator",
+    "prompt": "Rendered by tools/generate_procedural_art.py as an original 1024x1024 landscape painting for stage 418, ‘風暴眼盆地’ (盆地 · 風暴). The deterministic painterly scene uses the route palette, landmark shapes, terrain layers, water or sky details and fine texture; it contains no text or interface elements."
+  },
+  {
+    "level": 419,
+    "title": "星塵火山口",
+    "subtitle": "火山 · 星塵",
+    "file": "landscape-419.jpg",
+    "tool": "procedural painterly generator",
+    "prompt": "Rendered by tools/generate_procedural_art.py as an original 1024x1024 landscape painting for stage 419, ‘星塵火山口’ (火山 · 星塵). The deterministic painterly scene uses the route palette, landmark shapes, terrain layers, water or sky details and fine texture; it contains no text or interface elements."
+  },
+  {
+    "level": 420,
+    "title": "初訪異星灣",
+    "subtitle": "異星 · 初訪",
+    "file": "landscape-420.jpg",
+    "tool": "procedural painterly generator",
+    "prompt": "Rendered by tools/generate_procedural_art.py as an original 1024x1024 landscape painting for stage 420, ‘初訪異星灣’ (異星 · 初訪). The deterministic painterly scene uses the route palette, landmark shapes, terrain layers, water or sky details and fine texture; it contains no text or interface elements."
+  },
+  {
+    "level": 421,
+    "title": "晶環峽谷",
+    "subtitle": "峽谷 · 晶環",
+    "file": "landscape-421.jpg",
+    "tool": "procedural painterly generator",
+    "prompt": "Rendered by tools/generate_procedural_art.py as an original 1024x1024 landscape painting for stage 421, ‘晶環峽谷’ (峽谷 · 晶環). The deterministic painterly scene uses the route palette, landmark shapes, terrain layers, water or sky details and fine texture; it contains no text or interface elements."
+  },
+  {
+    "level": 422,
+    "title": "紫晶河谷",
+    "subtitle": "河谷 · 紫晶",
+    "file": "landscape-422.jpg",
+    "tool": "procedural painterly generator",
+    "prompt": "Rendered by tools/generate_procedural_art.py as an original 1024x1024 landscape painting for stage 422, ‘紫晶河谷’ (河谷 · 紫晶). The deterministic painterly scene uses the route palette, landmark shapes, terrain layers, water or sky details and fine texture; it contains no text or interface elements."
+  },
+  {
+    "level": 423,
+    "title": "環山天橋",
+    "subtitle": "天橋 · 環山",
+    "file": "landscape-423.jpg",
+    "tool": "procedural painterly generator",
+    "prompt": "Rendered by tools/generate_procedural_art.py as an original 1024x1024 landscape painting for stage 423, ‘環山天橋’ (天橋 · 環山). The deterministic painterly scene uses the route palette, landmark shapes, terrain layers, water or sky details and fine texture; it contains no text or interface elements."
+  },
+  {
+    "level": 424,
+    "title": "磁浮石庭",
+    "subtitle": "石庭 · 磁浮",
+    "file": "landscape-424.jpg",
+    "tool": "procedural painterly generator",
+    "prompt": "Rendered by tools/generate_procedural_art.py as an original 1024x1024 landscape painting for stage 424, ‘磁浮石庭’ (石庭 · 磁浮). The deterministic painterly scene uses the route palette, landmark shapes, terrain layers, water or sky details and fine texture; it contains no text or interface elements."
+  },
+  {
+    "level": 425,
+    "title": "鏡晶瀑潭",
+    "subtitle": "瀑潭 · 鏡晶",
+    "file": "landscape-425.jpg",
+    "tool": "procedural painterly generator",
+    "prompt": "Rendered by tools/generate_procedural_art.py as an original 1024x1024 landscape painting for stage 425, ‘鏡晶瀑潭’ (瀑潭 · 鏡晶). The deterministic painterly scene uses the route palette, landmark shapes, terrain layers, water or sky details and fine texture; it contains no text or interface elements."
+  },
+  {
+    "level": 426,
+    "title": "玫瑰石英崖",
+    "subtitle": "石英 · 玫瑰",
+    "file": "landscape-426.jpg",
+    "tool": "procedural painterly generator",
+    "prompt": "Rendered by tools/generate_procedural_art.py as an original 1024x1024 landscape painting for stage 426, ‘玫瑰石英崖’ (石英 · 玫瑰). The deterministic painterly scene uses the route palette, landmark shapes, terrain layers, water or sky details and fine texture; it contains no text or interface elements."
+  },
+  {
+    "level": 427,
+    "title": "六角晶林",
+    "subtitle": "晶林 · 六角",
+    "file": "landscape-427.jpg",
+    "tool": "procedural painterly generator",
+    "prompt": "Rendered by tools/generate_procedural_art.py as an original 1024x1024 landscape painting for stage 427, ‘六角晶林’ (晶林 · 六角). The deterministic painterly scene uses the route palette, landmark shapes, terrain layers, water or sky details and fine texture; it contains no text or interface elements."
+  },
+  {
+    "level": 428,
+    "title": "折光洞門",
+    "subtitle": "洞門 · 折光",
+    "file": "landscape-428.jpg",
+    "tool": "procedural painterly generator",
+    "prompt": "Rendered by tools/generate_procedural_art.py as an original 1024x1024 landscape painting for stage 428, ‘折光洞門’ (洞門 · 折光). The deterministic painterly scene uses the route palette, landmark shapes, terrain layers, water or sky details and fine texture; it contains no text or interface elements."
+  },
+  {
+    "level": 429,
+    "title": "青晶深井",
+    "subtitle": "深井 · 青晶",
+    "file": "landscape-429.jpg",
+    "tool": "procedural painterly generator",
+    "prompt": "Rendered by tools/generate_procedural_art.py as an original 1024x1024 landscape painting for stage 429, ‘青晶深井’ (深井 · 青晶). The deterministic painterly scene uses the route palette, landmark shapes, terrain layers, water or sky details and fine texture; it contains no text or interface elements."
+  },
+  {
+    "level": 430,
+    "title": "星環山脊",
+    "subtitle": "山脊 · 星環",
+    "file": "landscape-430.jpg",
+    "tool": "procedural painterly generator",
+    "prompt": "Rendered by tools/generate_procedural_art.py as an original 1024x1024 landscape painting for stage 430, ‘星環山脊’ (山脊 · 星環). The deterministic painterly scene uses the route palette, landmark shapes, terrain layers, water or sky details and fine texture; it contains no text or interface elements."
+  },
+  {
+    "level": 431,
+    "title": "水晶沙洲",
+    "subtitle": "沙洲 · 水晶",
+    "file": "landscape-431.jpg",
+    "tool": "procedural painterly generator",
+    "prompt": "Rendered by tools/generate_procedural_art.py as an original 1024x1024 landscape painting for stage 431, ‘水晶沙洲’ (沙洲 · 水晶). The deterministic painterly scene uses the route palette, landmark shapes, terrain layers, water or sky details and fine texture; it contains no text or interface elements."
+  },
+  {
+    "level": 432,
+    "title": "琉璃斷層",
+    "subtitle": "斷層 · 琉璃",
+    "file": "landscape-432.jpg",
+    "tool": "procedural painterly generator",
+    "prompt": "Rendered by tools/generate_procedural_art.py as an original 1024x1024 landscape painting for stage 432, ‘琉璃斷層’ (斷層 · 琉璃). The deterministic painterly scene uses the route palette, landmark shapes, terrain layers, water or sky details and fine texture; it contains no text or interface elements."
+  },
+  {
+    "level": 433,
+    "title": "晶瀑石階",
+    "subtitle": "石階 · 晶瀑",
+    "file": "landscape-433.jpg",
+    "tool": "procedural painterly generator",
+    "prompt": "Rendered by tools/generate_procedural_art.py as an original 1024x1024 landscape painting for stage 433, ‘晶瀑石階’ (石階 · 晶瀑). The deterministic painterly scene uses the route palette, landmark shapes, terrain layers, water or sky details and fine texture; it contains no text or interface elements."
+  },
+  {
+    "level": 434,
+    "title": "虹光環湖",
+    "subtitle": "環湖 · 虹光",
+    "file": "landscape-434.jpg",
+    "tool": "procedural painterly generator",
+    "prompt": "Rendered by tools/generate_procedural_art.py as an original 1024x1024 landscape painting for stage 434, ‘虹光環湖’ (環湖 · 虹光). The deterministic painterly scene uses the route palette, landmark shapes, terrain layers, water or sky details and fine texture; it contains no text or interface elements."
+  },
+  {
+    "level": 435,
+    "title": "藍晶風蝕柱",
+    "subtitle": "風蝕 · 藍晶",
+    "file": "landscape-435.jpg",
+    "tool": "procedural painterly generator",
+    "prompt": "Rendered by tools/generate_procedural_art.py as an original 1024x1024 landscape painting for stage 435, ‘藍晶風蝕柱’ (風蝕 · 藍晶). The deterministic painterly scene uses the route palette, landmark shapes, terrain layers, water or sky details and fine texture; it contains no text or interface elements."
+  },
+  {
+    "level": 436,
+    "title": "紫霧峽門",
+    "subtitle": "峽門 · 紫霧",
+    "file": "landscape-436.jpg",
+    "tool": "procedural painterly generator",
+    "prompt": "Rendered by tools/generate_procedural_art.py as an original 1024x1024 landscape painting for stage 436, ‘紫霧峽門’ (峽門 · 紫霧). The deterministic painterly scene uses the route palette, landmark shapes, terrain layers, water or sky details and fine texture; it contains no text or interface elements."
+  },
+  {
+    "level": 437,
+    "title": "懸石星谷",
+    "subtitle": "星谷 · 懸石",
+    "file": "landscape-437.jpg",
+    "tool": "procedural painterly generator",
+    "prompt": "Rendered by tools/generate_procedural_art.py as an original 1024x1024 landscape painting for stage 437, ‘懸石星谷’ (星谷 · 懸石). The deterministic painterly scene uses the route palette, landmark shapes, terrain layers, water or sky details and fine texture; it contains no text or interface elements."
+  },
+  {
+    "level": 438,
+    "title": "晶環高原",
+    "subtitle": "高原 · 晶環",
+    "file": "landscape-438.jpg",
+    "tool": "procedural painterly generator",
+    "prompt": "Rendered by tools/generate_procedural_art.py as an original 1024x1024 landscape painting for stage 438, ‘晶環高原’ (高原 · 晶環). The deterministic painterly scene uses the route palette, landmark shapes, terrain layers, water or sky details and fine texture; it contains no text or interface elements."
+  },
+  {
+    "level": 439,
+    "title": "寶石潮汐",
+    "subtitle": "潮汐 · 寶石",
+    "file": "landscape-439.jpg",
+    "tool": "procedural painterly generator",
+    "prompt": "Rendered by tools/generate_procedural_art.py as an original 1024x1024 landscape painting for stage 439, ‘寶石潮汐’ (潮汐 · 寶石). The deterministic painterly scene uses the route palette, landmark shapes, terrain layers, water or sky details and fine texture; it contains no text or interface elements."
+  },
+  {
+    "level": 440,
+    "title": "萬稜之心",
+    "subtitle": "稜心 · 萬面",
+    "file": "landscape-440.jpg",
+    "tool": "procedural painterly generator",
+    "prompt": "Rendered by tools/generate_procedural_art.py as an original 1024x1024 landscape painting for stage 440, ‘萬稜之心’ (稜心 · 萬面). The deterministic painterly scene uses the route palette, landmark shapes, terrain layers, water or sky details and fine texture; it contains no text or interface elements."
+  },
+  {
+    "level": 441,
+    "title": "發光蕈林",
+    "subtitle": "蕈林 · 發光",
+    "file": "landscape-441.jpg",
+    "tool": "procedural painterly generator",
+    "prompt": "Rendered by tools/generate_procedural_art.py as an original 1024x1024 landscape painting for stage 441, ‘發光蕈林’ (蕈林 · 發光). The deterministic painterly scene uses the route palette, landmark shapes, terrain layers, water or sky details and fine texture; it contains no text or interface elements."
+  },
+  {
+    "level": 442,
+    "title": "異星濕地",
+    "subtitle": "濕地 · 異星",
+    "file": "landscape-442.jpg",
+    "tool": "procedural painterly generator",
+    "prompt": "Rendered by tools/generate_procedural_art.py as an original 1024x1024 landscape painting for stage 442, ‘異星濕地’ (濕地 · 異星). The deterministic painterly scene uses the route palette, landmark shapes, terrain layers, water or sky details and fine texture; it contains no text or interface elements."
+  },
+  {
+    "level": 443,
+    "title": "漂浮孢子谷",
+    "subtitle": "孢子 · 漂浮",
+    "file": "landscape-443.jpg",
+    "tool": "procedural painterly generator",
+    "prompt": "Rendered by tools/generate_procedural_art.py as an original 1024x1024 landscape painting for stage 443, ‘漂浮孢子谷’ (孢子 · 漂浮). The deterministic painterly scene uses the route palette, landmark shapes, terrain layers, water or sky details and fine texture; it contains no text or interface elements."
+  },
+  {
+    "level": 444,
+    "title": "藍焰蘆原",
+    "subtitle": "蘆原 · 藍焰",
+    "file": "landscape-444.jpg",
+    "tool": "procedural painterly generator",
+    "prompt": "Rendered by tools/generate_procedural_art.py as an original 1024x1024 landscape painting for stage 444, ‘藍焰蘆原’ (蘆原 · 藍焰). The deterministic painterly scene uses the route palette, landmark shapes, terrain layers, water or sky details and fine texture; it contains no text or interface elements."
+  },
+  {
+    "level": 445,
+    "title": "螢光蕨島",
+    "subtitle": "蕨島 · 螢光",
+    "file": "landscape-445.jpg",
+    "tool": "procedural painterly generator",
+    "prompt": "Rendered by tools/generate_procedural_art.py as an original 1024x1024 landscape painting for stage 445, ‘螢光蕨島’ (蕨島 · 螢光). The deterministic painterly scene uses the route palette, landmark shapes, terrain layers, water or sky details and fine texture; it contains no text or interface elements."
+  },
+  {
+    "level": 446,
+    "title": "星點菌庭",
+    "subtitle": "菌庭 · 星點",
+    "file": "landscape-446.jpg",
+    "tool": "procedural painterly generator",
+    "prompt": "Rendered by tools/generate_procedural_art.py as an original 1024x1024 landscape painting for stage 446, ‘星點菌庭’ (菌庭 · 星點). The deterministic painterly scene uses the route palette, landmark shapes, terrain layers, water or sky details and fine texture; it contains no text or interface elements."
+  },
+  {
+    "level": 447,
+    "title": "月色菌環",
+    "subtitle": "菌環 · 月色",
+    "file": "landscape-447.jpg",
+    "tool": "procedural painterly generator",
+    "prompt": "Rendered by tools/generate_procedural_art.py as an original 1024x1024 landscape painting for stage 447, ‘月色菌環’ (菌環 · 月色). The deterministic painterly scene uses the route palette, landmark shapes, terrain layers, water or sky details and fine texture; it contains no text or interface elements."
+  },
+  {
+    "level": 448,
+    "title": "光藻潟湖",
+    "subtitle": "潟湖 · 光藻",
+    "file": "landscape-448.jpg",
+    "tool": "procedural painterly generator",
+    "prompt": "Rendered by tools/generate_procedural_art.py as an original 1024x1024 landscape painting for stage 448, ‘光藻潟湖’ (潟湖 · 光藻). The deterministic painterly scene uses the route palette, landmark shapes, terrain layers, water or sky details and fine texture; it contains no text or interface elements."
+  },
+  {
+    "level": 449,
+    "title": "翠焰藤谷",
+    "subtitle": "藤谷 · 翠焰",
+    "file": "landscape-449.jpg",
+    "tool": "procedural painterly generator",
+    "prompt": "Rendered by tools/generate_procedural_art.py as an original 1024x1024 landscape painting for stage 449, ‘翠焰藤谷’ (藤谷 · 翠焰). The deterministic painterly scene uses the route palette, landmark shapes, terrain layers, water or sky details and fine texture; it contains no text or interface elements."
+  },
+  {
+    "level": 450,
+    "title": "浮光樹海",
+    "subtitle": "樹海 · 浮光",
+    "file": "landscape-450.jpg",
+    "tool": "procedural painterly generator",
+    "prompt": "Rendered by tools/generate_procedural_art.py as an original 1024x1024 landscape painting for stage 450, ‘浮光樹海’ (樹海 · 浮光). The deterministic painterly scene uses the route palette, landmark shapes, terrain layers, water or sky details and fine texture; it contains no text or interface elements."
+  },
+  {
+    "level": 451,
+    "title": "紫霧花沼",
+    "subtitle": "花沼 · 紫霧",
+    "file": "landscape-451.jpg",
+    "tool": "procedural painterly generator",
+    "prompt": "Rendered by tools/generate_procedural_art.py as an original 1024x1024 landscape painting for stage 451, ‘紫霧花沼’ (花沼 · 紫霧). The deterministic painterly scene uses the route palette, landmark shapes, terrain layers, water or sky details and fine texture; it contains no text or interface elements."
+  },
+  {
+    "level": 452,
+    "title": "水晶蒲草灣",
+    "subtitle": "蒲草 · 水晶",
+    "file": "landscape-452.jpg",
+    "tool": "procedural painterly generator",
+    "prompt": "Rendered by tools/generate_procedural_art.py as an original 1024x1024 landscape painting for stage 452, ‘水晶蒲草灣’ (蒲草 · 水晶). The deterministic painterly scene uses the route palette, landmark shapes, terrain layers, water or sky details and fine texture; it contains no text or interface elements."
+  },
+  {
+    "level": 453,
+    "title": "銀葉夜林",
+    "subtitle": "夜林 · 銀葉",
+    "file": "landscape-453.jpg",
+    "tool": "procedural painterly generator",
+    "prompt": "Rendered by tools/generate_procedural_art.py as an original 1024x1024 landscape painting for stage 453, ‘銀葉夜林’ (夜林 · 銀葉). The deterministic painterly scene uses the route palette, landmark shapes, terrain layers, water or sky details and fine texture; it contains no text or interface elements."
+  },
+  {
+    "level": 454,
+    "title": "光羽瀑布",
+    "subtitle": "瀑布 · 光羽",
+    "file": "landscape-454.jpg",
+    "tool": "procedural painterly generator",
+    "prompt": "Rendered by tools/generate_procedural_art.py as an original 1024x1024 landscape painting for stage 454, ‘光羽瀑布’ (瀑布 · 光羽). The deterministic painterly scene uses the route palette, landmark shapes, terrain layers, water or sky details and fine texture; it contains no text or interface elements."
+  },
+  {
+    "level": 455,
+    "title": "生物光海岬",
+    "subtitle": "海岬 · 生光",
+    "file": "landscape-455.jpg",
+    "tool": "procedural painterly generator",
+    "prompt": "Rendered by tools/generate_procedural_art.py as an original 1024x1024 landscape painting for stage 455, ‘生物光海岬’ (海岬 · 生光). The deterministic painterly scene uses the route palette, landmark shapes, terrain layers, water or sky details and fine texture; it contains no text or interface elements."
+  },
+  {
+    "level": 456,
+    "title": "幽藍天池",
+    "subtitle": "天池 · 幽藍",
+    "file": "landscape-456.jpg",
+    "tool": "procedural painterly generator",
+    "prompt": "Rendered by tools/generate_procedural_art.py as an original 1024x1024 landscape painting for stage 456, ‘幽藍天池’ (天池 · 幽藍). The deterministic painterly scene uses the route palette, landmark shapes, terrain layers, water or sky details and fine texture; it contains no text or interface elements."
+  },
+  {
+    "level": 457,
+    "title": "星塵蘑菇谷",
+    "subtitle": "菌谷 · 星塵",
+    "file": "landscape-457.jpg",
+    "tool": "procedural painterly generator",
+    "prompt": "Rendered by tools/generate_procedural_art.py as an original 1024x1024 landscape painting for stage 457, ‘星塵蘑菇谷’ (菌谷 · 星塵). The deterministic painterly scene uses the route palette, landmark shapes, terrain layers, water or sky details and fine texture; it contains no text or interface elements."
+  },
+  {
+    "level": 458,
+    "title": "虹色苔原",
+    "subtitle": "苔原 · 虹色",
+    "file": "landscape-458.jpg",
+    "tool": "procedural painterly generator",
+    "prompt": "Rendered by tools/generate_procedural_art.py as an original 1024x1024 landscape painting for stage 458, ‘虹色苔原’ (苔原 · 虹色). The deterministic painterly scene uses the route palette, landmark shapes, terrain layers, water or sky details and fine texture; it contains no text or interface elements."
+  },
+  {
+    "level": 459,
+    "title": "夜光珊瑚原",
+    "subtitle": "珊瑚 · 夜光",
+    "file": "landscape-459.jpg",
+    "tool": "procedural painterly generator",
+    "prompt": "Rendered by tools/generate_procedural_art.py as an original 1024x1024 landscape painting for stage 459, ‘夜光珊瑚原’ (珊瑚 · 夜光). The deterministic painterly scene uses the route palette, landmark shapes, terrain layers, water or sky details and fine texture; it contains no text or interface elements."
+  },
+  {
+    "level": 460,
+    "title": "萬燈生態園",
+    "subtitle": "生態 · 萬燈",
+    "file": "landscape-460.jpg",
+    "tool": "procedural painterly generator",
+    "prompt": "Rendered by tools/generate_procedural_art.py as an original 1024x1024 landscape painting for stage 460, ‘萬燈生態園’ (生態 · 萬燈). The deterministic painterly scene uses the route palette, landmark shapes, terrain layers, water or sky details and fine texture; it contains no text or interface elements."
+  },
+  {
+    "level": 461,
+    "title": "地底遺構",
+    "subtitle": "遺構 · 地底",
+    "file": "landscape-461.jpg",
+    "tool": "procedural painterly generator",
+    "prompt": "Rendered by tools/generate_procedural_art.py as an original 1024x1024 landscape painting for stage 461, ‘地底遺構’ (遺構 · 地底). The deterministic painterly scene uses the route palette, landmark shapes, terrain layers, water or sky details and fine texture; it contains no text or interface elements."
+  },
+  {
+    "level": 462,
+    "title": "透明穹頂",
+    "subtitle": "穹頂 · 透明",
+    "file": "landscape-462.jpg",
+    "tool": "procedural painterly generator",
+    "prompt": "Rendered by tools/generate_procedural_art.py as an original 1024x1024 landscape painting for stage 462, ‘透明穹頂’ (穹頂 · 透明). The deterministic painterly scene uses the route palette, landmark shapes, terrain layers, water or sky details and fine texture; it contains no text or interface elements."
+  },
+  {
+    "level": 463,
+    "title": "環形廣場",
+    "subtitle": "廣場 · 環形",
+    "file": "landscape-463.jpg",
+    "tool": "procedural painterly generator",
+    "prompt": "Rendered by tools/generate_procedural_art.py as an original 1024x1024 landscape painting for stage 463, ‘環形廣場’ (廣場 · 環形). The deterministic painterly scene uses the route palette, landmark shapes, terrain layers, water or sky details and fine texture; it contains no text or interface elements."
+  },
+  {
+    "level": 464,
+    "title": "星門廢庭",
+    "subtitle": "廢庭 · 星門",
+    "file": "landscape-464.jpg",
+    "tool": "procedural painterly generator",
+    "prompt": "Rendered by tools/generate_procedural_art.py as an original 1024x1024 landscape painting for stage 464, ‘星門廢庭’ (廢庭 · 星門). The deterministic painterly scene uses the route palette, landmark shapes, terrain layers, water or sky details and fine texture; it contains no text or interface elements."
+  },
+  {
+    "level": 465,
+    "title": "長眠拱廊",
+    "subtitle": "拱廊 · 長眠",
+    "file": "landscape-465.jpg",
+    "tool": "procedural painterly generator",
+    "prompt": "Rendered by tools/generate_procedural_art.py as an original 1024x1024 landscape painting for stage 465, ‘長眠拱廊’ (拱廊 · 長眠). The deterministic painterly scene uses the route palette, landmark shapes, terrain layers, water or sky details and fine texture; it contains no text or interface elements."
+  },
+  {
+    "level": 466,
+    "title": "苔覆觀測臺",
+    "subtitle": "觀臺 · 苔覆",
+    "file": "landscape-466.jpg",
+    "tool": "procedural painterly generator",
+    "prompt": "Rendered by tools/generate_procedural_art.py as an original 1024x1024 landscape painting for stage 466, ‘苔覆觀測臺’ (觀臺 · 苔覆). The deterministic painterly scene uses the route palette, landmark shapes, terrain layers, water or sky details and fine texture; it contains no text or interface elements."
+  },
+  {
+    "level": 467,
+    "title": "倒映古城",
+    "subtitle": "古城 · 倒映",
+    "file": "landscape-467.jpg",
+    "tool": "procedural painterly generator",
+    "prompt": "Rendered by tools/generate_procedural_art.py as an original 1024x1024 landscape painting for stage 467, ‘倒映古城’ (古城 · 倒映). The deterministic painterly scene uses the route palette, landmark shapes, terrain layers, water or sky details and fine texture; it contains no text or interface elements."
+  },
+  {
+    "level": 468,
+    "title": "晶柱神殿",
+    "subtitle": "神殿 · 晶柱",
+    "file": "landscape-468.jpg",
+    "tool": "procedural painterly generator",
+    "prompt": "Rendered by tools/generate_procedural_art.py as an original 1024x1024 landscape painting for stage 468, ‘晶柱神殿’ (神殿 · 晶柱). The deterministic painterly scene uses the route palette, landmark shapes, terrain layers, water or sky details and fine texture; it contains no text or interface elements."
+  },
+  {
+    "level": 469,
+    "title": "沙掩階城",
+    "subtitle": "階城 · 沙掩",
+    "file": "landscape-469.jpg",
+    "tool": "procedural painterly generator",
+    "prompt": "Rendered by tools/generate_procedural_art.py as an original 1024x1024 landscape painting for stage 469, ‘沙掩階城’ (階城 · 沙掩). The deterministic painterly scene uses the route palette, landmark shapes, terrain layers, water or sky details and fine texture; it contains no text or interface elements."
+  },
+  {
+    "level": 470,
+    "title": "藍霧庭院",
+    "subtitle": "庭院 · 藍霧",
+    "file": "landscape-470.jpg",
+    "tool": "procedural painterly generator",
+    "prompt": "Rendered by tools/generate_procedural_art.py as an original 1024x1024 landscape painting for stage 470, ‘藍霧庭院’ (庭院 · 藍霧). The deterministic painterly scene uses the route palette, landmark shapes, terrain layers, water or sky details and fine texture; it contains no text or interface elements."
+  },
+  {
+    "level": 471,
+    "title": "日蝕高塔",
+    "subtitle": "高塔 · 日蝕",
+    "file": "landscape-471.jpg",
+    "tool": "procedural painterly generator",
+    "prompt": "Rendered by tools/generate_procedural_art.py as an original 1024x1024 landscape painting for stage 471, ‘日蝕高塔’ (高塔 · 日蝕). The deterministic painterly scene uses the route palette, landmark shapes, terrain layers, water or sky details and fine texture; it contains no text or interface elements."
+  },
+  {
+    "level": 472,
+    "title": "根脈石門",
+    "subtitle": "石門 · 根脈",
+    "file": "landscape-472.jpg",
+    "tool": "procedural painterly generator",
+    "prompt": "Rendered by tools/generate_procedural_art.py as an original 1024x1024 landscape painting for stage 472, ‘根脈石門’ (石門 · 根脈). The deterministic painterly scene uses the route palette, landmark shapes, terrain layers, water or sky details and fine texture; it contains no text or interface elements."
+  },
+  {
+    "level": 473,
+    "title": "月環水池",
+    "subtitle": "水池 · 月環",
+    "file": "landscape-473.jpg",
+    "tool": "procedural painterly generator",
+    "prompt": "Rendered by tools/generate_procedural_art.py as an original 1024x1024 landscape painting for stage 473, ‘月環水池’ (水池 · 月環). The deterministic painterly scene uses the route palette, landmark shapes, terrain layers, water or sky details and fine texture; it contains no text or interface elements."
+  },
+  {
+    "level": 474,
+    "title": "古城天井",
+    "subtitle": "天井 · 古城",
+    "file": "landscape-474.jpg",
+    "tool": "procedural painterly generator",
+    "prompt": "Rendered by tools/generate_procedural_art.py as an original 1024x1024 landscape painting for stage 474, ‘古城天井’ (天井 · 古城). The deterministic painterly scene uses the route palette, landmark shapes, terrain layers, water or sky details and fine texture; it contains no text or interface elements."
+  },
+  {
+    "level": 475,
+    "title": "星圖石林",
+    "subtitle": "石林 · 星圖",
+    "file": "landscape-475.jpg",
+    "tool": "procedural painterly generator",
+    "prompt": "Rendered by tools/generate_procedural_art.py as an original 1024x1024 landscape painting for stage 475, ‘星圖石林’ (石林 · 星圖). The deterministic painterly scene uses the route palette, landmark shapes, terrain layers, water or sky details and fine texture; it contains no text or interface elements."
+  },
+  {
+    "level": 476,
+    "title": "遺城瀑渠",
+    "subtitle": "瀑渠 · 遺城",
+    "file": "landscape-476.jpg",
+    "tool": "procedural painterly generator",
+    "prompt": "Rendered by tools/generate_procedural_art.py as an original 1024x1024 landscape painting for stage 476, ‘遺城瀑渠’ (瀑渠 · 遺城). The deterministic painterly scene uses the route palette, landmark shapes, terrain layers, water or sky details and fine texture; it contains no text or interface elements."
+  },
+  {
+    "level": 477,
+    "title": "靜默圓殿",
+    "subtitle": "圓殿 · 靜默",
+    "file": "landscape-477.jpg",
+    "tool": "procedural painterly generator",
+    "prompt": "Rendered by tools/generate_procedural_art.py as an original 1024x1024 landscape painting for stage 477, ‘靜默圓殿’ (圓殿 · 靜默). The deterministic painterly scene uses the route palette, landmark shapes, terrain layers, water or sky details and fine texture; it contains no text or interface elements."
+  },
+  {
+    "level": 478,
+    "title": "群峰瞭望臺",
+    "subtitle": "瞭望 · 群峰",
+    "file": "landscape-478.jpg",
+    "tool": "procedural painterly generator",
+    "prompt": "Rendered by tools/generate_procedural_art.py as an original 1024x1024 landscape painting for stage 478, ‘群峰瞭望臺’ (瞭望 · 群峰). The deterministic painterly scene uses the route palette, landmark shapes, terrain layers, water or sky details and fine texture; it contains no text or interface elements."
+  },
+  {
+    "level": 479,
+    "title": "夜海長廊",
+    "subtitle": "長廊 · 夜海",
+    "file": "landscape-479.jpg",
+    "tool": "procedural painterly generator",
+    "prompt": "Rendered by tools/generate_procedural_art.py as an original 1024x1024 landscape painting for stage 479, ‘夜海長廊’ (長廊 · 夜海). The deterministic painterly scene uses the route palette, landmark shapes, terrain layers, water or sky details and fine texture; it contains no text or interface elements."
+  },
+  {
+    "level": 480,
+    "title": "失落之都",
+    "subtitle": "古都 · 失落",
+    "file": "landscape-480.jpg",
+    "tool": "procedural painterly generator",
+    "prompt": "Rendered by tools/generate_procedural_art.py as an original 1024x1024 landscape painting for stage 480, ‘失落之都’ (古都 · 失落). The deterministic painterly scene uses the route palette, landmark shapes, terrain layers, water or sky details and fine texture; it contains no text or interface elements."
+  },
+  {
+    "level": 481,
+    "title": "行星環海",
+    "subtitle": "環海 · 行星",
+    "file": "landscape-481.jpg",
+    "tool": "procedural painterly generator",
+    "prompt": "Rendered by tools/generate_procedural_art.py as an original 1024x1024 landscape painting for stage 481, ‘行星環海’ (環海 · 行星). The deterministic painterly scene uses the route palette, landmark shapes, terrain layers, water or sky details and fine texture; it contains no text or interface elements."
+  },
+  {
+    "level": 482,
+    "title": "軌道花園",
+    "subtitle": "花園 · 軌道",
+    "file": "landscape-482.jpg",
+    "tool": "procedural painterly generator",
+    "prompt": "Rendered by tools/generate_procedural_art.py as an original 1024x1024 landscape painting for stage 482, ‘軌道花園’ (花園 · 軌道). The deterministic painterly scene uses the route palette, landmark shapes, terrain layers, water or sky details and fine texture; it contains no text or interface elements."
+  },
+  {
+    "level": 483,
+    "title": "星門觀景臺",
+    "subtitle": "觀景 · 星門",
+    "file": "landscape-483.jpg",
+    "tool": "procedural painterly generator",
+    "prompt": "Rendered by tools/generate_procedural_art.py as an original 1024x1024 landscape painting for stage 483, ‘星門觀景臺’ (觀景 · 星門). The deterministic painterly scene uses the route palette, landmark shapes, terrain layers, water or sky details and fine texture; it contains no text or interface elements."
+  },
+  {
+    "level": 484,
+    "title": "雙星日出",
+    "subtitle": "日出 · 雙星",
+    "file": "landscape-484.jpg",
+    "tool": "procedural painterly generator",
+    "prompt": "Rendered by tools/generate_procedural_art.py as an original 1024x1024 landscape painting for stage 484, ‘雙星日出’ (日出 · 雙星). The deterministic painterly scene uses the route palette, landmark shapes, terrain layers, water or sky details and fine texture; it contains no text or interface elements."
+  },
+  {
+    "level": 485,
+    "title": "彗尾花園",
+    "subtitle": "花園 · 彗尾",
+    "file": "landscape-485.jpg",
+    "tool": "procedural painterly generator",
+    "prompt": "Rendered by tools/generate_procedural_art.py as an original 1024x1024 landscape painting for stage 485, ‘彗尾花園’ (花園 · 彗尾). The deterministic painterly scene uses the route palette, landmark shapes, terrain layers, water or sky details and fine texture; it contains no text or interface elements."
+  },
+  {
+    "level": 486,
+    "title": "月環天橋",
+    "subtitle": "天橋 · 月環",
+    "file": "landscape-486.jpg",
+    "tool": "procedural painterly generator",
+    "prompt": "Rendered by tools/generate_procedural_art.py as an original 1024x1024 landscape painting for stage 486, ‘月環天橋’ (天橋 · 月環). The deterministic painterly scene uses the route palette, landmark shapes, terrain layers, water or sky details and fine texture; it contains no text or interface elements."
+  },
+  {
+    "level": 487,
+    "title": "星雲燈塔",
+    "subtitle": "燈塔 · 星雲",
+    "file": "landscape-487.jpg",
+    "tool": "procedural painterly generator",
+    "prompt": "Rendered by tools/generate_procedural_art.py as an original 1024x1024 landscape painting for stage 487, ‘星雲燈塔’ (燈塔 · 星雲). The deterministic painterly scene uses the route palette, landmark shapes, terrain layers, water or sky details and fine texture; it contains no text or interface elements."
+  },
+  {
+    "level": 488,
+    "title": "天幕港灣",
+    "subtitle": "港灣 · 天幕",
+    "file": "landscape-488.jpg",
+    "tool": "procedural painterly generator",
+    "prompt": "Rendered by tools/generate_procedural_art.py as an original 1024x1024 landscape painting for stage 488, ‘天幕港灣’ (港灣 · 天幕). The deterministic painterly scene uses the route palette, landmark shapes, terrain layers, water or sky details and fine texture; it contains no text or interface elements."
+  },
+  {
+    "level": 489,
+    "title": "光環雲瀑",
+    "subtitle": "雲瀑 · 光環",
+    "file": "landscape-489.jpg",
+    "tool": "procedural painterly generator",
+    "prompt": "Rendered by tools/generate_procedural_art.py as an original 1024x1024 landscape painting for stage 489, ‘光環雲瀑’ (雲瀑 · 光環). The deterministic painterly scene uses the route palette, landmark shapes, terrain layers, water or sky details and fine texture; it contains no text or interface elements."
+  },
+  {
+    "level": 490,
+    "title": "流星群島",
+    "subtitle": "群島 · 流星",
+    "file": "landscape-490.jpg",
+    "tool": "procedural painterly generator",
+    "prompt": "Rendered by tools/generate_procedural_art.py as an original 1024x1024 landscape painting for stage 490, ‘流星群島’ (群島 · 流星). The deterministic painterly scene uses the route palette, landmark shapes, terrain layers, water or sky details and fine texture; it contains no text or interface elements."
+  },
+  {
+    "level": 491,
+    "title": "銀河觀測站",
+    "subtitle": "觀測 · 銀河",
+    "file": "landscape-491.jpg",
+    "tool": "procedural painterly generator",
+    "prompt": "Rendered by tools/generate_procedural_art.py as an original 1024x1024 landscape painting for stage 491, ‘銀河觀測站’ (觀測 · 銀河). The deterministic painterly scene uses the route palette, landmark shapes, terrain layers, water or sky details and fine texture; it contains no text or interface elements."
+  },
+  {
+    "level": 492,
+    "title": "行星夜市",
+    "subtitle": "夜市 · 行星",
+    "file": "landscape-492.jpg",
+    "tool": "procedural painterly generator",
+    "prompt": "Rendered by tools/generate_procedural_art.py as an original 1024x1024 landscape painting for stage 492, ‘行星夜市’ (夜市 · 行星). The deterministic painterly scene uses the route palette, landmark shapes, terrain layers, water or sky details and fine texture; it contains no text or interface elements."
+  },
+  {
+    "level": 493,
+    "title": "星際水苑",
+    "subtitle": "水苑 · 星際",
+    "file": "landscape-493.jpg",
+    "tool": "procedural painterly generator",
+    "prompt": "Rendered by tools/generate_procedural_art.py as an original 1024x1024 landscape painting for stage 493, ‘星際水苑’ (水苑 · 星際). The deterministic painterly scene uses the route palette, landmark shapes, terrain layers, water or sky details and fine texture; it contains no text or interface elements."
+  },
+  {
+    "level": 494,
+    "title": "晨曦星門",
+    "subtitle": "星門 · 晨曦",
+    "file": "landscape-494.jpg",
+    "tool": "procedural painterly generator",
+    "prompt": "Rendered by tools/generate_procedural_art.py as an original 1024x1024 landscape painting for stage 494, ‘晨曦星門’ (星門 · 晨曦). The deterministic painterly scene uses the route palette, landmark shapes, terrain layers, water or sky details and fine texture; it contains no text or interface elements."
+  },
+  {
+    "level": 495,
+    "title": "日蝕花廊",
+    "subtitle": "花廊 · 日蝕",
+    "file": "landscape-495.jpg",
+    "tool": "procedural painterly generator",
+    "prompt": "Rendered by tools/generate_procedural_art.py as an original 1024x1024 landscape painting for stage 495, ‘日蝕花廊’ (花廊 · 日蝕). The deterministic painterly scene uses the route palette, landmark shapes, terrain layers, water or sky details and fine texture; it contains no text or interface elements."
+  },
+  {
+    "level": 496,
+    "title": "星環雪園",
+    "subtitle": "雪園 · 星環",
+    "file": "landscape-496.jpg",
+    "tool": "procedural painterly generator",
+    "prompt": "Rendered by tools/generate_procedural_art.py as an original 1024x1024 landscape painting for stage 496, ‘星環雪園’ (雪園 · 星環). The deterministic painterly scene uses the route palette, landmark shapes, terrain layers, water or sky details and fine texture; it contains no text or interface elements."
+  },
+  {
+    "level": 497,
+    "title": "深空燈海",
+    "subtitle": "燈海 · 深空",
+    "file": "landscape-497.jpg",
+    "tool": "procedural painterly generator",
+    "prompt": "Rendered by tools/generate_procedural_art.py as an original 1024x1024 landscape painting for stage 497, ‘深空燈海’ (燈海 · 深空). The deterministic painterly scene uses the route palette, landmark shapes, terrain layers, water or sky details and fine texture; it contains no text or interface elements."
+  },
+  {
+    "level": 498,
+    "title": "星塵長橋",
+    "subtitle": "長橋 · 星塵",
+    "file": "landscape-498.jpg",
+    "tool": "procedural painterly generator",
+    "prompt": "Rendered by tools/generate_procedural_art.py as an original 1024x1024 landscape painting for stage 498, ‘星塵長橋’ (長橋 · 星塵). The deterministic painterly scene uses the route palette, landmark shapes, terrain layers, water or sky details and fine texture; it contains no text or interface elements."
+  },
+  {
+    "level": 499,
+    "title": "群星彼岸",
+    "subtitle": "彼岸 · 群星",
+    "file": "landscape-499.jpg",
+    "tool": "procedural painterly generator",
+    "prompt": "Rendered by tools/generate_procedural_art.py as an original 1024x1024 landscape painting for stage 499, ‘群星彼岸’ (彼岸 · 群星). The deterministic painterly scene uses the route palette, landmark shapes, terrain layers, water or sky details and fine texture; it contains no text or interface elements."
+  },
+  {
+    "level": 500,
+    "title": "宇宙之門",
+    "subtitle": "星門 · 宇宙",
+    "file": "landscape-500.jpg",
+    "tool": "procedural painterly generator",
+    "prompt": "Rendered by tools/generate_procedural_art.py as an original 1024x1024 landscape painting for stage 500, ‘宇宙之門’ (星門 · 宇宙). The deterministic painterly scene uses the route palette, landmark shapes, terrain layers, water or sky details and fine texture; it contains no text or interface elements."
   }
 ]

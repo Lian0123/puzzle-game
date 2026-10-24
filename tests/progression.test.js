@@ -84,14 +84,14 @@ test('expansion preserves legacy daily sessions and validates the new daily pool
   assert.equal(S.recordWin(state,{mode:'daily',index:(legacy.current+1)%140,size:4,stars:3,date:today},today),0);
   assert.equal(state.balance,200);
 });
-test('new stages 141 through 300 persist in all difficulties while stage 301 is rejected',()=>{
-  for(let current=140;current<300;current++)for(const size of [4,5,6]){
+test('new stages 301 through 500 persist in all difficulties while stage 501 is rejected',()=>{
+  for(let current=300;current<500;current++)for(const size of [4,5,6]){
     const raw={current,size,pieces:S.makePuzzle(size,current),moves:3,seconds:30,hints:2};
-    assert.equal(S.normalizeSession(raw,300).current,current);
+    assert.equal(S.normalizeSession(raw,500).current,current);
   }
-  assert.equal(S.normalizeSession({current:300,size:4,pieces:S.makePuzzle(4,1),moves:0,seconds:0,hints:2},300),null);
+  assert.equal(S.normalizeSession({current:500,size:4,pieces:S.makePuzzle(4,1),moves:0,seconds:0,hints:2},500),null);
 });
-test('the 140-level daily pool remains valid after the 300-level expansion',()=>{
+test('the 140-level daily pool remains valid after the 500-level expansion',()=>{
   const legacy={current:S.dailyIndex(today,140),dailyPool:140,size:4,pieces:S.makePuzzle(4,1),moves:4,seconds:40,hints:1,mode:'daily',date:today};
-  const restored=S.normalizeSession(legacy,300);assert.ok(restored);assert.equal(restored.dailyPool,140);assert.deepEqual(restored.pieces,legacy.pieces);
+  const restored=S.normalizeSession(legacy,500);assert.ok(restored);assert.equal(restored.dailyPool,140);assert.deepEqual(restored.pieces,legacy.pieces);
 });

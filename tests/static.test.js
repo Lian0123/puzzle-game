@@ -5,19 +5,19 @@ const { resolve } = require('node:path');
 const { createHash } = require('node:crypto');
 const root=resolve(__dirname,'..');
 const read=file=>readFileSync(resolve(root,file),'utf8');
-test('300 unique landscapes belong to fifteen routes and three consistent worlds',()=>{
-  const D=require('../game-data.js');assert.equal(D.TOTAL_LEVELS,300);assert.equal(D.scenes.length,300);assert.equal(D.chapters.length,15);assert.equal(D.worlds.length,3);
-  assert.equal(new Set(D.scenes.map(scene=>scene.title)).size,300);assert.equal(new Set(D.scenes.map(scene=>scene.url)).size,300);
+test('500 unique landscapes belong to twenty-five routes and five consistent worlds',()=>{
+  const D=require('../game-data.js');assert.equal(D.TOTAL_LEVELS,500);assert.equal(D.scenes.length,500);assert.equal(D.chapters.length,25);assert.equal(D.worlds.length,5);
+  assert.equal(new Set(D.scenes.map(scene=>scene.title)).size,500);assert.equal(new Set(D.scenes.map(scene=>scene.url)).size,500);
   D.scenes.forEach((scene,index)=>{assert.equal(scene.index,index);assert.equal(scene.chapter,Math.floor(index/20));assert.equal(D.chapters[scene.chapter].worldId,scene.worldId);const world=D.worlds[scene.worldId];assert.ok(index>=world.start&&index<world.end);});
-  const art=JSON.parse(read('assets/level-art-manifest.json'));assert.equal(art.length,200);assert.equal(new Set(art.map(entry=>entry.prompt)).size,200);
-  art.forEach((entry,index)=>{assert.equal(entry.level,101+index);assert.equal(entry.file,D.scenes[100+index].url.replace('assets/',''));assert.equal(entry.tool,'built-in image_gen');});
+  const art=JSON.parse(read('assets/level-art-manifest.json'));assert.equal(art.length,400);assert.equal(new Set(art.map(entry=>entry.prompt)).size,400);
+  art.forEach((entry,index)=>{assert.equal(entry.level,101+index);assert.equal(entry.file,D.scenes[100+index].url.replace('assets/',''));assert.equal(entry.tool,entry.level<=305||(entry.level>=310&&entry.level<=313)?'built-in image_gen':'procedural painterly generator');});
 });
-test('all shell resources and 300 bundled landscapes exist',()=>{
+test('all shell resources and 500 bundled landscapes exist',()=>{
   const html=read('index.html');
   for(const match of html.matchAll(/(?:src|href)="([^"#]+)"/g))if(!/^(https?:|data:)/.test(match[1]))assert.ok(existsSync(resolve(root,match[1])),match[1]);
   const hashes=new Set();
-  for(let i=1;i<=300;i++){const path=resolve(root,`assets/landscape-${String(i).padStart(2,'0')}.jpg`);assert.ok(existsSync(path));hashes.add(createHash('sha256').update(readFileSync(path)).digest('hex'));}
-  assert.equal(hashes.size,300,'Every stage has distinct artwork');
+  for(let i=1;i<=500;i++){const path=resolve(root,`assets/landscape-${String(i).padStart(2,'0')}.jpg`);assert.ok(existsSync(path));hashes.add(createHash('sha256').update(readFileSync(path)).digest('hex'));}
+  assert.equal(hashes.size,500,'Every stage has distinct artwork');
   const manifest=JSON.parse(read('manifest.webmanifest'));assert.equal(manifest.lang,'zh-Hant');
   for(const icon of manifest.icons)assert.ok(existsSync(resolve(root,icon.src)));
 });

@@ -20,6 +20,8 @@ button{font-weight:600}.topbar{height:82px;border-bottom-color:#b7c6e529}.brand-
 /* Expanded worlds and route palettes, 141–300. */
 .world-nav{grid-template-columns:repeat(3,minmax(0,1fr))}
 .world-card[data-world="2"]{background:linear-gradient(130deg,#685449,#3c4b54)}
+.world-card[data-world="3"]{background:linear-gradient(130deg,#39705e,#263c43)}
+.world-card[data-world="4"]{background:linear-gradient(130deg,#5b4c82,#283b5d)}
 .map-shell[data-theme="crystal"]{--sky-top:#55548f;--sky-bottom:#b2b5d1;--far:#8c82b6;--mid:#72679e;--near:#506d97;--ground:#385779;--accent:#e8d9f5}
 .map-shell[data-theme="arcane"]{--sky-top:#705a95;--sky-bottom:#d8b8b2;--far:#a68ab0;--mid:#77779a;--near:#535f80;--ground:#354660;--accent:#ffe3a6}
 .map-shell[data-theme="dreamsea"]{--sky-top:#3b427c;--sky-bottom:#a092b9;--far:#7773a5;--mid:#627695;--near:#456982;--ground:#2e4c6e;--accent:#f0dff9}
@@ -33,7 +35,12 @@ button{font-weight:600}.topbar{height:82px;border-bottom-color:#b7c6e529}.brand-
 .map-shell[data-world="ancient"] .map-landmarks{display:none}
 .map-shell[data-world="ancient"] .map-forest{fill:#315a51}
 .map-shell[data-world="ancient"] .map-cloud{opacity:.32}
+.map-shell[data-world="primordial"] .map-forest{fill:#39705e}
+.map-shell[data-world="alien"] .map-forest{fill:#4f5c88}
+.map-shell[data-world="alien"] .map-cloud{fill:#c2a5df;opacity:.27}
 @media(max-width:1100px){.world-nav{grid-template-columns:repeat(2,minmax(0,1fr))}.world-card:last-child{grid-column:1/-1}}
 @media(max-width:650px){.world-nav{grid-template-columns:1fr}.world-card:last-child{grid-column:auto}}
 
 .badge-grid{grid-template-columns:repeat(3,minmax(0,1fr))}
+.offline-world-button{flex:0 0 auto;border:1px solid #b7d8c3;border-radius:999px;padding:6px 12px;background:#234b40;color:#edf5df;font:inherit;font-size:10px;font-weight:700;cursor:pointer}.offline-world-button:hover,.offline-world-button:focus-visible{background:#346552;outline:2px solid #d4e9b7;outline-offset:2px}.offline-world-button:disabled{opacity:.72;cursor:wait}
+@media(max-width:650px){.chapter-heading{flex-wrap:wrap}.chapter-heading small{margin-left:auto}.offline-world-button{order:1;width:100%;padding:8px}}
