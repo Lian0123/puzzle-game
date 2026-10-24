@@ -427,4 +427,4 @@ def main():
 
 
 if __name__ == "__main__":
-    main()
+    raise SystemExit("Archived generator: use built-in image_gen and record_generated_art.py; do not overwrite finished artwork.")

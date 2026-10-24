@@ -42,5 +42,17 @@ button{font-weight:600}.topbar{height:82px;border-bottom-color:#b7c6e529}.brand-
 @media(max-width:650px){.world-nav{grid-template-columns:1fr}.world-card:last-child{grid-column:auto}}
 
 .badge-grid{grid-template-columns:repeat(3,minmax(0,1fr))}
+.world-card[data-world="5"]{background:linear-gradient(130deg,#285d70,#153c4a)}
+.world-card[data-world="6"]{background:linear-gradient(130deg,#78643f,#5d4c53)}
+.map-shell[data-world="technology"]{--sky-top:#264e69;--sky-bottom:#9dc5c5;--far:#729cae;--mid:#517b91;--near:#326276;--ground:#204452;--accent:#c6fff3}
+.map-shell[data-world="nouveau"]{--sky-top:#8d7378;--sky-bottom:#e5d2ae;--far:#b5a18e;--mid:#8f9580;--near:#6b8274;--ground:#455c54;--accent:#ffe5a3}
+.map-shell[data-world="technology"] .map-landmarks{fill:#b9e5dc;stroke:#7cc7d4;stroke-width:2}
+.map-shell[data-world="technology"] .map-river{stroke:#92e8f4}
+.map-shell[data-world="technology"] .map-sparkles{fill:#affff4}
+.map-shell[data-world="nouveau"] .map-landmarks{fill:#edd2a0}
+.map-shell[data-world="nouveau"] .map-forest{fill:#68846b}
+.map-shell[data-world="nouveau"] .map-river{stroke:#dec38e}
+.map-shell[data-world="nouveau"] .map-sun{fill:#f0dba3;stroke:#c3a46c;stroke-width:8}
+.map-shell[data-world="nouveau"] .map-heading-icon{border-radius:50%;box-shadow:0 0 0 3px #c5a46555}
 .offline-world-button{flex:0 0 auto;border:1px solid #b7d8c3;border-radius:999px;padding:6px 12px;background:#234b40;color:#edf5df;font:inherit;font-size:10px;font-weight:700;cursor:pointer}.offline-world-button:hover,.offline-world-button:focus-visible{background:#346552;outline:2px solid #d4e9b7;outline-offset:2px}.offline-world-button:disabled{opacity:.72;cursor:wait}
 @media(max-width:650px){.chapter-heading{flex-wrap:wrap}.chapter-heading small{margin-left:auto}.offline-world-button{order:1;width:100%;padding:8px}}

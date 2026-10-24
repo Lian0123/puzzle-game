@@ -1,8 +1,14 @@
 // Increment CACHE and VERSION whenever the app shell or bundled assets change.
 importScripts('./game-data.js');
-const CACHE='shijing-v14';
-const VERSION='14';
+const CACHE='shijing-v16';
+const VERSION='16';
 const sceneImages=self.ShijingData.scenes.map(scene=>`./${scene.url}`);
+// Replaced procedural artwork must be fetched fresh rather than inherited.
+const revisedImages=new Set(sceneImages.slice(305,500).filter((_,i)=>![310,311,312,313].includes(i+306)));
+// Retry restored artwork without inheriting an older placeholder or HTTP cache entry.
+const restoredLevels=[658,659,664,667,668,669,670,671,672,673,675,676,677,680,681,682,683,686,687,689,690,691,692,693,694,695,696,697,698,699,700];
+restoredLevels.forEach(level=>revisedImages.add(sceneImages[level-1]));
+const revisedImageUrls=new Set([...revisedImages].map(path=>new URL(path,self.registration.scope).href));
 const shell=['./','./index.html','./style.css','./map.css','./polish.css','./adventure.css','./game-data.js','./progression.js','./script.js','./manifest.webmanifest',`./sw.js?v=${VERSION}`,'./icons/icon-192.png','./icons/icon-512.png','./icons/apple-touch-icon.png'];
 async function broadcast(message){const clients=await self.clients.matchAll({type:'window',includeUncontrolled:true});clients.forEach(client=>client.postMessage({...message,version:VERSION}));}
 async function prepareOffline(){
@@ -13,7 +19,7 @@ async function prepareOffline(){
   let next=0,done=0;
   const worker=async()=>{while(next<sceneImages.length){
     const path=sceneImages[next++],url=new URL(path,self.registration.scope).href;
-    if(!await cache.match(url))for(const key of oldCaches){const cached=await(await caches.open(key)).match(url);if(cached){await cache.put(url,cached);break;}}
+    if(!revisedImages.has(path)&&!await cache.match(url))for(const key of oldCaches){const cached=await(await caches.open(key)).match(url);if(cached){await cache.put(url,cached);break;}}
     done++;if(done%25===0||done===sceneImages.length)await broadcast({type:'OFFLINE_PROGRESS',done,total:sceneImages.length});
   }};
   await Promise.all(Array.from({length:4},worker));
@@ -26,7 +32,7 @@ async function downloadWorld(worldId){
   const cache=await caches.open(CACHE);let next=0,done=0,failed=0;
   const worker=async()=>{while(next<images.length){
     const path=images[next++],url=new URL(path,self.registration.scope).href;
-    try{if(!await cache.match(url)){const response=await fetch(url);if(!response.ok)throw new Error('image download failed');await cache.put(url,response);}done++;}
+    try{if(!await cache.match(url)){const response=await fetch(url,{cache:revisedImages.has(path)?'reload':'default'});if(!response.ok)throw new Error('image download failed');await cache.put(url,response);}done++;}
     catch{failed++;}
     if((done+failed)%5===0||done+failed===images.length)await broadcast({type:'OFFLINE_PROGRESS',worldId,done:done+failed,total:images.length});
   }};
@@ -63,7 +69,7 @@ self.addEventListener('fetch',event=>{
     }).catch(()=>caches.match(request).then(cached=>cached||(request.mode==='navigate'?caches.match('./index.html'):Response.error()))));
     return;
   }
-  event.respondWith(caches.match(request).then(cached=>cached||fetch(request).then(response=>{
+  event.respondWith(caches.match(request).then(cached=>cached||fetch(request,{cache:revisedImageUrls.has(request.url)?'reload':'default'}).then(response=>{
     if(response.ok){const copy=response.clone();caches.open(CACHE).then(cache=>cache.put(request,copy));}
     return response;
   })));
