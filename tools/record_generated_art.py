@@ -26,7 +26,7 @@ with (root/'tools/.art-record.lock').open('w') as lock:
     manifestpath=root/'assets/level-art-manifest.json'
     manifest=json.loads(manifestpath.read_text())
     entry={k:job[k] for k in ('level','title','subtitle','file','prompt')}
-    entry.update(tool='built-in image_gen',source=str(source),revision=('2026-10-27-cubist-expansion' if level>=701 else '2026-10-24-detailed-art'))
+    entry.update(tool='built-in image_gen',source=str(source),revision=('2026-10-27-surrealist-expansion' if level>=801 else '2026-10-27-cubist-expansion' if level>=701 else '2026-10-24-detailed-art'))
     manifest=[item for item in manifest if item['level']!=level]+[entry]
     manifest.sort(key=lambda item:item['level'])
     write_json(manifestpath,manifest)

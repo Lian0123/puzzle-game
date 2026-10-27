@@ -64,3 +64,11 @@ button{font-weight:600}.topbar{height:82px;border-bottom-color:#b7c6e529}.brand-
 .map-shell[data-world="cubism"] .map-river{stroke:#96b8cb}
 .map-shell[data-world="cubism"] .map-sun{fill:#e9bc81;stroke:#c48b69;stroke-width:8}
 .map-shell[data-world="cubism"] .map-heading-icon{border-radius:8px;transform:rotate(-6deg)}
+
+/* Surrealist world: warm stone, lavender distances and dreamlike turquoise. */
+.map-shell[data-world="surrealism"]{--sky-top:#665f90;--sky-bottom:#e2cba8;--far:#ad91a0;--mid:#8ba5a2;--near:#527f87;--ground:#365566;--accent:#ffe2a4}
+.map-shell[data-world="surrealism"] .map-landmarks{fill:#f1d3a3}
+.map-shell[data-world="surrealism"] .map-forest{fill:#67867c}
+.map-shell[data-world="surrealism"] .map-river{stroke:#a7d3d3}
+.map-shell[data-world="surrealism"] .map-sun{fill:#f7d29d;stroke:#dec2b2;stroke-width:8}
+.map-shell[data-world="surrealism"] .map-heading-icon{border-radius:50% 50% 44% 44%;box-shadow:0 0 18px #e9d4af44}

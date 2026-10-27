@@ -1,7 +1,7 @@
 // Increment CACHE and VERSION whenever the app shell or bundled assets change.
 importScripts('./game-data.js');
-const CACHE='shijing-v17';
-const VERSION='17';
+const CACHE='shijing-v18';
+const VERSION='18';
 const sceneImages=self.ShijingData.scenes.map(scene=>`./${scene.url}`);
 // Replaced procedural artwork must be fetched fresh rather than inherited.
 const revisedImages=new Set(sceneImages.slice(305,500).filter((_,i)=>![310,311,312,313].includes(i+306)));
@@ -14,13 +14,13 @@ async function broadcast(message){const clients=await self.clients.matchAll({typ
 async function prepareOffline(){
   const cache=await caches.open(CACHE);
   await cache.addAll(shell);
-  // v16 already contains the repaired art; older caches must skip revised images.
+  // v16 and v17 already contain the repaired art; older caches must skip revised images.
   // New worlds remain on demand to keep first install small.
   const oldCaches=(await caches.keys()).filter(key=>key.startsWith('shijing-')&&key!==CACHE);
   let next=0,done=0;
   const worker=async()=>{while(next<sceneImages.length){
     const path=sceneImages[next++],url=new URL(path,self.registration.scope).href;
-    if(!await cache.match(url))for(const key of oldCaches){if(revisedImages.has(path)&&key!=='shijing-v16')continue;const cached=await(await caches.open(key)).match(url);if(cached){await cache.put(url,cached);break;}}
+    if(!await cache.match(url))for(const key of oldCaches){if(revisedImages.has(path)&&!['shijing-v16','shijing-v17'].includes(key))continue;const cached=await(await caches.open(key)).match(url);if(cached){await cache.put(url,cached);break;}}
     done++;if(done%25===0||done===sceneImages.length)await broadcast({type:'OFFLINE_PROGRESS',done,total:sceneImages.length});
   }};
   await Promise.all(Array.from({length:4},worker));
