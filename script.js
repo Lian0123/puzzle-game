@@ -45,7 +45,7 @@ function renderPlayerHUD() {
   const done = scenes.filter(scene => isCompleted(scene.index)).length;
   const complete = done === TOTAL_LEVELS, experience = complete ? 1000 : done % 10 * 100;
   $('playerLevel').textContent = `LV. ${String(Math.floor(done / 10) + 1).padStart(2,'0')}`;
-  $('playerRank').textContent = done >= 700 ? '花冠藝術家 · 七百幅風景都在心裡' : done >= 600 ? '新藝術旅人 · 走進花與金線的世界' : done >= 500 ? '未來探索者 · 開啟科技與藝術之旅' : done >= 400 ? '星際行者 · 穿越星門抵達遠方' : done >= 300 ? '原初探索者 · 走過世界最初的風景' : done >= 200 ? '古風行者 · 宮闕與山水等你收藏' : done >= 100 ? '跨界旅人 · 新世界等你探索' : done >= 20 ? '山海收藏家 · 旅程越來越精彩' : '初見旅人 · 旅程從這裡開始';
+  $('playerRank').textContent = done >= 800 ? '千面藝術家 · 八百幅風景都在心裡' : done >= 700 ? '花冠藝術家 · 開啟多重視角的旅程' : done >= 600 ? '新藝術旅人 · 走進花與金線的世界' : done >= 500 ? '未來探索者 · 開啟科技與藝術之旅' : done >= 400 ? '星際行者 · 穿越星門抵達遠方' : done >= 300 ? '原初探索者 · 走過世界最初的風景' : done >= 200 ? '古風行者 · 宮闕與山水等你收藏' : done >= 100 ? '跨界旅人 · 新世界等你探索' : done >= 20 ? '山海收藏家 · 旅程越來越精彩' : '初見旅人 · 旅程從這裡開始';
   $('journeyXP').textContent = `${experience.toLocaleString('zh-TW')} / 1,000 旅途經驗`;
   $('nextRankText').textContent = complete ? `${TOTAL_LEVELS} 幅風景全收藏 · 旅人等級已滿` : `再完成 ${10-done%10} 個新關卡，提升旅人等級`;
   $('xpFill').style.width = `${experience / 10}%`;
@@ -107,7 +107,7 @@ function openFeature(kind) {
   if (kind === 'shop') $('featureContent').innerHTML = `<div class="shop-balance">✦ ${profile.balance.toLocaleString('zh-TW')} 星砂 <small> · 旅程的每一點收穫</small></div>${Object.entries(S.ITEMS).map(([id,item]) => `<div class="shop-item"><span class="shop-item-icon" aria-hidden="true">${item.icon}</span><div class="shop-item-copy"><h3>${item.name}</h3><p>${item.description}</p><small>背包中有 ${profile.inventory[id]} 個</small></div><button data-buy="${id}" type="button" ${profile.balance < item.cost || profile.inventory[id] >= 999 ? 'disabled' : ''}>${item.cost} ✦ 兌換</button></div>`).join('')}<p class="dialog-note">星砂由簽到、每日任務與完成拼圖獲得，沒有付費購買。道具使用後扣除，不會因切換拼圖而退還。新旅人已獲得 120 星砂與入門道具。</p>`;
   if (kind === 'collection') {
     const collected = scenes.filter(scene => isCompleted(scene.index));
-    const badges = [{icon:'✧',name:'第一片風景',earned:collected.length>=1},{icon:'❖',name:'山海收藏家',earned:collected.length>=20},{icon:'☀',name:'七日拾光',earned:profile.bestStreak>=7},{icon:'✦',name:'百景旅人',earned:collected.length>=100},{icon:'♧',name:'幻想先鋒',earned:scenes.slice(100,140).every(scene=>isCompleted(scene.index))},{icon:'⌂',name:'古風雅客',earned:scenes.slice(200,300).every(scene=>isCompleted(scene.index))},{icon:'☼',name:'原初行者',earned:scenes.slice(300,400).every(scene=>isCompleted(scene.index))},{icon:'✧',name:'星際旅人',earned:scenes.slice(400,500).every(scene=>isCompleted(scene.index))},{icon:'⌘',name:'科技先驅',earned:scenes.slice(500,600).every(scene=>isCompleted(scene.index))},{icon:'❀',name:'新藝術花冠',earned:scenes.slice(600,700).every(scene=>isCompleted(scene.index))}];
+    const badges = [{icon:'✧',name:'第一片風景',earned:collected.length>=1},{icon:'❖',name:'山海收藏家',earned:collected.length>=20},{icon:'☀',name:'七日拾光',earned:profile.bestStreak>=7},{icon:'✦',name:'百景旅人',earned:collected.length>=100},{icon:'♧',name:'幻想先鋒',earned:scenes.slice(100,140).every(scene=>isCompleted(scene.index))},{icon:'⌂',name:'古風雅客',earned:scenes.slice(200,300).every(scene=>isCompleted(scene.index))},{icon:'☼',name:'原初行者',earned:scenes.slice(300,400).every(scene=>isCompleted(scene.index))},{icon:'✧',name:'星際旅人',earned:scenes.slice(400,500).every(scene=>isCompleted(scene.index))},{icon:'⌘',name:'科技先驅',earned:scenes.slice(500,600).every(scene=>isCompleted(scene.index))},{icon:'❀',name:'新藝術花冠',earned:scenes.slice(600,700).every(scene=>isCompleted(scene.index))},{icon:'◒',name:'千面藝術家',earned:scenes.slice(700,800).every(scene=>isCompleted(scene.index))}];
     $('featureContent').innerHTML = `<div class="album-stats"><span>風景 ${collected.length} / ${TOTAL_LEVELS}</span><span>累計完成 ${profile.totalWins} 局</span></div><div class="badge-grid">${badges.map(b => `<div class="badge ${b.earned ? 'earned' : ''}" aria-label="${b.name}，${b.earned ? '已獲得' : '未獲得'}"><strong aria-hidden="true">${b.icon}</strong>${b.name}</div>`).join('')}</div>${collected.length ? `<div class="album-grid">${collected.map(scene => `<figure class="album-card"><img src="${scene.url}" alt="${scene.title}，${scene.subtitle}" loading="lazy" width="256" height="256"><figcaption>${String(scene.index+1).padStart(2,'0')} · ${scene.title}</figcaption></figure>`).join('')}</div>` : '<div class="empty-album"><span>▧</span><p>完成旅程模式第一關，<br>收藏你的第一幅風景。</p></div>'}<p class="dialog-note">旅程模式會收藏風景、解鎖下一關。特殊模式另有獎勵，不影響旅程解鎖。</p>`;
   }
   if (kind === 'settings') $('featureContent').innerHTML = `<div class="setting-row"><div><strong>遊戲音效</strong><small>交換、提示與完成時的輕柔音效</small></div><button class="toggle-button" data-setting="sound" aria-pressed="${profile.settings.sound}" type="button">${profile.settings.sound?'開啟':'關閉'}</button></div><div class="setting-row"><div><strong>畫面動態</strong><small>浮動風景、交換動畫與完成彩紙</small></div><button class="toggle-button" data-setting="motion" aria-pressed="${profile.settings.motion}" type="button">${profile.settings.motion?'開啟':'關閉'}</button></div><p class="dialog-note">會自動尊重裝置的「減少動態」偏好。進度保存在目前瀏覽器；清除網站資料會移除進度，不同裝置不會同步。</p>`;
@@ -355,7 +355,7 @@ if('serviceWorker'in navigator){
     window.location.reload();
   });
   navigator.serviceWorker.addEventListener('message',event=>{
-    if(event.data?.version!=='16')return;
+    if(event.data?.version!=='17')return;
     if(event.data?.type==='OFFLINE_STATUS')$('offlineStatus').textContent=event.data.ready?`✓ 遊戲已離線準備 · ${event.data.cachedImages} / ${TOTAL_LEVELS} 幅風景已保存；可另存各世界圖片。`:'正在準備離線遊戲介面，請保持連線。';
     if(event.data?.type==='OFFLINE_PROGRESS')$('offlineStatus').textContent=event.data.worldId===undefined?`正在整理離線風景：${event.data.done} / ${event.data.total}`:`正在保存${worlds[event.data.worldId]?.title||'世界'}離線圖片：${event.data.done} / ${event.data.total}`;
     if(event.data?.type==='OFFLINE_WORLD_STATUS'){
@@ -363,7 +363,7 @@ if('serviceWorker'in navigator){
       $('offlineStatus').textContent=event.data.failed?`離線圖片已保存 ${event.data.done} / ${event.data.total} 幅，${event.data.failed} 幅下次連線時可再試。`:`✓ ${worlds[event.data.worldId]?.title||'世界'}離線圖片已保存：${event.data.done} / ${event.data.total}`;
     }
   });
-  window.addEventListener('load',()=>navigator.serviceWorker.register('./sw.js?v=16',{updateViaCache:'none'})
+  window.addEventListener('load',()=>navigator.serviceWorker.register('./sw.js?v=17',{updateViaCache:'none'})
     .then(registration=>{
       const observe=worker=>worker?.addEventListener('statechange',()=>{if(worker.state==='redundant')$('offlineStatus').textContent='離線準備未完成，連線後重新開啟遊戲即可再試。';});
       observe(registration.installing);registration.addEventListener('updatefound',()=>observe(registration.installing));

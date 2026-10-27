@@ -56,3 +56,11 @@ button{font-weight:600}.topbar{height:82px;border-bottom-color:#b7c6e529}.brand-
 .map-shell[data-world="nouveau"] .map-heading-icon{border-radius:50%;box-shadow:0 0 0 3px #c5a46555}
 .offline-world-button{flex:0 0 auto;border:1px solid #b7d8c3;border-radius:999px;padding:6px 12px;background:#234b40;color:#edf5df;font:inherit;font-size:10px;font-weight:700;cursor:pointer}.offline-world-button:hover,.offline-world-button:focus-visible{background:#346552;outline:2px solid #d4e9b7;outline-offset:2px}.offline-world-button:disabled{opacity:.72;cursor:wait}
 @media(max-width:650px){.chapter-heading{flex-wrap:wrap}.chapter-heading small{margin-left:auto}.offline-world-button{order:1;width:100%;padding:8px}}
+
+/* Cubist world: mineral blue, terracotta and angular landscapes. */
+.map-shell[data-world="cubism"]{--sky-top:#344e76;--sky-bottom:#d6c09c;--far:#aa806e;--mid:#70878d;--near:#4c6775;--ground:#344c5b;--accent:#ffe0a1}
+.map-shell[data-world="cubism"] .map-landmarks{fill:#e2b484}
+.map-shell[data-world="cubism"] .map-forest{fill:#597971}
+.map-shell[data-world="cubism"] .map-river{stroke:#96b8cb}
+.map-shell[data-world="cubism"] .map-sun{fill:#e9bc81;stroke:#c48b69;stroke-width:8}
+.map-shell[data-world="cubism"] .map-heading-icon{border-radius:8px;transform:rotate(-6deg)}

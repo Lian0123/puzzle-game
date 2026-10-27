@@ -60,7 +60,7 @@ test('special mode rewards are daily and old daily sessions do not complete toda
 test('daily board is deterministic, date-specific, valid and never solved', () => {
   const a=S.makePuzzle(4,`daily:${today}`);assert.deepEqual(a,S.makePuzzle(4,`daily:${today}`));
   assert.notDeepEqual(a,S.makePuzzle(4,'daily:2026-10-05'));
-  for(const size of [4,5,6])for(let i=0;i<700;i++){const puzzle=S.makePuzzle(size,i);assert.ok(S.permutation(puzzle,size));assert.ok(puzzle.some((p,j)=>p!==j));}
+  for(const size of [4,5,6])for(let i=0;i<800;i++){const puzzle=S.makePuzzle(size,i);assert.ok(S.permutation(puzzle,size));assert.ok(puzzle.some((p,j)=>p!==j));}
   assert.equal(S.dailyIndex(today),S.dailyIndex(today));assert.ok(S.dailyIndex(today)>=0&&S.dailyIndex(today)<100);
 });
 test('legacy session migrates to journey, preserves all existing puzzle data', () => {
@@ -84,16 +84,16 @@ test('expansion preserves legacy daily sessions and validates the new daily pool
   assert.equal(S.recordWin(state,{mode:'daily',index:(legacy.current+1)%140,size:4,stars:3,date:today},today),0);
   assert.equal(state.balance,200);
 });
-test('new stages 301 through 700 persist in all difficulties while stage 701 is rejected',()=>{
-  for(let current=300;current<700;current++)for(const size of [4,5,6]){
+test('new stages 301 through 800 persist in all difficulties while stage 801 is rejected',()=>{
+  for(let current=300;current<800;current++)for(const size of [4,5,6]){
     const raw={current,size,pieces:S.makePuzzle(size,current),moves:3,seconds:30,hints:2};
-    assert.equal(S.normalizeSession(raw,700).current,current);
+    assert.equal(S.normalizeSession(raw,800).current,current);
   }
-  assert.equal(S.normalizeSession({current:700,size:4,pieces:S.makePuzzle(4,1),moves:0,seconds:0,hints:2},700),null);
+  assert.equal(S.normalizeSession({current:800,size:4,pieces:S.makePuzzle(4,1),moves:0,seconds:0,hints:2},800),null);
 });
-test('legacy daily pools remain valid after the 700-level expansion',()=>{
-  for(const pool of [140,300,500]){
+test('legacy daily pools remain valid after the 800-level expansion',()=>{
+  for(const pool of [140,300,500,600,700]){
     const legacy={current:S.dailyIndex(today,pool),dailyPool:pool,size:4,pieces:S.makePuzzle(4,1),moves:4,seconds:40,hints:1,mode:'daily',date:today};
-    const restored=S.normalizeSession(legacy,700);assert.ok(restored);assert.equal(restored.dailyPool,pool);assert.deepEqual(restored.pieces,legacy.pieces);
+    const restored=S.normalizeSession(legacy,800);assert.ok(restored);assert.equal(restored.dailyPool,pool);assert.deepEqual(restored.pieces,legacy.pieces);
   }
 });

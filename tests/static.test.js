@@ -5,19 +5,19 @@ const { resolve } = require('node:path');
 const { createHash } = require('node:crypto');
 const root=resolve(__dirname,'..');
 const read=file=>readFileSync(resolve(root,file),'utf8');
-test('700 unique landscapes belong to thirty-five routes and seven consistent worlds',()=>{
-  const D=require('../game-data.js');assert.equal(D.TOTAL_LEVELS,700);assert.equal(D.scenes.length,700);assert.equal(D.chapters.length,35);assert.equal(D.worlds.length,7);
-  assert.equal(new Set(D.scenes.map(scene=>scene.title)).size,700);assert.equal(new Set(D.scenes.map(scene=>scene.url)).size,700);
+test('800 unique landscapes belong to forty routes and eight consistent worlds',()=>{
+  const D=require('../game-data.js');assert.equal(D.TOTAL_LEVELS,800);assert.equal(D.scenes.length,800);assert.equal(D.chapters.length,40);assert.equal(D.worlds.length,8);
+  assert.equal(new Set(D.scenes.map(scene=>scene.title)).size,800);assert.equal(new Set(D.scenes.map(scene=>scene.url)).size,800);
   D.scenes.forEach((scene,index)=>{assert.equal(scene.index,index);assert.equal(scene.chapter,Math.floor(index/20));assert.equal(D.chapters[scene.chapter].worldId,scene.worldId);const world=D.worlds[scene.worldId];assert.ok(index>=world.start&&index<world.end);});
-  const art=JSON.parse(read('assets/level-art-manifest.json'));assert.equal(art.length,600);assert.equal(new Set(art.map(entry=>entry.prompt)).size,600);
+  const art=JSON.parse(read('assets/level-art-manifest.json'));assert.equal(art.length,700);assert.equal(new Set(art.map(entry=>entry.prompt)).size,700);
   art.forEach((entry,index)=>{assert.equal(entry.level,101+index);assert.equal(entry.file,D.scenes[100+index].url.replace('assets/',''));assert.equal(entry.tool,'built-in image_gen');});
 });
-test('all shell resources and 700 bundled landscapes exist',()=>{
+test('all shell resources and 800 bundled landscapes exist',()=>{
   const html=read('index.html');
   for(const match of html.matchAll(/(?:src|href)="([^"#]+)"/g))if(!/^(https?:|data:)/.test(match[1]))assert.ok(existsSync(resolve(root,match[1])),match[1]);
   const hashes=new Set();
-  for(let i=1;i<=700;i++){const path=resolve(root,`assets/landscape-${String(i).padStart(2,'0')}.jpg`);assert.ok(existsSync(path));hashes.add(createHash('sha256').update(readFileSync(path)).digest('hex'));}
-  assert.equal(hashes.size,700,'Every stage has distinct artwork');
+  for(let i=1;i<=800;i++){const path=resolve(root,`assets/landscape-${String(i).padStart(2,'0')}.jpg`);assert.ok(existsSync(path));hashes.add(createHash('sha256').update(readFileSync(path)).digest('hex'));}
+  assert.equal(hashes.size,800,'Every stage has distinct artwork');
   const manifest=JSON.parse(read('manifest.webmanifest'));assert.equal(manifest.lang,'zh-Hant');
   for(const icon of manifest.icons)assert.ok(existsSync(resolve(root,icon.src)));
 });
@@ -39,8 +39,8 @@ test('service worker release and new offline shell are synchronized',()=>{
 
 test('future world rules reserve ordered ranges without exposing unfinished stages',()=>{
  const D=require('../game-data.js');assert.equal(D.PLANNED_LEVELS,1000);
- assert.deepEqual(D.worldRules.map(w=>[w.start,w.end,w.implemented]),[[500,600,true],[600,700,true],[700,800,false],[800,900,false],[900,1000,false]]);
+ assert.deepEqual(D.worldRules.map(w=>[w.start,w.end,w.implemented]),[[500,600,true],[600,700,true],[700,800,true],[800,900,false],[900,1000,false]]);
  assert.deepEqual(D.worldRules.map(w=>w.title),['科技世界','慕夏風格世界','畢卡索風格世界','達利風格世界','浮世繪世界']);
  D.worldRules.forEach(w=>assert.equal(w.routes.length,5));
- assert.equal(D.scenes[700],undefined);assert.equal(D.worlds[7],undefined);
+ assert.equal(D.scenes[800],undefined);assert.equal(D.worlds[8],undefined);
 });
